@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="ja" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>English Vocabulary Learner</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    color-scheme: dark;
+    --bg: #0f172a;
+    --panel: #1e293b;
+    --sub: #0f172a;
+    --item: #1e293b;
+    --line: #334155;
+    --text: #e2e8f0;
+    --muted: #94a3b8;
+    --accent: #0284c7;
+    --accent-hover: #0369a1;
+    --danger: #4c1d2a;
+    --danger-text: #fecdd3;
+    --shadow: 0 10px 30px rgba(0,0,0,.25);
+    --button-bg: #334155;
+    --button-hover: #475569;
+  }
+  [data-theme="light"] {
+    color-scheme: light;
+    --bg: #f1f5f9;
+    --panel: #ffffff;
+    --sub: #f8fafc;
+    --item: #f1f5f9;
+    --line: #cbd5e1;
+    --text: #0f172a;
+    --muted: #64748b;
+    --accent: #0284c7;
+    --accent-hover: #0369a1;
+    --danger: #fee2e2;
+    --danger-text: #b91c1c;
+    --shadow: 0 10px 30px rgba(0,0,0,.15);
+    --button-bg: #94a3b8;
+    --button-hover: #64748b;
+  }
+
+  body {
+    font-family: 'Noto Sans JP', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    margin: 0;
+    padding: 20px;
+    transition: background .3s, color .3s;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+  }
+  * { box-sizing: border-box; }
+  h1, h2, h3, p { margin: 0; }
+  
+  button {
+    cursor: pointer; background: #0284c7; color: white; border: none; font-weight: bold;
+    transition: background .2s, transform .1s; border-radius: 20px; padding: 8px 16px;
+    font-size: 14px; white-space: nowrap; display: inline-block;
+  }
+  button:hover:not(:disabled) { background: #0369a1; }
+  button:active:not(:disabled) { transform: scale(.97); }
+  button.btn-gray { background: var(--button-bg); color: #fff; }
+  button.btn-gray:hover:not(:disabled) { background: var(--button-hover); }
+  button.primary { background: var(--accent); color: #fff; }
+  button.primary:hover:not(:disabled) { background: var(--accent-hover); }
+  button:disabled { opacity: .45; cursor: not-allowed; }
+
+  input[type=text] {
+    width: 100%; padding: 12px 16px; font-size: 16px; background-color: var(--sub);
+    color: var(--text); border: 1px solid var(--line); border-radius: 8px;
+    transition: all .2s ease; font-family: inherit; text-align: center;
+  }
+  input:focus {
+    outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px rgba(2,132,199,.12);
+  }
+  label { display: block; font-size: 12px; font-weight: 700; color: var(--muted); margin: 0 0 5px; text-align: left; }
+  
+  .container {
+    background: var(--panel); padding: 30px; border-radius: 16px;
+    box-shadow: var(--shadow); transition: background .3s; margin-top: 20px;
+    width: 100%; max-width: 480px;
+  }
+  .card {
+    border: 1px solid var(--line); border-radius: 10px; padding: 20px;
+    background: var(--sub); margin-bottom: 20px; text-align: center;
+  }
+
+  .top-bar {
+    display: flex; justify-content: space-between; align-items: center;
+    width: 100%; max-width: 480px; padding: 10px 0;
+  }
+
+  .jp-word {
+    font-size: 32px;
+    font-weight: 900;
+    margin: 10px 0;
+    color: var(--text);
+  }
+  .row {
+    display: flex; gap: 10px; margin-top: 15px;
+  }
+  .row button {
+    flex: 1; padding: 12px;
+  }
+  .feedback {
+    margin-top: 20px; font-weight: 700; font-size: 15px; text-align: center; min-height: 22px;
+  }
+  .feedback.correct { color: #10b981; }
+  .feedback.incorrect { color: #ef4444; }
+  .progress {
+    text-align: right; font-size: 12px; color: var(--muted); margin-top: 10px; font-weight: bold;
+  }
+  
+  @keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+  }
+  .shake { animation: shake 0.3s ease-in-out; }
+</style>
+</head>
+<body>
+
+<div class="top-bar">
+  <h1 style="font-size: 18px;">単語学習アプリ</h1>
+  <button onclick="toggleTheme()" class="btn-gray" style="font-size: 12px;">テーマ切替</button>
+</div>
+
+<div class="container" style="margin-top: 0; margin-bottom: 20px;">
+  <h2 class="section-title" style="font-size: 14px; margin-bottom: 10px; border-bottom: 1px solid var(--line); padding-bottom: 5px;">単語データ読み込み (JSON)</h2>
+  <label>任意の単語数のカスタム辞書をアップロードできます</label>
+  <input type="file" id="file-input" accept=".json" style="margin-bottom: 5px;">
+  <span class="tip">フォーマット例: [{"word": "apple", "meaning": "りんご", "importance": 5}]</span>
+  <div id="file-feedback" class="feedback" style="margin-top: 5px; font-size: 12px; min-height: 18px;"></div>
+</div>
+
+<div class="container" style="margin-top: 0;" id="game-container">
+  <div class="card">
+    <div style="font-size: 12px; color: var(--muted); font-weight: bold;">日本語</div>
+    <div class="jp-word" id="jp-word">準備中...</div>
+  </div>
+
+  <div>
+    <label>英単語を入力、または発音してください</label>
+    <input type="text" id="en-input" placeholder="例: apple" autocomplete="off">
+  </div>
+  
+  <div class="row">
+    <button class="primary" id="submit-btn">決定 (Enter)</button>
+    <button class="btn-gray" id="speak-btn">発音する 🎤</button>
+  </div>
+
+  <div id="feedback" class="feedback"></div>
+  <div class="progress" id="progress-text">問題: 0 / 30</div>
+</div>
+
+<div class="container" style="margin-top: 0; display: none;" id="result-container">
+  <h2 class="section-title" style="font-size: 18px; text-align: center; border-bottom: none; margin-bottom: 5px;">学習セッション終了！</h2>
+  <div class="card" style="margin-bottom: 15px;">
+    <div style="font-size: 14px; color: var(--muted); font-weight: bold; margin-bottom: 5px;">一発正答率</div>
+    <div class="jp-word" id="accuracy-text" style="color: var(--accent);">0%</div>
+  </div>
+  
+  <div style="margin-bottom: 15px;">
+    <label>間違えた単語 (要復習)</label>
+    <div id="wrong-words-list" style="font-size: 14px; background: var(--sub); padding: 10px; border: 1px solid var(--line); border-radius: 8px; min-height: 42px;"></div>
+  </div>
+
+  <div style="margin-bottom: 15px;">
+    <label>AIへの更新依頼プロンプト (コピペ用)</label>
+    <textarea id="ai-prompt-textarea" rows="8" readonly style="font-size: 12px; resize: vertical; margin-bottom: 5px; font-family: monospace;"></textarea>
+    <span class="tip">※上記のテキストをChatGPTやGemini等に貼り付けると、間違えた単語の重要度が上がり、次回出やすくなるJSONが生成されます。</span>
+  </div>
+
+  <div class="row">
+    <button class="primary" id="copy-prompt-btn">プロンプトをコピー</button>
+    <button class="btn-gray" id="replay-btn">次の30単語へ</button>
+  </div>
+</div>
+
+<script>
+  // デフォルトの単語リスト
+  let fullVocabulary = [
+    { meaning: "りんご", word: "apple", importance: 3 },
+    { meaning: "犬", word: "dog", importance: 1 },
+    { meaning: "猫", word: "cat", importance: 1 },
+    { meaning: "車", word: "car", importance: 1 },
+    { meaning: "家", word: "house", importance: 2 },
+    { meaning: "水", word: "water", importance: 4 },
+    { meaning: "空", word: "sky", importance: 1 },
+    { meaning: "木", word: "tree", importance: 1 },
+    { meaning: "太陽", word: "sun", importance: 2 },
+    { meaning: "本", word: "book", importance: 1 }
+  ];
+
+  let currentSessionWords = [];
+  let currentWordObj = null;
+  
+  let targetSessionSize = 30;
+  let currentQuestionIndex = 0;
+  let globalPoolIndex = 0; // 任意の単語数から順に30個ずつ切り出すためのポインタ
+  let isFirstAttempt = true;
+  let sessionCorrectCount = 0;
+  let sessionWrongWords = [];
+  let sessionAskedWords = [];
+
+  let isProcessing = false;
+  let isListening = false;
+  
+  const gameContainerEl = document.getElementById('game-container');
+  const resultContainerEl = document.getElementById('result-container');
+  const accuracyTextEl = document.getElementById('accuracy-text');
+  const wrongWordsListEl = document.getElementById('wrong-words-list');
+  const aiPromptTextareaEl = document.getElementById('ai-prompt-textarea');
+  const copyPromptBtn = document.getElementById('copy-prompt-btn');
+  const replayBtn = document.getElementById('replay-btn');
+
+  const jpWordEl = document.getElementById('jp-word');
+  const enInputEl = document.getElementById('en-input');
+  const submitBtn = document.getElementById('submit-btn');
+  const speakBtn = document.getElementById('speak-btn');
+  const feedbackEl = document.getElementById('feedback');
+  const progressEl = document.getElementById('progress-text');
+  const fileInputEl = document.getElementById('file-input');
+  const fileFeedbackEl = document.getElementById('file-feedback');
+
+  // 配列をシャッフルするヘルパー関数 (Fisher-Yates)
+  function shuffleArray(array) {
+    const arr = [...array];
+    for (let i = arr.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [arr[i], arr[j]] = [arr[j], arr[i]];
+    }
+    return arr;
+  }
+
+  // アプリの初期化 (resetIndex = true の場合は最初から)
+  function initApp(resetIndex = false) {
+    if (resetIndex) {
+      globalPoolIndex = 0;
+      // 新しいファイルが読み込まれたら全体をシャッフルしてランダムな順序でプールにする
+      fullVocabulary = shuffleArray(fullVocabulary);
+    }
+
+    // 全単語数に応じて今回出題するセッションリスト（最大30個）を切り出す
+    const totalWords = fullVocabulary.length;
+    const sessionSize = Math.min(targetSessionSize, totalWords);
+
+    currentSessionWords = [];
+    for (let i = 0; i < sessionSize; i++) {
+      const actualIndex = (globalPoolIndex + i) % totalWords;
+      currentSessionWords.push(fullVocabulary[actualIndex]);
+    }
+
+    // 次回セッションのためにポインタを進める
+    globalPoolIndex = (globalPoolIndex + sessionSize) % totalWords;
+
+    currentQuestionIndex = 0;
+    sessionCorrectCount = 0;
+    sessionWrongWords = [];
+    sessionAskedWords = [];
+    
+    gameContainerEl.style.display = 'block';
+    resultContainerEl.style.display = 'none';
+
+    replayBtn.textContent = totalWords > sessionSize ? "次の30単語へ進む" : "もう一度プレイ";
+
+    showNextWord();
+  }
+
+  // 次の単語を表示
+  function showNextWord() {
+    if (currentQuestionIndex >= currentSessionWords.length) {
+      showResults();
+      return;
+    }
+
+    isProcessing = false;
+    enInputEl.disabled = false;
+    submitBtn.disabled = false;
+    if (window.SpeechRecognition || window.webkitSpeechRecognition) speakBtn.disabled = false;
+
+    currentWordObj = currentSessionWords[currentQuestionIndex];
+    sessionAskedWords.push(currentWordObj);
+    isFirstAttempt = true;
+
+    jpWordEl.textContent = currentWordObj.meaning;
+    enInputEl.value = '';
+    enInputEl.focus();
+    progressEl.textContent = `問題: ${currentQuestionIndex + 1} / ${currentSessionWords.length}`;
+    feedbackEl.textContent = '';
+    feedbackEl.className = 'feedback';
+  }
+
+  // 答え合わせ処理
+  function checkAnswer(inputStr) {
+    if (isProcessing || !inputStr) return;
+    
+    isProcessing = true;
+    enInputEl.disabled = true;
+    submitBtn.disabled = true;
+    speakBtn.disabled = true;
+    
+    const correctEn = currentWordObj.word.toLowerCase();
+    const normalizedInput = inputStr.toLowerCase().trim().replace(/[^a-z\s-]/g, ''); 
+
+    if (normalizedInput === correctEn) {
+      if (isFirstAttempt) {
+         sessionCorrectCount++;
+      }
+      currentQuestionIndex++;
+
+      feedbackEl.textContent = `正解！ (${currentWordObj.word})`;
+      feedbackEl.className = 'feedback correct';
+      
+      setTimeout(() => {
+        showNextWord();
+      }, 1000);
+    } else {
+      if (isFirstAttempt) {
+        if (!sessionWrongWords.find(w => w.word === currentWordObj.word)) {
+           sessionWrongWords.push(currentWordObj);
+        }
+        isFirstAttempt = false;
+      }
+
+      feedbackEl.textContent = `不正解... (入力: ${inputStr})`;
+      feedbackEl.className = 'feedback incorrect';
+      
+      enInputEl.classList.remove('shake');
+      void enInputEl.offsetWidth;
+      enInputEl.classList.add('shake');
+      
+      setTimeout(() => {
+        isProcessing = false;
+        enInputEl.disabled = false;
+        submitBtn.disabled = false;
+        if (window.SpeechRecognition || window.webkitSpeechRecognition) speakBtn.disabled = false;
+        enInputEl.focus();
+      }, 300);
+    }
+  }
+
+  // 結果画面の表示とAIプロンプトの生成
+  function showResults() {
+    gameContainerEl.style.display = 'none';
+    resultContainerEl.style.display = 'block';
+
+    const sessionTotal = currentSessionWords.length;
+    const accuracy = Math.round((sessionCorrectCount / sessionTotal) * 100);
+    accuracyTextEl.textContent = `${accuracy}% (${sessionCorrectCount} / ${sessionTotal})`;
+
+    if (sessionWrongWords.length > 0) {
+        wrongWordsListEl.innerHTML = sessionWrongWords.map(w => 
+            `<span style="display:inline-block; background: var(--danger); color: var(--danger-text); padding: 4px 8px; border-radius: 4px; margin: 0 4px 4px 0; font-weight: bold;">${w.word}</span>`
+        ).join('');
+    } else {
+        wrongWordsListEl.innerHTML = `<span style="color: #10b981; font-weight: bold;">全問一発正解！素晴らしい！🎉</span>`;
+    }
+
+    const wrongWordStrings = sessionWrongWords.map(w => w.word).join(", ");
+    const askedWordStrings = sessionAskedWords.map(w => w.word).join(", ");
+    const currentJson = JSON.stringify(fullVocabulary, null, 2);
+
+    const prompt = `以下の英語学習のテスト結果に基づいて、全体の単語帳（JSON）の \`importance\`（重要度）を更新してください。
+
+【ルール】
+1. 以下の「間違えた単語リスト」に含まれる単語は、\`importance\` を +2 してください。
+2. 今回「出題された単語」のうち、間違えなかった単語（一発正解）は、\`importance\` を -1 してください（ただし最低値は 1 とします）。
+3. 今回出題されていない単語の \`importance\` は変更しないでください。
+4. 出力は、更新されたJSONデータのみをコードブロックで出力してください。
+
+【テスト結果】
+- セッション出題数: ${sessionTotal}
+- 正答率: ${accuracy}%
+- 間違えた単語リスト: [${wrongWordStrings}]
+- 出題された単語リスト: [${askedWordStrings}]
+
+【現在のJSONデータ全体】
+${currentJson}`;
+
+    aiPromptTextareaEl.value = prompt;
+  }
+
+  copyPromptBtn.addEventListener('click', () => {
+    aiPromptTextareaEl.select();
+    document.execCommand('copy');
+    const originalText = copyPromptBtn.textContent;
+    copyPromptBtn.textContent = "コピーしました！";
+    setTimeout(() => { copyPromptBtn.textContent = originalText; }, 2000);
+  });
+
+  replayBtn.addEventListener('click', () => {
+    initApp(false); // 次の30単語のプールへ切り替え
+  });
+
+  submitBtn.addEventListener('click', () => {
+    if (isProcessing) return;
+    checkAnswer(enInputEl.value);
+  });
+
+  enInputEl.addEventListener('keypress', (e) => {
+    if (e.key === 'Enter') {
+      if (isProcessing) return;
+      checkAnswer(enInputEl.value);
+    }
+  });
+
+  // 任意の単語数のJSONファイルを読み込む処理
+  fileInputEl.addEventListener('change', (event) => {
+    const file = event.target.files[0];
+    if (!file) return;
+
+    const reader = new FileReader();
+    reader.onload = function(e) {
+      try {
+        const data = JSON.parse(e.target.result);
+        
+        if (!Array.isArray(data) || data.length === 0) {
+          throw new Error("配列形式で記述してください。");
+        }
+
+        const validData = data.filter(item => item.word && item.meaning);
+        if (validData.length === 0) {
+          throw new Error("「word」と「meaning」を持つデータが見つかりません。");
+        }
+
+        fullVocabulary = validData;
+        fileFeedbackEl.textContent = `${fullVocabulary.length}単語を読み込みました！`;
+        fileFeedbackEl.className = 'feedback correct';
+        
+        initApp(true); // 新規ファイルなのでインデックスを先頭にリセット
+
+      } catch (error) {
+        fileFeedbackEl.textContent = `エラー: ${error.message}`;
+        fileFeedbackEl.className = 'feedback incorrect';
+      }
+      
+      fileInputEl.value = '';
+    };
+    reader.onerror = function() {
+      fileFeedbackEl.textContent = "ファイルの読み込みに失敗しました。";
+      fileFeedbackEl.className = 'feedback incorrect';
+    };
+    
+    reader.readAsText(file);
+  });
+
+  const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+  
+  if (SpeechRecognition) {
+    const recognition = new SpeechRecognition();
+    recognition.lang = 'en-US';
+    recognition.interimResults = false;
+    recognition.maxAlternatives = 1;
+
+    speakBtn.addEventListener('click', () => {
+      if (isProcessing || isListening) return;
+      isListening = true;
+      try {
+        recognition.start();
+        speakBtn.textContent = "聞き取り中... 🎙️";
+        speakBtn.classList.replace('btn-gray', 'primary');
+        speakBtn.disabled = true;
+        enInputEnDisabled = true;
+        enInputEl.disabled = true;
+        submitBtn.disabled = true;
+      } catch (e) {
+        console.error("音声認識の起動に失敗しました:", e);
+        isListening = false;
+      }
+    });
+
+    recognition.addEventListener('result', (event) => {
+      const transcript = event.results[0][0].transcript;
+      enInputEl.value = transcript;
+      checkAnswer(transcript);
+    });
+
+    recognition.addEventListener('end', () => {
+      isListening = false;
+      speakBtn.textContent = "発音する 🎤";
+      speakBtn.classList.replace('primary', 'btn-gray');
+      
+      if (!isProcessing) {
+        speakBtn.disabled = false;
+        enInputEl.disabled = false;
+        submitBtn.disabled = false;
+        enInputEl.focus();
+      }
+    });
+
+    recognition.addEventListener('error', (event) => {
+      if (event.error !== 'no-speech') {
+        feedbackEl.textContent = `音声認識エラー: ${event.error}`;
+        feedbackEl.className = 'feedback incorrect';
+      }
+    });
+    
+  } else {
+    speakBtn.disabled = true;
+    speakBtn.textContent = "音声入力非対応 ❌";
+  }
+
+  function toggleTheme() {
+    const htmlEl = document.documentElement;
+    htmlEl.dataset.theme = htmlEl.dataset.theme === 'light' ? 'dark' : 'light';
+  }
+
+  // 初期起動
+  initApp(true);
+</script>
+</body>
+</html>
