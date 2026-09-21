@@ -946,10 +946,16 @@
       setTimeout(() => { showAnswerScreen(false); }, 600);
     } else {
       input.value = "";
-      const hintSource = getQuestionText(currentWordData, sessionQuizMode);
-      const hintChar = String(hintSource || "").charAt(0);
-      document.getElementById('hint-display').textContent =
-        `💡 ヒント: 頭文字は「${hintChar}」`;
+      
+      // 英語から日本語を当てるモード(word_to_meaning)の場合はヒントを出さない
+      if (sessionQuizMode === "word_to_meaning") {
+        document.getElementById('hint-display').textContent = "";
+      } else {
+        const hintSource = getQuestionText(currentWordData, sessionQuizMode);
+        const hintChar = String(hintSource || "").charAt(0);
+        document.getElementById('hint-display').textContent =
+          `💡 ヒント: 頭文字は「${hintChar}」`;
+      }
     }
   }
 
