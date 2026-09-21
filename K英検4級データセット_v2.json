@@ -7073,7 +7073,7 @@
       ]
     },
     "importance": 5
-  }
+  },
 {
   "meaning_to_word": {
     "question": "それぞれの",
@@ -7095,7 +7095,7 @@
     ]
   },
   "importance": 5
-}
+},
 
 {
   "meaning_to_word": {
@@ -7116,7 +7116,7 @@
     ]
   },
   "importance": 5
-}
+},
 {
   "meaning_to_word": {
     "question": "お腹いっぱい",
@@ -7139,7 +7139,7 @@
     ]
   },
   "importance": 5
-}
+},
 {
   "meaning_to_word": {
     "question": "もう一つの",
@@ -7162,14 +7162,465 @@
     ]
   },
   "importance": 5
-}
+},
+{
+  "meaning_to_word": {
+    "question": "下へ",
+    "answers": [
+      "down"
+    ]
+  },
+  "word_to_meaning": {
+    "question": "down",
+    "answers": [
+      "下へ",
+      "したへ",
+      "下に",
+      "したに",
+      "下方へ",
+      "かほうへ",
+      "下向きの",
+      "したむきの",
+      "落ち込んで",
+      "おちこんで"
+    ]
+  },
+  "importance": 5
+},
+{
+  "meaning_to_word": {
+    "question": "反対して",
+    "answers": [
+      "against"
+    ]
+  },
+  "word_to_meaning": {
+    "question": "against",
+    "answers": [
+      "反対して",
+      "はんたいして",
+      "〜に反対して",
+            "〜に反して",
+      "〜にはんたいして",
+      "〜に対して",
+      "〜にたいして",
+      "〜に逆らって",
+      "〜にさからって",
+      "〜に接して",
+      "〜にせっして"
+    ]
+  },
+  "importance": 5
+},
+{
+  "meaning_to_word": {
+    "question": "〜の間",
+    "answers": [
+      "during"
+    ]
+  },
+  "word_to_meaning": {
+    "question": "during",
+    "answers": [
+      "〜の間",
+      "〜のあいだ",
+      "〜の間に",
+      "〜のまに",
+      "〜の間中",
+      "〜のあいだじゅう"
+    ]
+  },
+  "importance": 5
+},
+ {
+  "meaning_to_word": {
+    "question": "忘れた",
+    "answers": [
+      "forgot"
+    ]
+  },
+  "word_to_meaning": {
+    "question": "forgot",
+    "answers": [
+      "忘れた",
+      "わすれた",
+      "忘れていた",
+      "わすれていた"
+    ]
+  },
+  "importance": 5
+},
+  {
+  "meaning_to_word": {
+    "question": "娘",
+    "answers": [
+      "daughter"
+    ]
+  },
+  "word_to_meaning": {
+    "question": "daughter",
+    "answers": [
+      "娘",
+      "むすめ"
+    ]
+  },
+  "importance": 5
+},
 
-
-
-
-
-
-  
-
+{
+  "meaning_to_word": {
+    "question": "窓",
+    "answers": [
+      "window"
+    ]
+  },
+  "word_to_meaning": {
+    "question": "window",
+    "answers": [
+      "窓",
+      "まど"
+    ]
+  },
+  "importance": 5
+},
+{
+  "meaning_to_word": {
+    "question": "生まれた",
+    "answers": [
+      "born"
+    ]
+  },
+  "word_to_meaning": {
+    "question": "born",
+    "answers": [
+      "生まれた",
+      "うまれた",
+      "産まれた",
+      "うまれた"
+    ]
+  },
+  "importance": 5
+},
+{
+  "meaning_to_word": {
+    "question": "私は〜で生まれた",
+    "answers": [
+      "I was born in ~",
+            "I was born in"
+            "I was born in ～"
+    ]
+  },
+  "word_to_meaning": {
+    "question": "I was born in ~",
+    "answers": [
+      "私は〜で生まれた",
+      "わたしは〜で生まれた",
+      "私は〜生まれです",
+      "わたしは〜うまれです",
+      "私は〜で生まれました",
+      "わたしは〜でうまれました"
+            "〜で生まれた",
+            "私は~で生まれた",
+      "わたしは~で生まれた",
+      "私は~生まれです",
+      "わたしは~うまれです",
+      "私は~で生まれました",
+      "わたしは~でうまれました"
+            "~で生まれた",
+    ]
+  },
+  "importance": 5
+},
+{
+  "meaning_to_word": {
+    "question": "育った",
+    "answers": [
+      "grew up"
+    ]
+  },
+  "word_to_meaning": {
+    "question": "grew up",
+    "answers": [
+      "育った",
+      "そだった",
+      "成長した",
+      "せいちょうした",
+      "大きくなった",
+      "おおきくなった"
+    ]
+  },
+  "importance": 5
+},
+  {
+  "meaning_to_word": {
+    "question": "成長する",
+    "answers": [
+      "grow up"
+    ]
+  },
+  "word_to_meaning": {
+    "question": "grow up",
+    "answers": [
+      "成長する",
+      "せいちょうする",
+      "大人になる",
+      "おとなになる",
+      "育つ",
+      "そだつ"
+    ]
+  },
+  "importance": 5
+},
+  {
+    "meaning_to_word": {
+      "question": "秋（季節）",
+      "answers": [
+        "fall"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "fall",
+      "answers": [
+        "秋",
+        "あき",
+        "秋季",
+        "しゅうき"
+      ]
+    },
+    "importance": 5
+  },
+  {
+  "meaning_to_word": {
+    "question": "いとこ",
+    "answers": [
+      "cousin"
+    ]
+  },
+  "word_to_meaning": {
+    "question": "cousin",
+    "answers": [
+      "いとこ",
+      "いとこ",
+      "従兄弟",
+      "いとこ",
+      "従姉妹",
+      "いとこ"
+    ]
+  },
+  "importance": 5
+},
+  {
+  "meaning_to_word": {
+    "question": "12月",
+    "answers": [
+      "December"
+    ]
+  },
+  "word_to_meaning": {
+    "question": "December",
+    "answers": [
+      "12月",
+            "十二月",
+      "じゅうにがつ"
+    ]
+  },
+  "importance": 5
+},
+  {
+  "meaning_to_word": {
+    "question": "AもBも両方",
+    "answers": [
+      "Both A and B",
+      "both a and b"
+    ]
+  },
+  "word_to_meaning": {
+    "question": "Both A and B",
+    "answers": [
+      "AもBも両方",
+      "AもBも両方とも",
+      "AとBの両方",
+      "AおよびB"
+    ]
+  },
+  "importance": 4
+},
+  {
+  "meaning_to_word": {
+    "question": "ますます多くの",
+    "answers": [
+      "more and more",
+      "More and more"
+    ]
+  },
+  "word_to_meaning": {
+    "question": "more and more",
+    "answers": [
+      "ますます多くの",
+      "ますます","だんだん",
+      "だんだん",
+            "なお一層",
+      "より一層"
+    ]
+  },
+  "importance": 4
+},
+  {
+  "meaning_to_word": {
+    "question": "今じゃない",
+    "answers": [
+      "not now",
+      "Not now"
+    ]
+  },
+  "word_to_meaning": {
+    "question": "not now",
+    "answers": [
+      "今じゃない",
+      "いまじゃない",
+      "今ではない",
+      "今はやめておく",
+      "今はダメ",
+      "今は無理"
+    ]
+  },
+  "importance": 3
+},
+  {
+    "meaning_to_word": {
+      "question": "いくら",
+      "answers": [
+        "How much",
+        "how much"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "How much",
+      "answers": [
+        "いくら",
+        "どれくらい",
+        "おいくら",
+        "いくらですか"
+      ]
+    },
+    "importance": 4
+  },{
+  "meaning_to_word": {
+    "question": "時間",
+    "answers": [
+      "hour",
+      "Hour"
+    ]
+  },
+  "word_to_meaning": {
+    "question": "hour",
+    "answers": [
+      "時間",
+      "じかん",
+      "1時間",
+      "いちじかん"
+    ]
+  },
+  "importance": 4
+},
+  {
+  "meaning_to_word": {
+    "question": "〜前",
+    "answers": [
+      "ago",
+      "Ago"
+    ]
+  },
+  "word_to_meaning": {
+    "question": "ago",
+    "answers": [
+      "〜前",
+      "~前",
+      "前",
+      "まえ",
+      "前に",
+      "まえに"
+    ]
+  },
+  "importance": 4
+},{
+  "meaning_to_word": {
+    "question": "皿",
+    "answers": [
+      "dish"
+    ]
+  },
+  "word_to_meaning": {
+    "question": "dish",
+    "answers": [
+      "皿",
+      "さら",
+      "料理",
+      "りょうり",
+      "一品",
+      "いっぴん",
+      "食器",
+      "しょっき"
+    ]
+  },
+  "importance": 4
+},{
+    "meaning_to_word": {
+      "question": "遅い",
+      "answers": [
+        "late",
+        "Late"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "late",
+      "answers": [
+        "遅い",
+        "おそい",
+        "遅れて",
+        "おくれて",
+        "遅刻して"
+      ]
+    },
+    "importance": 4
+  },{
+    "meaning_to_word": {
+      "question": "おば",
+      "answers": [
+        "aunt"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "aunt",
+      "answers": [
+        "おば",
+                "おばさん",
+        "叔母",
+        "伯母",
+                "叔母さん",
+        "伯母さん"
+      ]
+    },
+    "importance": 3
+  },{
+    "meaning_to_word": {
+      "question": "おじ",
+      "answers": [
+        "uncle"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "uncle",
+      "answers": [
+        "おじ",
+        "叔父",
+        "伯父",        
+        "おじさん",
+        "叔父さん",
+        "伯父さん"
+      ]
+    },
+    "importance": 3
+  }
   
 ]
