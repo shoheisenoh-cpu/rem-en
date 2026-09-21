@@ -1,0 +1,7077 @@
+[
+  {
+    "meaning_to_word": {
+      "question": "受け入れる",
+      "answers": [
+        "accept"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "accept",
+      "answers": [
+        "受け入れる",
+        "うけいれる",
+        "受けいれる",
+        "受入れる"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "～に到着する",
+      "answers": [
+        "arrive at",
+        "arrive at ~",
+        "arrive at ～"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "arrive at",
+      "answers": [
+        "～に到着する",
+        "〜に到着する",
+        "~に到着する",
+        "に到着する",
+        "～に着く",
+        "〜に着く",
+        "~に着く",
+        "に着く",
+        "到着する",
+        "着く",
+        "つく",
+        "とうちゃくする"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "借りる",
+      "answers": [
+        "borrow"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "borrow",
+      "answers": [
+        "借りる",
+        "かりる"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "持ってくる",
+      "answers": [
+        "bring"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "bring",
+      "answers": [
+        "持ってくる",
+        "もってくる",
+        "持てくる"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "建てる",
+      "answers": [
+        "build"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "build",
+      "answers": [
+        "建てる",
+        "たてる",
+        "建築する",
+        "けんちくする"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "運ぶ、持ち歩く",
+      "answers": [
+        "carry"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "carry",
+      "answers": [
+        "運ぶ、持ち歩く",
+        "運ぶ",
+        "持ち歩く",
+        "はこぶ",
+        "もちあるく"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "捕まえる、乗る",
+      "answers": [
+        "catch"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "catch",
+      "answers": [
+        "捕まえる、乗る",
+        "捕まえる",
+        "乗る",
+        "つかまえる",
+        "のる"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "選ぶ",
+      "answers": [
+        "choose"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "choose",
+      "answers": [
+        "選ぶ",
+        "えらぶ",
+        "選択する",
+        "せんたくする"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "閉める",
+      "answers": [
+        "close"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "close",
+      "answers": [
+        "閉める",
+        "閉じる",
+        "しめる",
+        "とじる"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "集める",
+      "answers": [
+        "collect"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "collect",
+      "answers": [
+        "集める",
+        "あつめる",
+        "収集する",
+        "しゅうしゅうする"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "決める",
+      "answers": [
+        "decide"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "decide",
+      "answers": [
+        "決める",
+        "きめる",
+        "決定する",
+        "けっていする"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "説明する",
+      "answers": [
+        "describe"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "describe",
+      "answers": [
+        "説明する",
+        "せつめいする",
+        "描写する"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "楽しむ",
+      "answers": [
+        "enjoy"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "enjoy",
+      "answers": [
+        "楽しむ",
+        "たのしむ"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "入る",
+      "answers": [
+        "enter"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "enter",
+      "answers": [
+        "入る",
+        "はいる",
+        "入力する",
+        "にゅうりょくする",
+        "参加する"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "終える",
+      "answers": [
+        "finish"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "finish",
+      "answers": [
+        "終える",
+        "終わる",
+        "おえる",
+        "おわる",
+        "終了する",
+        "しゅうりょうする"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "忘れる",
+      "answers": [
+        "forget"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "forget",
+      "answers": [
+        "忘れる",
+        "わすれる"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "起こる",
+      "answers": [
+        "happen"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "happen",
+      "answers": [
+        "起こる",
+        "おこる",
+        "起きる",
+        "おきる",
+        "発生する",
+        "はっせいする"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "招待する",
+      "answers": [
+        "invite"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "invite",
+      "answers": [
+        "招待する",
+        "招く",
+        "しょうたいする",
+        "まねく"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "参加する",
+      "answers": [
+        "join"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "join",
+      "answers": [
+        "参加する",
+        "さんかする",
+        "加わる",
+        "くわわる",
+        "入る"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "去る、置いていく",
+      "answers": [
+        "leave"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "leave",
+      "answers": [
+        "去る、置いていく",
+        "去る",
+        "置いていく",
+        "さる",
+        "おいていく",
+        "出発する",
+        "残す",
+        "しゅっぱつする",
+        "のこす"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "貸す",
+      "answers": [
+        "lend"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "lend",
+      "answers": [
+        "貸す",
+        "かす"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "なくす、負ける",
+      "answers": [
+        "lose"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "lose",
+      "answers": [
+        "なくす、負ける",
+        "なくす",
+        "負ける",
+        "失う",
+        "まける",
+        "うしなう",
+        "落とす"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "意味する",
+      "answers": [
+        "mean"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "mean",
+      "answers": [
+        "意味する",
+        "いみする"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "乗り遅れる、恋しく思う",
+      "answers": [
+        "miss"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "miss",
+      "answers": [
+        "乗り遅れる、恋しく思う",
+        "乗り遅れる",
+        "恋しく思う",
+        "のりおくれる",
+        "こいしくおもう",
+        "逃す",
+        "のがす"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "練習する",
+      "answers": [
+        "practice"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "practice",
+      "answers": [
+        "練習する",
+        "れんしゅうする"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "覚えている、思い出す",
+      "answers": [
+        "remember"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "remember",
+      "answers": [
+        "覚えている、思い出す",
+        "覚えている",
+        "思い出す",
+        "おぼえている",
+        "おもいだす",
+        "記憶している"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "戻る、返す",
+      "answers": [
+        "return"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "return",
+      "answers": [
+        "戻る、返す",
+        "戻る",
+        "返す",
+        "もどる",
+        "かえす",
+        "帰る"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "救う、蓄える",
+      "answers": [
+        "save"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "save",
+      "answers": [
+        "救う、蓄える",
+        "救う",
+        "蓄える",
+        "すくう",
+        "たくわえる",
+        "貯める",
+        "ためる",
+        "保存する",
+        "ほぞんする"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "（時間・お金を）使う",
+      "answers": [
+        "spend"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "spend",
+      "answers": [
+        "（時間・お金を）使う",
+        "使う",
+        "つかう",
+        "費やす",
+        "ついやす",
+        "過ごす",
+        "すごす"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "滞在する",
+      "answers": [
+        "stay"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "stay",
+      "answers": [
+        "滞在する",
+        "たいざいする",
+        "泊まる",
+        "とまる",
+        "とどまる"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "教える",
+      "answers": [
+        "teach"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "teach",
+      "answers": [
+        "教える",
+        "おしえる"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "旅行する",
+      "answers": [
+        "travel"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "travel",
+      "answers": [
+        "旅行する",
+        "りょこうする",
+        "旅する",
+        "たびする",
+        "旅行に行く"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "理解する",
+      "answers": [
+        "understand"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "understand",
+      "answers": [
+        "理解する",
+        "りかいする",
+        "わかる",
+        "分かる",
+        "解る"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "訪れる",
+      "answers": [
+        "visit"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "visit",
+      "answers": [
+        "訪れる",
+        "おとずれる",
+        "訪問する",
+        "ほうもんする",
+        "行く"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "心配する",
+      "answers": [
+        "worry"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "worry",
+      "answers": [
+        "心配する",
+        "しんぱいする",
+        "悩む",
+        "なやむ"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "言う",
+      "answers": [
+        "say"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "say",
+      "answers": [
+        "言う",
+        "いう"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "伝える",
+      "answers": [
+        "tell"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "tell",
+      "answers": [
+        "伝える",
+        "つたえる",
+        "教える",
+        "おしえる",
+        "言う",
+        "話す"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "見る",
+      "answers": [
+        "look"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "look",
+      "answers": [
+        "見る",
+        "みる"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "見える、見る",
+      "answers": [
+        "see"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "see",
+      "answers": [
+        "見える、見る",
+        "見える",
+        "見る",
+        "みえる",
+        "みる",
+        "会う",
+        "あう",
+        "わかる"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "注意して見る",
+      "answers": [
+        "watch"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "watch",
+      "answers": [
+        "注意して見る",
+        "ちゅういしてみる",
+        "見る",
+        "みる",
+        "観察する",
+        "かんさつする"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "聞こえる",
+      "answers": [
+        "hear"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "hear",
+      "answers": [
+        "聞こえる",
+        "きこえる",
+        "聞く",
+        "きく"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "注意して聞く",
+      "answers": [
+        "listen"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "listen",
+      "answers": [
+        "注意して聞く",
+        "ちゅういしてきく",
+        "聞く",
+        "きく",
+        "耳を傾ける"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "取る、持っていく",
+      "answers": [
+        "take"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "take",
+      "answers": [
+        "取る、持っていく",
+        "取る",
+        "持っていく",
+        "とる",
+        "もっていく",
+        "乗る",
+        "連れて行く"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "行く",
+      "answers": [
+        "go"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "go",
+      "answers": [
+        "行く",
+        "いく"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "来る",
+      "answers": [
+        "come"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "come",
+      "answers": [
+        "来る",
+        "くる"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "得る、着く",
+      "answers": [
+        "get"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "get",
+      "answers": [
+        "得る、着く",
+        "得る",
+        "着く",
+        "える",
+        "つく",
+        "手に入れる",
+        "てにいれる",
+        "なる"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "持つ、食べる",
+      "answers": [
+        "have"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "have",
+      "answers": [
+        "持つ、食べる",
+        "持つ",
+        "食べる",
+        "もつ",
+        "たべる",
+        "ある",
+        "いる",
+        "飼う"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "欲しい、～したい",
+      "answers": [
+        "want"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "want",
+      "answers": [
+        "欲しい、～したい",
+        "欲しい",
+        "～したい",
+        "ほしい",
+        "〜したい",
+        "~したい",
+        "したい"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "必要とする",
+      "answers": [
+        "need"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "need",
+      "answers": [
+        "必要とする",
+        "ひつようとする",
+        "必要だ",
+        "ひつようだ",
+        "いる"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "試す、～しようとする",
+      "answers": [
+        "try"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "try",
+      "answers": [
+        "試す、～しようとする",
+        "試す",
+        "～しようとする",
+        "ためす",
+        "〜しようとする",
+        "~しようとする",
+        "挑戦する",
+        "ちょうせんする"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "話す",
+      "answers": [
+        "speak"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "speak",
+      "answers": [
+        "話す",
+        "はなす"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "読む",
+      "answers": [
+        "read"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "read",
+      "answers": [
+        "読む",
+        "よむ"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "書く",
+      "answers": [
+        "write"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "write",
+      "answers": [
+        "書く",
+        "かく"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "勉強する",
+      "answers": [
+        "study"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "study",
+      "answers": [
+        "勉強する",
+        "べんきょうする",
+        "学ぶ",
+        "まなぶ",
+        "研究する"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "する、遊ぶ",
+      "answers": [
+        "play"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "play",
+      "answers": [
+        "する、遊ぶ",
+        "する",
+        "遊ぶ",
+        "あそぶ",
+        "演奏する",
+        "えんそうする",
+        "競技する"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "作る",
+      "answers": [
+        "make"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "make",
+      "answers": [
+        "作る",
+        "つくる",
+        "作成する"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "使う",
+      "answers": [
+        "use"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "use",
+      "answers": [
+        "使う",
+        "つかう",
+        "使用する",
+        "しようする"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "怖がって",
+      "answers": [
+        "afraid"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "afraid",
+      "answers": [
+        "怖がって",
+        "こわがって",
+        "怖い",
+        "こわい",
+        "恐れて",
+        "おそれて"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "怒って",
+      "answers": [
+        "angry"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "angry",
+      "answers": [
+        "怒って",
+        "おこって",
+        "怒る",
+        "おこる",
+        "怒っている",
+        "おこっている"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "美しい",
+      "answers": [
+        "beautiful"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "beautiful",
+      "answers": [
+        "美しい",
+        "うつくしい",
+        "きれいな",
+        "綺麗な",
+        "美しいな"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "注意深い",
+      "answers": [
+        "careful"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "careful",
+      "answers": [
+        "注意深い",
+        "ちゅういぶかい",
+        "気をつけて",
+        "きをつけて",
+        "慎重な",
+        "しんちょうな"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "難しい",
+      "answers": [
+        "difficult"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "difficult",
+      "answers": [
+        "難しい",
+        "むずかしい",
+        "困難な",
+        "こんなんな"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "簡単な",
+      "answers": [
+        "easy"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "easy",
+      "answers": [
+        "簡単な",
+        "かんたんな",
+        "易しい",
+        "やさしい",
+        "容易な"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "わくわくした",
+      "answers": [
+        "excited"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "excited",
+      "answers": [
+        "わくわくした",
+        "わくわくして",
+        "興奮した",
+        "こうふんした",
+        "興奮して"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "有名な",
+      "answers": [
+        "famous"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "famous",
+      "answers": [
+        "有名な",
+        "ゆうめいな",
+        "名高い"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "親しみやすい",
+      "answers": [
+        "friendly"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "friendly",
+      "answers": [
+        "親しみやすい",
+        "したしみやすい",
+        "フレンドリーな",
+        "ふれんどりーな",
+        "友好的な",
+        "ゆうこうてきな",
+        "親切な"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "重要な",
+      "answers": [
+        "important"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "important",
+      "answers": [
+        "重要な",
+        "じゅうような",
+        "大切な",
+        "たいせつな",
+        "大事な",
+        "だいじな"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "興味を持っている",
+      "answers": [
+        "interested"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "interested",
+      "answers": [
+        "興味を持っている",
+        "きょうみをもっている",
+        "興味がある",
+        "きょうみがある",
+        "関心がある"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "親切な",
+      "answers": [
+        "kind"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "kind",
+      "answers": [
+        "親切な",
+        "しんせつな",
+        "優しい",
+        "やさしい",
+        "種類",
+        "しゅるい"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "人気のある",
+      "answers": [
+        "popular"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "popular",
+      "answers": [
+        "人気のある",
+        "にんきのある",
+        "人気な",
+        "にんきな",
+        "流行の"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "静かな",
+      "answers": [
+        "quiet"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "quiet",
+      "answers": [
+        "静かな",
+        "しずかな",
+        "無口な"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "準備ができた",
+      "answers": [
+        "ready"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "ready",
+      "answers": [
+        "準備ができた",
+        "じゅんびができた",
+        "準備ができている",
+        "用意ができた",
+        "よういができた",
+        "用意ができている"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "病気の",
+      "answers": [
+        "sick"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "sick",
+      "answers": [
+        "病気の",
+        "びょうきの",
+        "病気",
+        "びょうき",
+        "具合が悪い",
+        "ぐあいがわるい",
+        "気分が悪い"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "奇妙な",
+      "answers": [
+        "strange"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "strange",
+      "answers": [
+        "奇妙な",
+        "きみょうな",
+        "変な",
+        "へんな",
+        "おかしい",
+        "見知らぬ"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "驚いた",
+      "answers": [
+        "surprised"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "surprised",
+      "answers": [
+        "驚いた",
+        "おどろいた",
+        "びっくりした",
+        "驚いて"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "疲れた",
+      "answers": [
+        "tired"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "tired",
+      "answers": [
+        "疲れた",
+        "つかれた",
+        "飽きた"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "役に立つ",
+      "answers": [
+        "useful"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "useful",
+      "answers": [
+        "役に立つ",
+        "やくにたつ",
+        "便利な",
+        "べんりな",
+        "有用な"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "素晴らしい",
+      "answers": [
+        "wonderful"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "wonderful",
+      "answers": [
+        "素晴らしい",
+        "すばらしい",
+        "素敵な",
+        "すてきな",
+        "素晴らしいな"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "面白い、興味深い",
+      "answers": [
+        "interesting"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "interesting",
+      "answers": [
+        "面白い、興味深い",
+        "面白い",
+        "おもしろい",
+        "興味深い",
+        "きょうみぶかい"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "違った",
+      "answers": [
+        "different"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "different",
+      "answers": [
+        "違った",
+        "ちがった",
+        "違う",
+        "ちがう",
+        "異なる",
+        "ことなる",
+        "別の"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "外国の",
+      "answers": [
+        "foreign"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "foreign",
+      "answers": [
+        "外国の",
+        "がいこくの",
+        "海外の",
+        "かいがいの",
+        "異国の"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "暑い、熱い",
+      "answers": [
+        "hot"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "hot",
+      "answers": [
+        "暑い、熱い",
+        "暑い",
+        "あつい",
+        "熱い",
+        "辛い",
+        "からい"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "暖かい",
+      "answers": [
+        "warm"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "warm",
+      "answers": [
+        "暖かい",
+        "あたたかい",
+        "温かい",
+        "温暖な"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "涼しい、かっこいい",
+      "answers": [
+        "cool"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "cool",
+      "answers": [
+        "涼しい、かっこいい",
+        "涼しい",
+        "すずしい",
+        "かっこいい",
+        "カッコいい",
+        "クールな",
+        "冷たい"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "寒い、冷たい",
+      "answers": [
+        "cold"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "cold",
+      "answers": [
+        "寒い、冷たい",
+        "寒い",
+        "さむい",
+        "冷たい",
+        "つめたい",
+        "風邪"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "晴れた",
+      "answers": [
+        "sunny"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "sunny",
+      "answers": [
+        "晴れた",
+        "はれた",
+        "晴れの",
+        "はれの",
+        "晴れ",
+        "はれ",
+        "よく晴れた"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "曇った",
+      "answers": [
+        "cloudy"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "cloudy",
+      "answers": [
+        "曇った",
+        "くもった",
+        "曇りの",
+        "くもりの",
+        "曇り",
+        "くもり"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "雨の",
+      "answers": [
+        "rainy"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "rainy",
+      "answers": [
+        "雨の",
+        "あめの",
+        "雨降りの",
+        "あめふりの",
+        "雨が多い"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "雪の",
+      "answers": [
+        "snowy"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "snowy",
+      "answers": [
+        "雪の",
+        "ゆきの",
+        "雪降りの",
+        "ゆきふりの",
+        "雪が多い"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "風の強い",
+      "answers": [
+        "windy"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "windy",
+      "answers": [
+        "風の強い",
+        "かぜのつよい",
+        "風が強い",
+        "かぜがつよい",
+        "風のある"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "人",
+      "answers": [
+        "person"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "person",
+      "answers": [
+        "人",
+        "ひと",
+        "人物",
+        "じんぶつ",
+        "人間"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "生徒",
+      "answers": [
+        "student"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "student",
+      "answers": [
+        "生徒",
+        "せいと",
+        "学生",
+        "がくせい"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "先生",
+      "answers": [
+        "teacher"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "teacher",
+      "answers": [
+        "先生",
+        "せんせい",
+        "教師",
+        "きょうし",
+        "教員"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "クラスメート",
+      "answers": [
+        "classmate"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "classmate",
+      "answers": [
+        "クラスメート",
+        "くらすめーと",
+        "クラスメイト",
+        "くらすめいと",
+        "同級生",
+        "どうきゅうせい",
+        "クラスの友達"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "メンバー",
+      "answers": [
+        "member"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "member",
+      "answers": [
+        "メンバー",
+        "めんばー",
+        "一員",
+        "いちいん",
+        "会員",
+        "かいいん"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "クラス、授業",
+      "answers": [
+        "class"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "class",
+      "answers": [
+        "クラス、授業",
+        "クラス",
+        "くらす",
+        "授業",
+        "じゅぎょう",
+        "学級"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "教室",
+      "answers": [
+        "classroom"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "classroom",
+      "answers": [
+        "教室",
+        "きょうしつ"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "授業",
+      "answers": [
+        "lesson"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "lesson",
+      "answers": [
+        "授業",
+        "じゅぎょう",
+        "レッスン",
+        "れっすん",
+        "教訓"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "教科",
+      "answers": [
+        "subject"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "subject",
+      "answers": [
+        "教科",
+        "きょうか",
+        "科目",
+        "かもく",
+        "主題",
+        "しゅだい",
+        "主語"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "テスト",
+      "answers": [
+        "test"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "test",
+      "answers": [
+        "テスト",
+        "てすと",
+        "試験",
+        "しけん",
+        "検査"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "試験",
+      "answers": [
+        "exam"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "exam",
+      "answers": [
+        "試験",
+        "しけん",
+        "テスト",
+        "てすと",
+        "検査"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "宿題",
+      "answers": [
+        "homework"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "homework",
+      "answers": [
+        "宿題",
+        "しゅくだい"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "教科書",
+      "answers": [
+        "textbook"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "textbook",
+      "answers": [
+        "教科書",
+        "きょうかしょ",
+        "テキスト",
+        "てきすと"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "辞書",
+      "answers": [
+        "dictionary"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "dictionary",
+      "answers": [
+        "辞書",
+        "じしょ",
+        "辞典",
+        "じてん"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "ノート",
+      "answers": [
+        "notebook"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "notebook",
+      "answers": [
+        "ノート",
+        "のーと",
+        "手帳",
+        "てちょう"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "質問、問題",
+      "answers": [
+        "question"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "question",
+      "answers": [
+        "質問、問題",
+        "質問",
+        "しつもん",
+        "問題",
+        "もんだい",
+        "疑問"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "答え",
+      "answers": [
+        "answer"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "answer",
+      "answers": [
+        "答え",
+        "こたえ",
+        "回答",
+        "かいとう",
+        "返事",
+        "へんじ",
+        "答える"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "成績、学年",
+      "answers": [
+        "grade"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "grade",
+      "answers": [
+        "成績、学年",
+        "成績",
+        "せいせき",
+        "学年",
+        "がくねん",
+        "等級"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "部活動",
+      "answers": [
+        "club"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "club",
+      "answers": [
+        "部活動",
+        "ぶかつどう",
+        "部活",
+        "ぶかつ",
+        "クラブ",
+        "くらぶ",
+        "部",
+        "ぶ"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "チーム",
+      "answers": [
+        "team"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "team",
+      "answers": [
+        "チーム",
+        "ちーむ"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "助言",
+      "answers": [
+        "advice"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "advice",
+      "answers": [
+        "助言",
+        "じょげん",
+        "アドバイス",
+        "あどばいす",
+        "忠告",
+        "ちゅうこく"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "情報",
+      "answers": [
+        "information"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "information",
+      "answers": [
+        "情報",
+        "じょうほう",
+        "案内",
+        "お知らせ"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "考え、アイデア",
+      "answers": [
+        "idea"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "idea",
+      "answers": [
+        "考え、アイデア",
+        "考え",
+        "かんがえ",
+        "アイデア",
+        "あいであ",
+        "アイディア",
+        "あいでぃあ",
+        "思いつき"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "例",
+      "answers": [
+        "example"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "example",
+      "answers": [
+        "例",
+        "れい",
+        "実例",
+        "じつれい",
+        "手本"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "問題",
+      "answers": [
+        "problem"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "problem",
+      "answers": [
+        "問題",
+        "もんだい",
+        "課題",
+        "かだい",
+        "厄介なこと"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "計画",
+      "answers": [
+        "plan"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "plan",
+      "answers": [
+        "計画",
+        "けいかく",
+        "予定",
+        "よてい",
+        "プラン",
+        "ぷらん",
+        "計画する"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "行事、出来事",
+      "answers": [
+        "event"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "event",
+      "answers": [
+        "行事、出来事",
+        "行事",
+        "ぎょうじ",
+        "出来事",
+        "できごと",
+        "イベント",
+        "いべんと",
+        "種目"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "パーティー",
+      "answers": [
+        "party"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "party",
+      "answers": [
+        "パーティー",
+        "ぱーてぃー",
+        "パーティ",
+        "ぱーてぃ",
+        "政党",
+        "一行"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "休日",
+      "answers": [
+        "holiday"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "holiday",
+      "answers": [
+        "休日",
+        "きゅうじつ",
+        "祝日",
+        "しゅくじつ",
+        "休み",
+        "やすみ",
+        "休暇"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "休暇",
+      "answers": [
+        "vacation"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "vacation",
+      "answers": [
+        "休暇",
+        "きゅうか",
+        "休み",
+        "やすみ",
+        "バケーション",
+        "ばけーしょん"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "趣味",
+      "answers": [
+        "hobby"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "hobby",
+      "answers": [
+        "趣味",
+        "しゅみ"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "未来",
+      "answers": [
+        "future"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "future",
+      "answers": [
+        "未来",
+        "みらい",
+        "将来",
+        "しょうらい",
+        "未来の"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "言語",
+      "answers": [
+        "language"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "language",
+      "answers": [
+        "言語",
+        "げんご",
+        "言葉",
+        "ことば",
+        "国語"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "国",
+      "answers": [
+        "country"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "country",
+      "answers": [
+        "国",
+        "くに",
+        "国家",
+        "こっか",
+        "田舎",
+        "いなか"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "都市",
+      "answers": [
+        "city"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "city",
+      "answers": [
+        "都市",
+        "とし",
+        "市",
+        "し",
+        "街",
+        "まち",
+        "都会"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "村",
+      "answers": [
+        "village"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "village",
+      "answers": [
+        "村",
+        "むら"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "建物",
+      "answers": [
+        "building"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "building",
+      "answers": [
+        "建物",
+        "たてもの",
+        "ビル",
+        "びる",
+        "ビルディング",
+        "建築物"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "駅",
+      "answers": [
+        "station"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "station",
+      "answers": [
+        "駅",
+        "えき",
+        "放送局",
+        "署"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "図書館",
+      "answers": [
+        "library"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "library",
+      "answers": [
+        "図書館",
+        "としょかん",
+        "図書室",
+        "蔵書"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "博物館",
+      "answers": [
+        "museum"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "museum",
+      "answers": [
+        "博物館",
+        "はくぶつかん",
+        "美術館",
+        "びじゅつかん",
+        "記念館"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "病院",
+      "answers": [
+        "hospital"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "hospital",
+      "answers": [
+        "病院",
+        "びょういん"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "レストラン",
+      "answers": [
+        "restaurant"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "restaurant",
+      "answers": [
+        "レストラン",
+        "れすとらん",
+        "飲食店",
+        "いんしょくてん",
+        "食堂"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "空港",
+      "answers": [
+        "airport"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "airport",
+      "answers": [
+        "空港",
+        "くうこう",
+        "飛行場",
+        "ひこうじょう"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "入口",
+      "answers": [
+        "entrance"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "entrance",
+      "answers": [
+        "入口",
+        "いりぐち",
+        "入り口",
+        "玄関",
+        "入場",
+        "入学"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "階、床",
+      "answers": [
+        "floor"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "floor",
+      "answers": [
+        "階、床",
+        "階",
+        "かい",
+        "床",
+        "ゆか",
+        "フロア",
+        "ふろあ"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "角",
+      "answers": [
+        "corner"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "corner",
+      "answers": [
+        "角",
+        "かど",
+        "隅",
+        "すみ",
+        "コーナー",
+        "こーなー",
+        "曲がり角"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "道、方法",
+      "answers": [
+        "way"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "way",
+      "answers": [
+        "道、方法",
+        "道",
+        "みち",
+        "方法",
+        "ほうほう",
+        "やり方",
+        "方向"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "場所",
+      "answers": [
+        "place"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "place",
+      "answers": [
+        "場所",
+        "ばしょ",
+        "所",
+        "ところ",
+        "位置",
+        "空間"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "寝室",
+      "answers": [
+        "bedroom"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "bedroom",
+      "answers": [
+        "寝室",
+        "しんしつ",
+        "ベッドルーム",
+        "べっどるーむ"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "台所",
+      "answers": [
+        "kitchen"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "kitchen",
+      "answers": [
+        "台所",
+        "だいどころ",
+        "キッチン",
+        "きっちん",
+        "厨房"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "浴室",
+      "answers": [
+        "bathroom"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "bathroom",
+      "answers": [
+        "浴室",
+        "よくしつ",
+        "風呂場",
+        "ふろば",
+        "トイレ",
+        "といれ",
+        "バスルーム",
+        "ばするーむ",
+        "お手洗い"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "居間",
+      "answers": [
+        "living room"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "living room",
+      "answers": [
+        "居間",
+        "いま",
+        "リビング",
+        "りびんぐ",
+        "リビングルーム",
+        "りびんぐるーむ",
+        "茶の間"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "庭",
+      "answers": [
+        "garden"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "garden",
+      "answers": [
+        "庭",
+        "にわ",
+        "ガーデン",
+        "がーでん",
+        "庭園"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "ドア",
+      "answers": [
+        "door"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "door",
+      "answers": [
+        "ドア",
+        "どあ",
+        "扉",
+        "とびら",
+        "戸"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "窓",
+      "answers": [
+        "window"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "window",
+      "answers": [
+        "窓",
+        "まど",
+        "ウィンドウ"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "テーブル",
+      "answers": [
+        "table"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "table",
+      "answers": [
+        "テーブル",
+        "てーぶる",
+        "卓",
+        "たく",
+        "食卓",
+        "表",
+        "ひょう"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "いす",
+      "answers": [
+        "chair"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "chair",
+      "answers": [
+        "いす",
+        "椅子",
+        "イス"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "ベッド",
+      "answers": [
+        "bed"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "bed",
+      "answers": [
+        "ベッド",
+        "べっど",
+        "寝台",
+        "布団"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "コンピューター",
+      "answers": [
+        "computer"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "computer",
+      "answers": [
+        "コンピューター",
+        "こんぴゅーたー",
+        "コンピュータ",
+        "こんぴゅーた",
+        "パソコン",
+        "ぱそこん"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "電話",
+      "answers": [
+        "phone"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "phone",
+      "answers": [
+        "電話",
+        "でんわ",
+        "スマホ",
+        "すまほ",
+        "携帯電話",
+        "けいたいでんわ",
+        "スマートフォン"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "テレビ",
+      "answers": [
+        "television"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "television",
+      "answers": [
+        "テレビ",
+        "てれび"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "食べ物",
+      "answers": [
+        "food"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "food",
+      "answers": [
+        "食べ物",
+        "たべもの",
+        "食料",
+        "しょくりょう",
+        "食品",
+        "しょくひん",
+        "食事"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "飲み物",
+      "answers": [
+        "drink"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "drink",
+      "answers": [
+        "飲み物",
+        "のみもの",
+        "飲む",
+        "のむ",
+        "飲料"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "食事",
+      "answers": [
+        "meal"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "meal",
+      "answers": [
+        "食事",
+        "しょくじ",
+        "ご飯",
+        "ごはん"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "朝食",
+      "answers": [
+        "breakfast"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "breakfast",
+      "answers": [
+        "朝食",
+        "ちょうしょく",
+        "朝ご飯",
+        "あさごはん",
+        "朝ごはん",
+        "朝めし"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "昼食",
+      "answers": [
+        "lunch"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "lunch",
+      "answers": [
+        "昼食",
+        "ちゅうしょく",
+        "昼ご飯",
+        "ひるごはん",
+        "昼ごはん",
+        "ランチ",
+        "らんち",
+        "昼めし"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "夕食",
+      "answers": [
+        "dinner"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "dinner",
+      "answers": [
+        "夕食",
+        "ゆうしょく",
+        "夜ご飯",
+        "よるごはん",
+        "夜ごはん",
+        "夕飯",
+        "ゆうはん",
+        "ディナー",
+        "でぃなー",
+        "晩ご飯",
+        "ばんごはん"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "野菜",
+      "answers": [
+        "vegetable"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "vegetable",
+      "answers": [
+        "野菜",
+        "やさい"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "果物",
+      "answers": [
+        "fruit"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "fruit",
+      "answers": [
+        "果物",
+        "くだもの",
+        "フルーツ",
+        "ふるーつ"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "肉",
+      "answers": [
+        "meat"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "meat",
+      "answers": [
+        "肉",
+        "にく",
+        "お肉",
+        "精肉"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "魚",
+      "answers": [
+        "fish"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "fish",
+      "answers": [
+        "魚",
+        "さかな",
+        "お魚",
+        "魚肉",
+        "釣りをする"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "パン",
+      "answers": [
+        "bread"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "bread",
+      "answers": [
+        "パン",
+        "ぱん",
+        "食パン"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "米、ご飯",
+      "answers": [
+        "rice"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "rice",
+      "answers": [
+        "米、ご飯",
+        "米",
+        "こめ",
+        "お米",
+        "ご飯",
+        "ごはん",
+        "ライス",
+        "らいす"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "卵",
+      "answers": [
+        "egg"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "egg",
+      "answers": [
+        "卵",
+        "たまご",
+        "玉子"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "チーズ",
+      "answers": [
+        "cheese"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "cheese",
+      "answers": [
+        "チーズ",
+        "ちーず"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "ケーキ",
+      "answers": [
+        "cake"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "cake",
+      "answers": [
+        "ケーキ",
+        "けーき"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "クッキー",
+      "answers": [
+        "cookie"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "cookie",
+      "answers": [
+        "クッキー",
+        "くっきー"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "サンドイッチ",
+      "answers": [
+        "sandwich"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "sandwich",
+      "answers": [
+        "サンドイッチ",
+        "さんどいっち",
+        "サンドウィッチ",
+        "さんどうぃっち"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "スープ",
+      "answers": [
+        "soup"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "soup",
+      "answers": [
+        "スープ",
+        "すーぷ",
+        "汁",
+        "しる"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "サラダ",
+      "answers": [
+        "salad"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "salad",
+      "answers": [
+        "サラダ",
+        "さらだ"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "水",
+      "answers": [
+        "water"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "water",
+      "answers": [
+        "水",
+        "みず",
+        "お水",
+        "ウォーター"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "ジュース",
+      "answers": [
+        "juice"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "juice",
+      "answers": [
+        "ジュース",
+        "じゅーす",
+        "果汁"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "牛乳",
+      "answers": [
+        "milk"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "milk",
+      "answers": [
+        "牛乳",
+        "ぎゅうにゅう",
+        "ミルク",
+        "みるく"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "お茶",
+      "answers": [
+        "tea"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "tea",
+      "answers": [
+        "お茶",
+        "おちゃ",
+        "茶",
+        "ちゃ",
+        "紅茶",
+        "こうちゃ",
+        "ティー"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "コーヒー",
+      "answers": [
+        "coffee"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "coffee",
+      "answers": [
+        "コーヒー",
+        "こーひー",
+        "珈琲"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "天気",
+      "answers": [
+        "weather"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "weather",
+      "answers": [
+        "天気",
+        "てんき",
+        "天候",
+        "てんこう",
+        "気象"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "空",
+      "answers": [
+        "sky"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "sky",
+      "answers": [
+        "空",
+        "そら",
+        "天空"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "雲",
+      "answers": [
+        "cloud"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "cloud",
+      "answers": [
+        "雲",
+        "くも"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "雨",
+      "answers": [
+        "rain"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "rain",
+      "answers": [
+        "雨",
+        "あめ",
+        "雨が降る",
+        "あめがふる",
+        "降雨"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "雪",
+      "answers": [
+        "snow"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "snow",
+      "answers": [
+        "雪",
+        "ゆき",
+        "雪が降る",
+        "ゆきがふる",
+        "降雪"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "風",
+      "answers": [
+        "wind"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "wind",
+      "answers": [
+        "風",
+        "かぜ"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "山",
+      "answers": [
+        "mountain"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "mountain",
+      "answers": [
+        "山",
+        "やま",
+        "山岳"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "川",
+      "answers": [
+        "river"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "river",
+      "answers": [
+        "川",
+        "かわ",
+        "河川",
+        "河"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "湖",
+      "answers": [
+        "lake"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "lake",
+      "answers": [
+        "湖",
+        "みずうみ"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "海",
+      "answers": [
+        "sea"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "sea",
+      "answers": [
+        "海",
+        "うみ",
+        "海洋"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "海岸",
+      "answers": [
+        "beach"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "beach",
+      "answers": [
+        "海岸",
+        "かいがん",
+        "ビーチ",
+        "びーち",
+        "浜辺",
+        "はまべ",
+        "海辺",
+        "うみべ"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "森",
+      "answers": [
+        "forest"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "forest",
+      "answers": [
+        "森",
+        "もり",
+        "森林",
+        "しんりん",
+        "林"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "木",
+      "answers": [
+        "tree"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "tree",
+      "answers": [
+        "木",
+        "き",
+        "樹木",
+        "じゅもく",
+        "樹",
+        "ツリー"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "花",
+      "answers": [
+        "flower"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "flower",
+      "answers": [
+        "花",
+        "はな",
+        "草花",
+        "フラワー"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "動物",
+      "answers": [
+        "animal"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "animal",
+      "answers": [
+        "動物",
+        "どうぶつ",
+        "アニマル",
+        "獣"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "季節",
+      "answers": [
+        "season"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "season",
+      "answers": [
+        "季節",
+        "きせつ",
+        "シーズン",
+        "しーずん",
+        "時期"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "電車",
+      "answers": [
+        "train"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "train",
+      "answers": [
+        "電車",
+        "でんしゃ",
+        "列車",
+        "れっしゃ",
+        "汽車",
+        "きしゃ",
+        "訓練する"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "バス",
+      "answers": [
+        "bus"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "bus",
+      "answers": [
+        "バス",
+        "ばす",
+        "乗合自動車"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "地下鉄",
+      "answers": [
+        "subway"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "subway",
+      "answers": [
+        "地下鉄",
+        "ちかてつ",
+        "地下道",
+        "メトロ"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "飛行機",
+      "answers": [
+        "airplane"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "airplane",
+      "answers": [
+        "飛行機",
+        "ひこうき",
+        "航空機",
+        "こうくうき"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "自転車",
+      "answers": [
+        "bicycle"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "bicycle",
+      "answers": [
+        "自転車",
+        "じてんしゃ",
+        "チャリ",
+        "バイク",
+        "ばいく"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "切符",
+      "answers": [
+        "ticket"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "ticket",
+      "answers": [
+        "切符",
+        "きっぷ",
+        "チケット",
+        "ちけっと",
+        "券",
+        "けん",
+        "入場券",
+        "乗車券"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "バス停",
+      "answers": [
+        "bus stop"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "bus stop",
+      "answers": [
+        "バス停",
+        "ばすてい",
+        "バス乗り場",
+        "ばすのりば",
+        "バスの停留所",
+        "ばすのていりゅうじょ",
+        "停留所"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "旅行",
+      "answers": [
+        "trip"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "trip",
+      "answers": [
+        "旅行",
+        "りょこう",
+        "旅",
+        "たび",
+        "小旅行"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "ホテル",
+      "answers": [
+        "hotel"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "hotel",
+      "answers": [
+        "ホテル",
+        "ほてる",
+        "宿",
+        "やど",
+        "旅館"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "地図",
+      "answers": [
+        "map"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "map",
+      "answers": [
+        "地図",
+        "ちず",
+        "マップ",
+        "まっぷ"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "道路",
+      "answers": [
+        "road"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "road",
+      "answers": [
+        "道路",
+        "どうろ",
+        "道",
+        "みち",
+        "車道"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "通り",
+      "answers": [
+        "street"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "street",
+      "answers": [
+        "通り",
+        "とおり",
+        "道",
+        "みち",
+        "ストリート",
+        "街路",
+        "がいろ"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "橋",
+      "answers": [
+        "bridge"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "bridge",
+      "answers": [
+        "橋",
+        "はし",
+        "ブリッジ"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "たくさんの～",
+      "answers": [
+        "a lot of"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "a lot of",
+      "answers": [
+        "たくさんの～",
+        "〜たくさんの",
+        "~たくさんの",
+        "たくさんの",
+        "たくさん",
+        "多くの",
+        "おおくの",
+        "多数の",
+        "多数",
+        "いっぱい",
+        "いっぱいの"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "少し",
+      "answers": [
+        "a little"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "a little",
+      "answers": [
+        "少し",
+        "すこし",
+        "少しの",
+        "すこしの",
+        "ちょっと",
+        "少量の",
+        "少々",
+        "いくらかの"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "ほとんどない、少数しかない",
+      "answers": [
+        "few"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "few",
+      "answers": [
+        "ほとんどない、少数しかない",
+        "ほとんどない",
+        "少数しかない",
+        "しょうすうしかない",
+        "わずかしかない",
+        "少ししかない",
+        "すこししかない",
+        "数少ない"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "少しの、いくつかの",
+      "answers": [
+        "a few"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "a few",
+      "answers": [
+        "少しの、いくつかの",
+        "少しの",
+        "すこしの",
+        "いくつかの",
+        "2,3の",
+        "2〜3の",
+        "二、三の",
+        "少数の",
+        "しょうすうの"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "～することができる",
+      "answers": [
+        "be able to"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "be able to",
+      "answers": [
+        "～することができる",
+        "〜することができる",
+        "~することができる",
+        "することができる",
+        "～できる",
+        "〜できる",
+        "~できる",
+        "できる",
+        "可能である",
+        "かのうである"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "～が得意",
+      "answers": [
+        "be good at"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "be good at",
+      "answers": [
+        "～が得意",
+        "〜が得意",
+        "~が得意",
+        "が得意",
+        "～が得意だ",
+        "〜が得意だ",
+        "~が得意だ",
+        "が得意だ",
+        "とくいだ",
+        "上手だ",
+        "じょうずだ"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "～に興味がある",
+      "answers": [
+        "be interested in"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "be interested in",
+      "answers": [
+        "～に興味がある",
+        "〜に興味がある",
+        "~に興味がある",
+        "に興味がある",
+        "にきょうみがある",
+        "～に関心がある",
+        "に関心がある"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "～を怖がる",
+      "answers": [
+        "be afraid of"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "be afraid of",
+      "answers": [
+        "～を怖がる",
+        "〜を怖がる",
+        "~を怖がる",
+        "を怖がる",
+        "をこわがる",
+        "～を恐れる",
+        "〜を恐れる",
+        "~を恐れる",
+        "を恐れる",
+        "をおそれる",
+        "～が怖い",
+        "が怖い"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "～と違う",
+      "answers": [
+        "be different from"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "be different from",
+      "answers": [
+        "～と違う",
+        "〜と違う",
+        "~と違う",
+        "と違う",
+        "とちがう",
+        "～と異なる",
+        "〜と異なる",
+        "~と異なる",
+        "と異なる",
+        "とことなる"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "～で有名",
+      "answers": [
+        "be famous for"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "be famous for",
+      "answers": [
+        "～で有名",
+        "〜で有名",
+        "~で有名",
+        "で有名",
+        "でゆうめい",
+        "～で有名だ",
+        "〜で有名だ",
+        "~で有名だ",
+        "で有名だ",
+        "でゆうめいだ",
+        "～として知られている"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "～でいっぱい",
+      "answers": [
+        "be full of"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "be full of",
+      "answers": [
+        "～でいっぱい",
+        "〜でいっぱい",
+        "~でいっぱい",
+        "でいっぱい",
+        "～で満ちている",
+        "〜で満ちている",
+        "~で満ちている",
+        "で満ちている",
+        "～に満ちている",
+        "に満ちている",
+        "～だらけ",
+        "だらけ"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "～の準備ができている",
+      "answers": [
+        "be ready for"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "be ready for",
+      "answers": [
+        "～の準備ができている",
+        "〜の準備ができている",
+        "~の準備ができている",
+        "の準備ができている",
+        "のじゅんびができている",
+        "～の用意ができている",
+        "の用意ができている",
+        "のよういができている",
+        "～の準備ができた",
+        "の準備ができた",
+        "～の覚悟ができている"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "～に遅れる",
+      "answers": [
+        "be late for"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "be late for",
+      "answers": [
+        "～に遅れる",
+        "〜に遅れる",
+        "~に遅れる",
+        "に遅れる",
+        "におくれる",
+        "～に遅刻する",
+        "〜に遅刻する",
+        "~に遅刻する",
+        "に遅刻する",
+        "にちこくする"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "～に親切",
+      "answers": [
+        "be kind to"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "be kind to",
+      "answers": [
+        "～に親切",
+        "〜に親切",
+        "~に親切",
+        "に親切",
+        "にしんせつ",
+        "～に親切だ",
+        "に親切だ",
+        "～に優しい",
+        "〜に優しい",
+        "~に優しい",
+        "に優しい",
+        "にやさしい"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "～に親切",
+      "answers": [
+        "be nice to"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "be nice to",
+      "answers": [
+        "～に親切",
+        "〜に親切",
+        "~に親切",
+        "に親切",
+        "にしんせつ",
+        "～に親切だ",
+        "に親切だ",
+        "～に優しい",
+        "〜に優しい",
+        "~に優しい",
+        "に優しい",
+        "にやさしい",
+        "～によくする"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "～を心配する",
+      "answers": [
+        "be worried about"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "be worried about",
+      "answers": [
+        "～を心配する",
+        "〜を心配する",
+        "~を心配する",
+        "を心配する",
+        "をしんぱいする",
+        "～を気にかける",
+        "を気にかける",
+        "をきにかける",
+        "～について心配している"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "戻ってくる",
+      "answers": [
+        "come back"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "come back",
+      "answers": [
+        "戻ってくる",
+        "もどってくる",
+        "帰ってくる",
+        "かえってくる",
+        "戻る",
+        "帰る"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "～出身である",
+      "answers": [
+        "come from"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "come from",
+      "answers": [
+        "～出身である",
+        "〜出身である",
+        "~出身である",
+        "出身である",
+        "しゅっしんである",
+        "～から来る",
+        "〜から来る",
+        "~から来る",
+        "から来る",
+        "からくる",
+        "～出身だ",
+        "出身だ",
+        "～の生まれだ",
+        "に由来する"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "起きる",
+      "answers": [
+        "get up"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "get up",
+      "answers": [
+        "起きる",
+        "おきる",
+        "起き上がる",
+        "おきあがる",
+        "立ち上がる",
+        "たちあがる",
+        "起床する"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "～に着く",
+      "answers": [
+        "get to"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "get to",
+      "answers": [
+        "～に着く",
+        "〜に着く",
+        "~に着く",
+        "に着く",
+        "につく",
+        "～に到着する",
+        "〜に到着する",
+        "~に到着する",
+        "に到着する",
+        "にとうちゃくする",
+        "～へ行く"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "家に着く",
+      "answers": [
+        "get home"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "get home",
+      "answers": [
+        "家に着く",
+        "いえにつく",
+        "家に帰る",
+        "いえにかえる",
+        "帰宅する",
+        "きたくする",
+        "帰る"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "戻る",
+      "answers": [
+        "get back"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "get back",
+      "answers": [
+        "戻る",
+        "もどる",
+        "帰る",
+        "かえる",
+        "取り戻す",
+        "とりもどす",
+        "戻ってくる"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "～に乗る",
+      "answers": [
+        "get on"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "get on",
+      "answers": [
+        "～に乗る",
+        "〜に乗る",
+        "~に乗る",
+        "に乗る",
+        "にのる",
+        "乗り込む",
+        "～を進める",
+        "仲良くする"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "～から降りる",
+      "answers": [
+        "get off"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "get off",
+      "answers": [
+        "～から降りる",
+        "〜から降りる",
+        "~から降りる",
+        "から降りる",
+        "からおりる",
+        "降りる",
+        "おりる",
+        "～を降りる",
+        "出発する"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "外出する",
+      "answers": [
+        "go out"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "go out",
+      "answers": [
+        "外出する",
+        "がいしゅつする",
+        "出かける",
+        "でかける",
+        "外に出る",
+        "そとにでる"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "戻る",
+      "answers": [
+        "go back"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "go back",
+      "answers": [
+        "戻る",
+        "もどる",
+        "帰る",
+        "かえる",
+        "引き返す",
+        "ひきかえす"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "買い物に行く",
+      "answers": [
+        "go shopping"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "go shopping",
+      "answers": [
+        "買い物に行く",
+        "かいものにいく",
+        "買い物へ行く",
+        "かいものへいく",
+        "買い出しに行く"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "泳ぎに行く",
+      "answers": [
+        "go swimming"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "go swimming",
+      "answers": [
+        "泳ぎに行く",
+        "およぎにいく",
+        "泳ぎへ行く",
+        "およぎへいく"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "釣りに行く",
+      "answers": [
+        "go fishing"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "go fishing",
+      "answers": [
+        "釣りに行く",
+        "つりにいく",
+        "釣りへ行く",
+        "つりへいく"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "寝る",
+      "answers": [
+        "go to bed"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "go to bed",
+      "answers": [
+        "寝る",
+        "ねる",
+        "床に就く",
+        "とこにつく",
+        "ベッドに行く",
+        "就寝する"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "～しなければならない",
+      "answers": [
+        "have to"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "have to",
+      "answers": [
+        "～しなければならない",
+        "〜しなければならない",
+        "~しなければならない",
+        "しなければならない",
+        "～する必要がある",
+        "する必要がある",
+        "～しないといけない",
+        "しないといけない",
+        "～せねばならない"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "楽しい時間を過ごす",
+      "answers": [
+        "have a good time"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "have a good time",
+      "answers": [
+        "楽しい時間を過ごす",
+        "たのしいじかんをすごす",
+        "楽しむ",
+        "たのしむ",
+        "楽しく過ごす"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "見てみる",
+      "answers": [
+        "have a look"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "have a look",
+      "answers": [
+        "見てみる",
+        "みてみる",
+        "見る",
+        "みる",
+        "ちょっと見る",
+        "一見する"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "朝食を食べる",
+      "answers": [
+        "have breakfast"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "have breakfast",
+      "answers": [
+        "朝食を食べる",
+        "ちょうしょくをたべる",
+        "朝ごはんを食べる",
+        "あさごはんをたべる",
+        "朝食をとる",
+        "ちょうしょくをとる"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "昼食を食べる",
+      "answers": [
+        "have lunch"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "have lunch",
+      "answers": [
+        "昼食を食べる",
+        "ちゅうしょくをたべる",
+        "昼ごはんを食べる",
+        "ひるごはんをたべる",
+        "昼食をとる",
+        "ランチを食べる",
+        "らんちをたべる"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "夕食を食べる",
+      "answers": [
+        "have dinner"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "have dinner",
+      "answers": [
+        "夕食を食べる",
+        "ゆうしょくをたべる",
+        "夜ごはんを食べる",
+        "よるごはんをたべる",
+        "夕飯を食べる",
+        "ゆうはんをたべる",
+        "夕食をとる",
+        "晩ごはんを食べる"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "～を見る",
+      "answers": [
+        "look at"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "look at",
+      "answers": [
+        "～を見る",
+        "〜を見る",
+        "~を見る",
+        "を見る",
+        "をみる",
+        "～に目を向ける",
+        "に目を向ける",
+        "～を調べる"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "～を探す",
+      "answers": [
+        "look for"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "look for",
+      "answers": [
+        "～を探す",
+        "〜を探す",
+        "~を探す",
+        "を探す",
+        "をさがす",
+        "～を求める"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "～のように見える",
+      "answers": [
+        "look like"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "look like",
+      "answers": [
+        "～のように見える",
+        "〜のように見える",
+        "~のように見える",
+        "のように見える",
+        "のようにみえる",
+        "～に似ている",
+        "〜に似ている",
+        "~に似ている",
+        "に似ている",
+        "ににている"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "～を聞く",
+      "answers": [
+        "listen to"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "listen to",
+      "answers": [
+        "～を聞く",
+        "〜を聞く",
+        "~を聞く",
+        "を聞く",
+        "をきく",
+        "～に耳を傾ける",
+        "に耳を傾ける"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "～を待つ",
+      "answers": [
+        "wait for"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "wait for",
+      "answers": [
+        "～を待つ",
+        "〜を待つ",
+        "~を待つ",
+        "を待つ",
+        "をまつ",
+        "～を待ち望む"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "～について話す",
+      "answers": [
+        "talk about"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "talk about",
+      "answers": [
+        "～について話す",
+        "〜について話す",
+        "~について話す",
+        "について話す",
+        "についてはなす",
+        "～を話し合う",
+        "を話し合う",
+        "～の話題にする"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "～について考える",
+      "answers": [
+        "think about"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "think about",
+      "answers": [
+        "～について考える",
+        "〜について考える",
+        "~について考える",
+        "について考える",
+        "についてかんがえる",
+        "～を検討する"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "～の世話をする",
+      "answers": [
+        "take care of"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "take care of",
+      "answers": [
+        "～の世話をする",
+        "〜の世話をする",
+        "~の世話をする",
+        "の世話をする",
+        "のせわをする",
+        "～を大切にする",
+        "～に気をつける",
+        "に気をつける",
+        "～の面倒を見る",
+        "の面倒を見る"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "写真を撮る",
+      "answers": [
+        "take a picture"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "take a picture",
+      "answers": [
+        "写真を撮る",
+        "しゃしんをとる",
+        "撮影する",
+        "さつえいする"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "散歩する",
+      "answers": [
+        "take a walk"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "take a walk",
+      "answers": [
+        "散歩する",
+        "さんぽする",
+        "散歩に行く",
+        "さんぽにいく",
+        "歩く",
+        "あるく",
+        "散歩に出かける"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "バスに乗る",
+      "answers": [
+        "take a bus"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "take a bus",
+      "answers": [
+        "バスに乗る",
+        "ばすにのる",
+        "バスでいく",
+        "バスで行く",
+        "バスを利用する"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "電車に乗る",
+      "answers": [
+        "take a train"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "take a train",
+      "answers": [
+        "電車に乗る",
+        "でんしゃにのる",
+        "列車に乗る",
+        "れっしゃにのる",
+        "電車で行く",
+        "でんしゃでいく",
+        "電車を利用する"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "～しようとする",
+      "answers": [
+        "try to"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "try to",
+      "answers": [
+        "～しようとする",
+        "〜しようとする",
+        "~しようとする",
+        "しようとする",
+        "～を試みる",
+        "を試みる",
+        "をこころみる",
+        "～しようと努める"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "～したい",
+      "answers": [
+        "want to"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "want to",
+      "answers": [
+        "～したい",
+        "〜したい",
+        "~したい",
+        "したい",
+        "～することを望む",
+        "することを望む"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "～する必要がある",
+      "answers": [
+        "need to"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "need to",
+      "answers": [
+        "～する必要がある",
+        "〜する必要がある",
+        "~する必要がある",
+        "する必要がある",
+        "ひつようがある",
+        "～しなければならない",
+        "しなければならない",
+        "～する必要性が有る"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "～したい",
+      "answers": [
+        "would like to"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "would like to",
+      "answers": [
+        "～したい",
+        "〜したい",
+        "~したい",
+        "したい",
+        "～したいのですが",
+        "したいのですが",
+        "～することを望む"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "～する予定",
+      "answers": [
+        "be going to"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "be going to",
+      "answers": [
+        "～する予定",
+        "〜する予定",
+        "~する予定",
+        "する予定",
+        "するよてい",
+        "～するつもり",
+        "〜するつもり",
+        "~するつもり",
+        "するつもり",
+        "～するだろう",
+        "するだろう"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "～はどうですか",
+      "answers": [
+        "How about",
+        "How about ~?",
+        "How about ～?"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "How about",
+      "answers": [
+        "～はどうですか",
+        "〜はどうですか",
+        "~はどうですか",
+        "はどうですか",
+        "～はどう",
+        "〜はどう",
+        "~はどう",
+        "はどう",
+        "～はいかがですか",
+        "〜はいかがですか",
+        "~はいかがですか",
+        "はいかがですか"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "～してはどうですか",
+      "answers": [
+        "Why don't you",
+        "Why don't you ~",
+        "Why don't you ~?",
+        "Why don't you ～",
+        "Why don't you ～?"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "Why don't you",
+      "answers": [
+        "～してはどうですか",
+        "〜してはどうですか",
+        "~してはどうですか",
+        "してはどうですか",
+        "～してはどうか",
+        "してはどうか",
+        "～しませんか",
+        "〜しませんか",
+        "~しませんか",
+        "しませんか",
+        "～したらどうですか",
+        "したらどうですか"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "～はいかがですか",
+      "answers": [
+        "Would you like",
+        "Would you like ~",
+        "Would you like ~?",
+        "Would you like ～",
+        "Would you like ～?"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "Would you like",
+      "answers": [
+        "～はいかがですか",
+        "〜はいかがですか",
+        "~はいかがですか",
+        "はいかがですか",
+        "～はどうですか",
+        "はどうですか",
+        "～が欲しいですか",
+        "が欲しいですか",
+        "～を望みますか",
+        "を望みますか",
+        "～はいかが"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "もちろん",
+      "answers": [
+        "of course"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "of course",
+      "answers": [
+        "もちろん",
+        "勿論",
+        "当然",
+        "とうぜん",
+        "当たり前"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "例えば",
+      "answers": [
+        "for example"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "for example",
+      "answers": [
+        "例えば",
+        "たとえば",
+        "例として",
+        "れいとして"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "最初は",
+      "answers": [
+        "at first"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "at first",
+      "answers": [
+        "最初は",
+        "さいしょは",
+        "最初に",
+        "さいしょに",
+        "はじめは",
+        "初めは",
+        "はじめに",
+        "第一に"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "放課後",
+      "answers": [
+        "after school"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "after school",
+      "answers": [
+        "放課後",
+        "ほうかご",
+        "学校の後に",
+        "がっこうのあとに",
+        "授業後に",
+        "じゅぎょうあとに"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "週末に",
+      "answers": [
+        "on weekends"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "on weekends",
+      "answers": [
+        "週末に",
+        "しゅうまつに",
+        "毎週末",
+        "まいしゅうまつ",
+        "週末には"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "～の前に",
+      "answers": [
+        "in front of",
+        "in front of ~",
+        "in front of ～"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "in front of",
+      "answers": [
+        "～の前に",
+        "〜の前に",
+        "~の前に",
+        "の前に",
+        "のまえに",
+        "～の正面に",
+        "の正面に",
+        "のしょうめんに",
+        "～の表に"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "～の隣に",
+      "answers": [
+        "next to",
+        "next to ~",
+        "next to ～"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "next to",
+      "answers": [
+        "～の隣に",
+        "〜の隣に",
+        "~の隣に",
+        "の隣に",
+        "のとなりに",
+        "～の横に",
+        "の横に",
+        "のよこに",
+        "～の隣",
+        "～の次に",
+        "の次に"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "AとBの間に",
+      "answers": [
+        "between A and B"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "between A and B",
+      "answers": [
+        "AとBの間に",
+        "AとBの間に",
+        "aとbの間に",
+        "aとbのあいだに",
+        "AとBのあいだに"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "～へ行く途中で",
+      "answers": [
+        "on the way to",
+        "on the way to ~",
+        "on the way to ～"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "on the way to",
+      "answers": [
+        "～へ行く途中で",
+        "〜へ行く途中で",
+        "~へ行く途中で",
+        "へ行く途中で",
+        "へいくとちゅうで",
+        "～の途中で",
+        "の途中で",
+        "のとちゅうで",
+        "～へ向かう途中で",
+        "へ向かう途中で",
+        "へむかうとちゅうで"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "これからは",
+      "answers": [
+        "from now on"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "from now on",
+      "answers": [
+        "これからは",
+        "今後は",
+        "こんごは",
+        "今から",
+        "いまから",
+        "今からは",
+        "いまからは",
+        "この先ずっと"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "今すぐ、ちょうど今",
+      "answers": [
+        "right now"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "right now",
+      "answers": [
+        "今すぐ、ちょうど今",
+        "今すぐ",
+        "いますぐ",
+        "ちょうど今",
+        "ちょうどういま",
+        "たった今",
+        "たったいま",
+        "今まさに"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "週に1回",
+      "answers": [
+        "once a week"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "once a week",
+      "answers": [
+        "週に1回",
+        "週に一回",
+        "しゅうにいっかい",
+        "週一回",
+        "しゅういっかい",
+        "1週間に1回",
+        "いっしゅうかんにいっかい"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "毎日",
+      "answers": [
+        "every day"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "every day",
+      "answers": [
+        "毎日",
+        "まいにち",
+        "日々",
+        "ひび"
+      ]
+    },
+    "importance": 3
+  },
+  {
+    "meaning_to_word": {
+      "question": "例えば",
+      "answers": [
+        "for example"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "for example",
+      "answers": [
+        "例えば",
+        "たとえば",
+        "例として",
+        "れいとして"
+      ]
+    },
+    "importance": 5
+  },
+  {
+    "meaning_to_word": {
+      "question": "～の一種",
+      "answers": [
+        "a kind of",
+        "a kind of ~",
+        "a kind of ～",
+        "a kinds of",
+        "a kinds of ~",
+        "a kinds of ～"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "a kind of",
+      "answers": [
+        "～の一種",
+        "〜の一種",
+        "~の一種",
+        "の一種",
+        "のいっしゅ",
+        "ある種の",
+        "あるしゅの",
+        "～の種類",
+        "～のようなもの"
+      ]
+    },
+    "importance": 5
+  },
+  {
+    "meaning_to_word": {
+      "question": "世界中（の全ての場所）で",
+      "answers": [
+        "all over the world"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "all over the world",
+      "answers": [
+        "世界中（の全ての場所）で",
+        "世界中で",
+        "せかいじゅうで",
+        "世界中の至る所で",
+        "世界中至る所で",
+        "全世界で",
+        "ぜんせかいで"
+      ]
+    },
+    "importance": 5
+  },
+  {
+    "meaning_to_word": {
+      "question": "世界中（のどこか）で",
+      "answers": [
+        "around the world"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "around the world",
+      "answers": [
+        "世界中（のどこか）で",
+        "世界中で",
+        "せかいじゅうで",
+        "世界中を",
+        "せかいじゅうを",
+        "世界各地で",
+        "せかいかくちで",
+        "世界を巡って"
+      ]
+    },
+    "importance": 5
+  },
+  {
+    "meaning_to_word": {
+      "question": "昨日",
+      "answers": [
+        "yesterday"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "yesterday",
+      "answers": [
+        "昨日",
+        "きのう",
+        "さくじつ"
+      ]
+    },
+    "importance": 5
+  },
+  {
+    "meaning_to_word": {
+      "question": "～する必要がある",
+      "answers": [
+        "have to",
+        "have to do",
+        "have to ~",
+        "have to ～"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "have to",
+      "answers": [
+        "～する必要がある",
+        "〜する必要がある",
+        "~する必要がある",
+        "する必要がある",
+        "ひつようがある",
+        "～しなければならない",
+        "〜しなければならない",
+        "~しなければならない",
+        "しなければならない",
+        "～しないといけない",
+        "しないといけない"
+      ]
+    },
+    "importance": 5
+  },
+  {
+    "meaning_to_word": {
+      "question": "～していただけませんか？",
+      "answers": [
+        "Could you ~?",
+        "Could you?",
+        "Could you ～?",
+        "Could you ～?",
+        "Could you ~",
+        "Could you",
+        "Could you ～"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "Could you ~?",
+      "answers": [
+        "～していただけませんか？",
+        "〜していただけませんか？",
+        "~していただけませんか？",
+        "していただけませんか？",
+        "～していただけませんか",
+        "〜していただけませんか",
+        "~していただけませんか",
+        "していただけませんか",
+        "～してくれませんか",
+        "してくれませんか",
+        "～してくれませんか？",
+        "してくれませんか？",
+        "～してもらえますか",
+        "してもらえますか",
+        "～してもらえますか？",
+        "してもらえますか？"
+      ]
+    },
+    "importance": 5
+  },
+  {
+    "meaning_to_word": {
+      "question": "～を教えていただけませんか？",
+      "answers": [
+        "Could you tell me ~, please?",
+        "Could you tell me ～, please?",
+        "Could you tell me, please?",
+        "Could you tell me ~, please",
+        "Could you tell me ～, please",
+        "Could you tell me, please",
+        "Could you tell me ~",
+        "Could you tell me ～",
+        "Could you tell me",
+        "Could you tell me ~?",
+        "Could you tell me ～?",
+        "Could you tell me?"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "Could you tell me ~, please?",
+      "answers": [
+        "～を教えていただけませんか？",
+        "〜を教えていただけませんか？",
+        "~を教えていただけませんか？",
+        "を教えていただけませんか？",
+        "～を教えていただけませんか",
+        "〜を教えていただけませんか",
+        "~を教えていただけませんか",
+        "を教えていただけませんか",
+        "を教えくれませんか",
+        "を教えてくれませんか？",
+        "教えてください",
+        "おしえてください",
+        "教えていただけませんか"
+      ]
+    },
+    "importance": 5
+  },
+  {
+    "meaning_to_word": {
+      "question": "家に帰る",
+      "answers": [
+        "go home"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "go home",
+      "answers": [
+        "家に帰る",
+        "いえにかえる",
+        "帰宅する",
+        "きたくする",
+        "帰る",
+        "かえる",
+        "家へ帰る",
+        "いえへかえる"
+      ]
+    },
+    "importance": 5
+  },
+  {
+    "meaning_to_word": {
+      "question": "熱がある",
+      "answers": [
+        "have a fever"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "have a fever",
+      "answers": [
+        "熱がある",
+        "ねつがある",
+        "発熱している",
+        "はつねつしている",
+        "熱を出す",
+        "ねつをだす"
+      ]
+    },
+    "importance": 5
+  },
+  {
+    "meaning_to_word": {
+      "question": "〜と一緒にいる",
+      "answers": [
+        "stay with"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "stay with",
+      "answers": [
+        "〜と一緒にいる",
+        "～と一緒にいる",
+        "~と一緒にいる",
+        "と一緒にいる",
+        "といっしょにいる",
+        "～のところに滞在する",
+        "のところに滞在する",
+        "のところにたいざいする",
+        "～に泊まる",
+        "に泊まる",
+        "にとまる",
+        "～の家に泊まる",
+        "～と一緒に滞在する"
+      ]
+    },
+    "importance": 5
+  },
+  {
+    "meaning_to_word": {
+      "question": "風邪をひいている",
+      "answers": [
+        "have a cold"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "have a cold",
+      "answers": [
+        "風邪をひいている",
+        "かぜをひいている",
+        "風邪をひく",
+        "かぜをひく",
+        "風邪を引いている",
+        "風邪を引く",
+        "かぜ気味だ"
+      ]
+    },
+    "importance": 5
+  },
+  {
+    "meaning_to_word": {
+      "question": "病気の、具合が悪い",
+      "answers": [
+        "sick"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "sick",
+      "answers": [
+        "病気の、具合が悪い",
+        "病気の",
+        "びょうきの",
+        "具合が悪い",
+        "ぐあいがわるい",
+        "病気",
+        "びょうき",
+        "体調が悪い",
+        "気分が悪い",
+        "きぶんがわるい"
+      ]
+    },
+    "importance": 5
+  },
+  {
+    "meaning_to_word": {
+      "question": "両方、両者",
+      "answers": [
+        "both"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "both",
+      "answers": [
+        "両方、両者",
+        "両方",
+        "りょうほう",
+        "両者",
+        "りょうしゃ",
+        "ふたつとも",
+        "二つとも",
+        "両方の",
+        "りょうほうの",
+        "両方のとも",
+        "両方とも"
+      ]
+    },
+    "importance": 5
+  },
+  {
+    "meaning_to_word": {
+      "question": "雨、雨が降る",
+      "answers": [
+        "rain"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "rain",
+      "answers": [
+        "雨、雨が降る",
+        "雨",
+        "あめ",
+        "雨が降る",
+        "あめがふる",
+        "降雨"
+      ]
+    },
+    "importance": 5
+  },
+  {
+    "meaning_to_word": {
+      "question": "買った",
+      "answers": [
+        "bought"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "bought",
+      "answers": [
+        "買った",
+        "かった",
+        "購入した",
+        "こうにゅうした",
+        "買ってきた"
+      ]
+    },
+    "importance": 5
+  },
+  {
+    "meaning_to_word": {
+      "question": "聞こえた、聞いた",
+      "answers": [
+        "heard"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "heard",
+      "answers": [
+        "聞こえた、聞いた",
+        "聞こえた",
+        "きこえた",
+        "聞いた",
+        "きいた",
+        "耳にした",
+        "みみにした"
+      ]
+    },
+    "importance": 5
+  },
+  {
+    "meaning_to_word": {
+      "question": "聞こえる、聞く",
+      "answers": [
+        "hear"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "hear",
+      "answers": [
+        "聞こえる、聞く",
+        "聞こえる",
+        "きこえる",
+        "聞く",
+        "きく",
+        "耳にする"
+      ]
+    },
+    "importance": 5
+  },
+  {
+    "meaning_to_word": {
+      "question": "動く、引っ越す",
+      "answers": [
+        "move"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "move",
+      "answers": [
+        "動く、引っ越す",
+        "動く",
+        "うごく",
+        "引っ越す",
+        "ひっこす",
+        "移動する",
+        "いどうする",
+        "移転する",
+        "感動させる"
+      ]
+    },
+    "importance": 5
+  },
+  {
+    "meaning_to_word": {
+      "question": "フランスへ引っ越す",
+      "answers": [
+        "move to France"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "move to France",
+      "answers": [
+        "フランスへ引っ越す",
+        "ふらんすへひっこす",
+        "フランスに移住する",
+        "ふらんすにいじゅうする",
+        "フランスへ移動する",
+        "フランスへ引っ越しする"
+      ]
+    },
+    "importance": 5
+  },
+  {
+    "meaning_to_word": {
+      "question": "～へ引っ越す",
+      "answers": [
+        "move to ～",
+        "move to",
+        "move to ~"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "move to ～",
+      "answers": [
+        "～へ引っ越す",
+        "〜へ引っ越す",
+        "~へ引っ越す",
+        "へ引っ越す",
+        "へひっこす",
+        "～に移住する",
+        "に移住する",
+        "にいじゅうする",
+        "～へ移動する",
+        "へ移動する",
+        "へいどうする",
+        "～に引っ越す",
+        "に引っ越す"
+      ]
+    },
+    "importance": 5
+  },
+  {
+    "meaning_to_word": {
+      "question": "〜したい、〜することを望む",
+      "answers": [
+        "want to do",
+        "want to ~",
+        "want to ～",
+        "want to"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "want to do",
+      "answers": [
+        "〜したい、〜することを望む",
+        "～したい",
+        "〜したい",
+        "~したい",
+        "したい",
+        "～することを望む",
+        "〜することを望む",
+        "~することを望む",
+        "することを望む",
+        "することをのぞむ",
+        "〜したいと思う",
+        "～したいと思う",
+        "したいと思う"
+      ]
+    },
+    "importance": 5
+  },
+  {
+    "meaning_to_word": {
+      "question": "風呂に入る",
+      "answers": [
+        "take a bath"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "take a bath",
+      "answers": [
+        "風呂に入る",
+        "ふろにはいる",
+        "お風呂に入る",
+        "おふろにはいる",
+        "入浴する",
+        "にゅうよくする"
+      ]
+    },
+    "importance": 5
+  },
+  {
+    "meaning_to_word": {
+      "question": "〜するのが得意である",
+      "answers": [
+        "be good at ~ing",
+        "be good at",
+        "be good at -ing",
+        "be good at ing",
+        "be good at ～ing",
+        "be good at doing"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "be good at ~ing",
+      "answers": [
+        "〜するのが得意である",
+        "～するのが得意である",
+        "~するのが得意である",
+        "するのが得意である",
+        "するのがとくいである",
+        "〜するのが得意だ",
+        "～するのが得意だ",
+        "~するのが得意だ",
+        "するのが得意だ",
+        "するのがとくいだ",
+        "〜するのが上手だ",
+        "～するのが上手だ",
+        "するのが上手だ",
+        "するのがじょうずだ"
+      ]
+    },
+    "importance": 5
+  },
+  {
+    "meaning_to_word": {
+      "question": "帰宅した、家に帰ってきた",
+      "answers": [
+        "came home"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "came home",
+      "answers": [
+        "帰宅した、家に帰ってきた",
+        "帰宅した",
+        "きたくした",
+        "家に帰ってきた",
+        "いえにかえってきた",
+        "家に帰った",
+        "いえにかえった",
+        "家に戻った"
+      ]
+    },
+    "importance": 5
+  },
+  {
+    "meaning_to_word": {
+      "question": "趣味",
+      "answers": [
+        "hobby"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "hobby",
+      "answers": [
+        "趣味",
+        "しゅみ",
+        "道楽",
+        "ホビー"
+      ]
+    },
+    "importance": 5
+  },
+  {
+    "meaning_to_word": {
+      "question": "長い間",
+      "answers": [
+        "for a long time"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "for a long time",
+      "answers": [
+        "長い間",
+        "ながいあいだ",
+        "長期間",
+        "ちょうきかん",
+        "長いこと",
+        "ながいこと",
+        "長年",
+        "ながねん",
+        "長い時間"
+      ]
+    },
+    "importance": 5
+  },
+  {
+    "meaning_to_word": {
+      "question": "〜はあなたのためになる",
+      "answers": [
+        "~ is good for you",
+        "is good for you",
+        "～ is good for you"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "~ is good for you",
+      "answers": [
+        "〜はあなたのためになる",
+        "～はあなたのためになる",
+        "~はあなたのためになる",
+        "はあなたのためになる",
+        "〜はあなたの体によい",
+        "～はあなたの体によい",
+        "はあなたの体によい",
+        "〜はあなたに良い",
+        "～はあなたに良い",
+        "はあなたに良い",
+        "はあなたにいい"
+      ]
+    },
+    "importance": 5
+  },
+  {
+    "meaning_to_word": {
+      "question": "仕事、職業",
+      "answers": [
+        "job"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "job",
+      "answers": [
+        "仕事、職業",
+        "仕事",
+        "しごと",
+        "職業",
+        "しょくぎょう",
+        "職",
+        "ジョブ"
+      ]
+    },
+    "importance": 5
+  },
+  {
+    "meaning_to_word": {
+      "question": "〜だった（単数）",
+      "answers": [
+        "was"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "was",
+      "answers": [
+        "〜だった（単数）",
+        "〜だった",
+        "～だった",
+        "~だった",
+        "だった",
+        "でした",
+        "〜でした",
+        "～でした",
+        "~でした",
+        "いた",
+        "〜にいた",
+        "～にいた",
+        "~にいた",
+        "にいた"
+      ]
+    },
+    "importance": 5
+  },
+  {
+    "meaning_to_word": {
+      "question": "〜まで",
+      "answers": [
+        "until"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "until",
+      "answers": [
+        "〜まで",
+        "～まで",
+        "~まで",
+        "まで",
+        "〜に至るまで",
+        "～に至るまで",
+        "に至るまで"
+      ]
+    },
+    "importance": 5
+  },
+  {
+    "meaning_to_word": {
+      "question": "聞く、耳を傾ける",
+      "answers": [
+        "listen"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "listen",
+      "answers": [
+        "聞く、耳を傾ける",
+        "聞く",
+        "きく",
+        "耳を傾ける",
+        "みみをかたむける",
+        "聴く",
+        "傾聴する"
+      ]
+    },
+    "importance": 5
+  },
+  {
+    "meaning_to_word": {
+      "question": "劇場、映画館",
+      "answers": [
+        "theater"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "theater",
+      "answers": [
+        "劇場、映画館",
+        "劇場",
+        "げきじょう",
+        "映画館",
+        "えいがかん",
+        "シアター",
+        "しあたー"
+      ]
+    },
+    "importance": 5
+  },
+  {
+    "meaning_to_word": {
+      "question": "〜と一緒に",
+      "answers": [
+        "with"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "with",
+      "answers": [
+        "〜と一緒に",
+        "～と一緒に",
+        "~と一緒に",
+        "と一緒に",
+        "といっしょに",
+        "〜と",
+        "～と",
+        "~と",
+        "と",
+        "〜を持って",
+        "～を持って",
+        "を持って",
+        "〜を用いて",
+        "～を用いて",
+        "を用いて"
+      ]
+    },
+    "importance": 5
+  },
+  {
+    "meaning_to_word": {
+      "question": "旅",
+      "answers": [
+        "trip"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "trip",
+      "answers": [
+        "旅",
+        "たび",
+        "旅行",
+        "りょこう",
+        "小旅行"
+      ]
+    },
+    "importance": 5
+  },
+  {
+    "meaning_to_word": {
+      "question": "脚、足",
+      "answers": [
+        "leg"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "leg",
+      "answers": [
+        "脚、足",
+        "脚",
+        "あし",
+        "足",
+        "レッグ"
+      ]
+    },
+    "importance": 5
+  },
+  {
+    "meaning_to_word": {
+      "question": "〜だろう、〜するつもりである",
+      "answers": [
+        "will"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "will",
+      "answers": [
+        "〜だろう、〜するつもりである",
+        "〜だろう",
+        "～だろう",
+        "~だろう",
+        "だろう",
+        "〜するつもりである",
+        "～するつもりである",
+        "~するつもりである",
+        "するつもりである",
+        "するつもりだ",
+        "〜するつもりだ",
+        "～するつもりだ",
+        "〜でしょう",
+        "～でしょう",
+        "でしょう",
+        "予定だ",
+        "よていだ",
+        "意思",
+        "いし",
+        "遺言",
+        "ゆいごん"
+      ]
+    },
+    "importance": 5
+  },
+  {
+    "meaning_to_word": {
+      "question": "親愛なる〜、〜さん",
+      "answers": [
+        "dear ~",
+        "dear ~,",
+        "dear ～",
+        "dear ～,",
+        "dear"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "dear ~",
+      "answers": [
+        "親愛なる〜、〜さん",
+        "親愛なる〜",
+        "親愛なる～",
+        "親愛なる~",
+        "親愛なる",
+        "しんあいなる",
+        "〜さん",
+        "～さん",
+        "~さん",
+        "さん",
+        "親しい",
+        "したしい",
+        "愛しい",
+        "いとしい"
+      ]
+    },
+    "importance": 5
+  },
+  {
+    "meaning_to_word": {
+      "question": "いいね、素敵だね",
+      "answers": [
+        "Sounds nice!",
+        "Sounds nice",
+        "Sounds good!",
+        "Sounds good"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "Sounds nice!",
+      "answers": [
+        "いいね、素敵だね",
+        "いいね",
+        "素敵だね",
+        "すてきだね",
+        "いいですね",
+        "素敵ですね",
+        "すてきですね",
+        "よさそうだね",
+        "良さそうですね",
+        "いい響きだね"
+      ]
+    },
+    "importance": 5
+  },
+  {
+    "meaning_to_word": {
+      "question": "なぜなら、〜なので",
+      "answers": [
+        "because",
+        "because ~",
+        "because ～"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "because",
+      "answers": [
+        "なぜなら、〜なので",
+        "なぜなら",
+        "〜なので",
+        "～なので",
+        "~なので",
+        "なので",
+        "だから",
+        "〜だから",
+        "～だから",
+        "~だから",
+        "〜という理由は",
+        "～という理由は",
+        "という理由は",
+        "というのも"
+      ]
+    },
+    "importance": 5
+  },
+  {
+    "meaning_to_word": {
+      "question": "情報",
+      "answers": [
+        "information"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "information",
+      "answers": [
+        "情報",
+        "じょうほう",
+        "案内",
+        "あんない",
+        "お知らせ",
+        "おしらせ",
+        "知識",
+        "ちしき",
+        "インフォメーション"
+      ]
+    },
+    "importance": 5
+  },
+  {
+    "meaning_to_word": {
+      "question": "お気に入りの、大好きな",
+      "answers": [
+        "favorite"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "favorite",
+      "answers": [
+        "お気に入りの、大好きな",
+        "お気に入りの",
+        "おきにいりの",
+        "大好きな",
+        "だいすきな",
+        "いちばん好きな",
+        "一番好きな",
+        "いちばんすきな",
+        "お気に入り",
+        "大好物"
+      ]
+    },
+    "importance": 5
+  },
+  {
+    "meaning_to_word": {
+      "question": "作家、ライター",
+      "answers": [
+        "writer"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "writer",
+      "answers": [
+        "作家、ライター",
+        "作家",
+        "さっか",
+        "ライター",
+        "らいたー",
+        "著者",
+        "ちょしゃ",
+        "筆者",
+        "ひっしゃ",
+        "書く人"
+      ]
+    },
+    "importance": 5
+  },
+  {
+    "meaning_to_word": {
+      "question": "〜時、時刻を表す",
+      "answers": [
+        "o'clock"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "o'clock",
+      "answers": [
+        "〜時、時刻を表す",
+        "〜時",
+        "～時",
+        "~時",
+        "時",
+        "じ",
+        "時刻",
+        "じこく"
+      ]
+    },
+    "importance": 5
+  },
+  {
+    "meaning_to_word": {
+      "question": "〜するつもりである、〜しようとしている",
+      "answers": [
+        "am going to",
+        "be going to",
+        "going to",
+        "am going to ~",
+        "be going to ~",
+        "going to ~",
+        "am going to ～",
+        "be going to ～",
+        "going to ～"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "am going to",
+      "answers": [
+        "〜するつもりである、〜しようとしている",
+        "〜するつもりである",
+        "～するつもりである",
+        "~するつもりである",
+        "するつもりである",
+        "〜しようとしている",
+        "～しようとしている",
+        "~しようとしている",
+        "しようとしている",
+        "〜するつもりだ",
+        "～するつもりだ",
+        "~するつもりだ",
+        "するつもりだ",
+        "〜する予定だ",
+        "～する予定だ",
+        "~する予定だ",
+        "する予定だ"
+      ]
+    },
+    "importance": 5
+  },
+  {
+    "meaning_to_word": {
+      "question": "贈り物、プレゼント",
+      "answers": [
+        "present"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "present",
+      "answers": [
+        "贈り物、プレゼント",
+        "贈り物",
+        "おくりもの",
+        "プレゼント",
+        "ぷれぜんと",
+        "ギフト",
+        "贈呈品",
+        "現在の",
+        "げんざいの",
+        "出席している"
+      ]
+    },
+    "importance": 5
+  },
+  {
+    "meaning_to_word": {
+      "question": "〜を探す",
+      "answers": [
+        "look for ~",
+        "look for",
+        "look for ～"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "look for ~",
+      "answers": [
+        "〜を探す",
+        "～を探す",
+        "~を探す",
+        "を探す",
+        "をさがす",
+        "〜を求める",
+        "～を求める",
+        "~を求める",
+        "を求める",
+        "をもとめる"
+      ]
+    },
+    "importance": 5
+  },
+  {
+    "meaning_to_word": {
+      "question": "もっと、さらに",
+      "answers": [
+        "more"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "more",
+      "answers": [
+        "もっと、さらに",
+        "もっと",
+        "さらに",
+        "より多くの",
+        "よりおおくの",
+        "もっと多くの",
+        "より以上の"
+      ]
+    },
+    "importance": 5
+  },
+  {
+    "meaning_to_word": {
+      "question": "会議",
+      "answers": [
+        "meeting"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "meeting",
+      "answers": [
+        "会議",
+        "かいぎ",
+        "打ち合わせ",
+        "うちあわせ",
+        "ミーティング",
+        "みーてぃんぐ",
+        "会合",
+        "かいごう",
+        "出会い",
+        "であい"
+      ]
+    },
+    "importance": 5
+  },
+  {
+    "meaning_to_word": {
+      "question": "希望、望む",
+      "answers": [
+        "hope"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "hope",
+      "answers": [
+        "希望、望む",
+        "希望",
+        "きぼう",
+        "望む",
+        "のぞむ",
+        "願う",
+        "ねがう",
+        "希望する",
+        "きぼうする",
+        "期待",
+        "きたい"
+      ]
+    },
+    "importance": 5
+  },
+  {
+    "meaning_to_word": {
+      "question": "伝えた、話した",
+      "answers": [
+        "told"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "told",
+      "answers": [
+        "伝えた、話した",
+        "伝えた",
+        "つたえた",
+        "話した",
+        "はなした",
+        "言った",
+        "いった",
+        "教えた",
+        "おしえた",
+        "命じた",
+        "めいじた"
+      ]
+    },
+    "importance": 5
+  },
+  {
+    "meaning_to_word": {
+      "question": "会う",
+      "answers": [
+        "meet"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "meet",
+      "answers": [
+        "会う",
+        "あう",
+        "面会する",
+        "めんかいする",
+        "出会う",
+        "であう",
+        "待ち合わせる"
+      ]
+    },
+    "importance": 5
+  },
+  {
+    "meaning_to_word": {
+      "question": "伝える、話す",
+      "answers": [
+        "tell"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "tell",
+      "answers": [
+        "伝える、話す",
+        "伝える",
+        "つたえる",
+        "話す",
+        "はなす",
+        "言う",
+        "いう",
+        "教える",
+        "おしえる",
+        "命じる",
+        "めいじる"
+      ]
+    },
+    "importance": 5
+  },
+  {
+    "meaning_to_word": {
+      "question": "〜として、〜のように",
+      "answers": [
+        "as",
+        "as ~",
+        "as ～"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "as",
+      "answers": [
+        "〜として、〜のように",
+        "〜として",
+        "～として",
+        "~として",
+        "として",
+        "〜のように",
+        "～のように",
+        "~のように",
+        "のように",
+        "〜と同じくらい",
+        "～と同じくらい",
+        "~と同じくらい",
+        "と同じくらい",
+        "〜なので",
+        "～なので",
+        "~なので",
+        "なので",
+        "〜するにつれて",
+        "～するにつれて",
+        "~するにつれて",
+        "するにつれて",
+        "〜する時に",
+        "～する時に",
+        "~する時に",
+        "する時に"
+      ]
+    },
+    "importance": 5
+  },
+  {
+    "meaning_to_word": {
+      "question": "多くの、たくさんの",
+      "answers": [
+        "many"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "many",
+      "answers": [
+        "多くの、たくさんの",
+        "多くの",
+        "おおくの",
+        "たくさんの",
+        "たくさん",
+        "多数の",
+        "たすうの",
+        "多数",
+        "数多くの",
+        "かずおおくの"
+      ]
+    },
+    "importance": 5
+  },
+  {
+    "meaning_to_word": {
+      "question": "置く、入れる",
+      "answers": [
+        "put"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "put",
+      "answers": [
+        "置く、入れる",
+        "置く",
+        "おく",
+        "入れる",
+        "いれる",
+        "乗せる",
+        "のせる",
+        "つける",
+        "塗る",
+        "ぬる"
+      ]
+    },
+    "importance": 5
+  },
+  {
+    "meaning_to_word": {
+      "question": "終わった、終了した",
+      "answers": [
+        "ended"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "ended",
+      "answers": [
+        "終わった、終了した",
+        "終わった",
+        "おわった",
+        "終了した",
+        "しゅうりょうした",
+        "終えた",
+        "おえた",
+        "結末を迎えた"
+      ]
+    },
+    "importance": 5
+  },
+  {
+    "meaning_to_word": {
+      "question": "それら、それらの",
+      "answers": [
+        "Those"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "Those",
+      "answers": [
+        "それら、それらの",
+        "それら",
+        "それらの",
+        "あれら",
+        "あれらの",
+        "あの方たち",
+        "あの方々の",
+        "あれらは",
+        "それらは"
+      ]
+    },
+    "importance": 5
+  },
+  {
+    "meaning_to_word": {
+      "question": "〜より多い、〜以上",
+      "answers": [
+        "more than ~"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "more than ~",
+      "answers": [
+        "〜より多い、〜以上",
+        "〜より多い",
+        "～より多い",
+        "~より多い",
+        "より多い",
+        "よりおおい",
+        "〜以上",
+        "～以上",
+        "~以上",
+        "以上",
+        "いじょう",
+        "〜を超える",
+        "～を超える",
+        "~を超える",
+        "を超える",
+        "をこえる"
+      ]
+    },
+    "importance": 5
+  },
+  {
+    "meaning_to_word": {
+      "question": "尋ねる、頼む",
+      "answers": [
+        "ask"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "ask",
+      "answers": [
+        "尋ねる、頼む",
+        "尋ねる",
+        "たずねる",
+        "頼む",
+        "たのむ",
+        "聞く",
+        "きく",
+        "質問する",
+        "しつもんする",
+        "お願いする",
+        "おねがいする",
+        "求める",
+        "もとめる"
+      ]
+    },
+    "importance": 5
+  },
+  {
+    "meaning_to_word": {
+      "question": "観光 観光名所",
+      "answers": [
+        "sightseeing"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "sightseeing",
+      "answers": [
+        "観光 観光名所",
+        "観光",
+        "かんこう",
+        "観光名所",
+        "かんこうめいしょ",
+        "観光地",
+        "かんこうち",
+        "見物",
+        "けんぶつ",
+        "観光旅行"
+      ]
+    },
+    "importance": 5
+  },
+  {
+    "meaning_to_word": {
+      "question": "読む（過去形）",
+      "answers": [
+        "read"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "read",
+      "answers": [
+        "読む（過去形）",
+        "読んだ",
+        "よんだ",
+        "読んでしまった"
+      ]
+    },
+    "importance": 5
+  },
+  {
+    "meaning_to_word": {
+      "question": "〜の前に",
+      "answers": [
+        "Before ~",
+        "Before ~,",
+        "Before ～",
+        "Before ～,",
+        "before ~",
+        "before ~,",
+        "before ～",
+        "before ～,",
+        "before",
+        "Before"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "Before ~",
+      "answers": [
+        "〜の前に",
+        "～の前に",
+        "~の前に",
+        "の前に",
+        "のまえに",
+        "前に",
+        "まえに",
+        "〜する前に",
+        "～する前に",
+        "~する前に",
+        "する前に",
+        "するまえに",
+        "以前に",
+        "いぜんに"
+      ]
+    },
+    "importance": 5
+  },
+  {
+    "meaning_to_word": {
+      "question": "〜の後に",
+      "answers": [
+        "After ~",
+        "After ~,",
+        "After ～",
+        "After ～,",
+        "after ~",
+        "after ~,",
+        "after ～",
+        "after ～,",
+        "after",
+        "After"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "After ~",
+      "answers": [
+        "〜の後に",
+        "～の後に",
+        "~の後に",
+        "の後に",
+        "のあとに",
+        "後に",
+        "あとに",
+        "〜した後に",
+        "～した後に",
+        "~した後に",
+        "した後に",
+        "したあとに",
+        "〜の後",
+        "～の後",
+        "~の後",
+        "の後",
+        "のあと"
+      ]
+    },
+    "importance": 5
+  },
+  {
+    "meaning_to_word": {
+      "question": "言う",
+      "answers": [
+        "say"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "say",
+      "answers": [
+        "言う",
+        "いう",
+        "発言する",
+        "はつげんする",
+        "述べる",
+        "のべる",
+        "書いてある"
+      ]
+    },
+    "importance": 5
+  },
+  {
+    "meaning_to_word": {
+      "question": "1年間",
+      "answers": [
+        "for a year"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "for a year",
+      "answers": [
+        "1年間",
+        "一年間",
+        "いちねんかん",
+        "1年",
+        "一年",
+        "いちねん",
+        "1年の間",
+        "一年の間"
+      ]
+    },
+    "importance": 5
+  },
+  {
+    "meaning_to_word": {
+      "question": "見つける",
+      "answers": [
+        "find"
+      ]
+    },
+    "word_to_meaning": {
+      "question": "find",
+      "answers": [
+        "見つける",
+        "みつける",
+        "発見する",
+        "はっけんする",
+        "見出す",
+        "みいだす",
+        "気づく",
+        "きづく"
+      ]
+    },
+    "importance": 5
+  }
+]

@@ -47,12 +47,12 @@
   button.danger { background: var(--danger); color: var(--danger-text); }
   button:disabled { opacity: .45; cursor: not-allowed; }
 
-  input[type=text], select, input[type=file] {
+  input[type=text], textarea, select, input[type=file] {
     width: 100%; padding: 10px 14px; font-size: 16px; background-color: var(--sub);
     color: var(--text); border: 2px solid var(--line); border-radius: 10px;
     transition: all .2s ease; font-family: inherit; margin-bottom: 10px;
   }
-  input[type=text]:focus, select:focus {
+  input[type=text]:focus, textarea:focus, select:focus {
     outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px rgba(2,132,199,.12);
   }
   label { display: block; font-size: 13px; font-weight: 700; color: var(--muted); margin: 0 0 5px; }
@@ -136,6 +136,14 @@
       </select>
     </div>
 
+    <div style="margin-bottom: 20px;">
+      <label>出題形式</label>
+      <select id="quiz-mode-select" onchange="changeQuizMode()">
+        <option value="meaning_to_word">日本語を見て、英単語を入力</option>
+        <option value="word_to_meaning">英単語を見て、日本語を入力</option>
+      </select>
+    </div>
+
     <div class="card">
       <label>外部ファイルから読み込む (JSON)</label>
       <input type="file" id="file-input" accept=".json" onchange="loadCustomFile(event)" style="font-size: 13px;">
@@ -151,17 +159,20 @@
     <div class="card" style="margin-top: 30px;">
       <label>選択中の単語リストに、新しい単語を追加</label>
 
-      <div style="margin-bottom: 8px;">
-        <label for="new-word-meaning">意味</label>
-        <input type="text" id="new-word-meaning" placeholder="例：受け入れる">
+      <div style="margin-bottom: 14px; padding: 12px; border: 1px solid var(--line); border-radius: 10px;">
+        <div style="font-weight: 900; margin-bottom: 8px;">日本語 → 英語</div>
+        <label for="new-m2w-question">問題（日本語）</label>
+        <input type="text" id="new-m2w-question" placeholder="例：受け入れる">
+        <label for="new-m2w-answers">正解（英語・複数可）</label>
+        <textarea id="new-m2w-answers" rows="3" placeholder="例：accept,&#10;receive"></textarea>
       </div>
 
-      <div style="margin-bottom: 8px;">
-        <label for="new-word-answer">英単語・表現</label>
-        <input type="text" id="new-word-answer" placeholder="例：accept">
-        <p style="font-size: 11px; color: var(--muted); margin-top: -4px;">
-          複数の正解を登録する場合は「,」または改行で区切れます。
-        </p>
+      <div style="margin-bottom: 14px; padding: 12px; border: 1px solid var(--line); border-radius: 10px;">
+        <div style="font-weight: 900; margin-bottom: 8px;">英語 → 日本語</div>
+        <label for="new-w2m-question">問題（英語）</label>
+        <input type="text" id="new-w2m-question" placeholder="例：accept">
+        <label for="new-w2m-answers">正解（日本語・複数可）</label>
+        <textarea id="new-w2m-answers" rows="3" placeholder="例：受け入れる,&#10;引き受ける"></textarea>
       </div>
 
       <div style="margin-bottom: 10px;">
@@ -177,7 +188,7 @@
 
       <button class="primary" onclick="addNewWord()" style="width: 100%;">この単語を追加</button>
       <p style="font-size: 11px; color: var(--muted); margin-top: 8px;">
-        ※標準リストに追加した場合も、その時点でローカルのカスタマイズコピーが作成されます。
+        ※各出題方向の問題と正解は独立しています。複数の正解は「,」または改行で登録できます。
       </p>
     </div>
   </div>
@@ -186,9 +197,10 @@
   <div id="quiz-screen" class="screen container">
     <div class="progress-text" id="progress-indicator">問題: 1 / 30</div>
     <div style="text-align: center;"><span class="badge info" id="importance-badge">重要度: 3</span></div>
-    
+
+    <div class="progress-text" id="quiz-prompt-label" style="font-size: 13px; margin-top: 12px; margin-bottom: 4px;">日本語</div>
     <div class="meaning-text" id="word-meaning">意味</div>
-    
+
     <div class="hint-text" id="hint-display"></div>
 
     <input type="text" id="answer-input" placeholder="英単語を入力してEnter" autocomplete="off">
@@ -242,7 +254,7 @@
     </div>
     
     <p style="font-size: 12px; color: var(--muted); margin-bottom: 15px;">
-      変更された重要度はブラウザに自動保存されています。
+      変更された重要度と出題方向別の学習データはブラウザに自動保存されています。
     </p>
 
     <div style="display: flex; flex-direction: column; gap: 10px;">
@@ -268,6 +280,7 @@
   const CUSTOM_DATA_STORAGE_KEY = "vocabAppCustomizedWordLists_v2";
   const STARTED_LISTS_STORAGE_KEY = "vocabAppStartedLists_v2";
   const CURRENT_LIST_STORAGE_KEY = "vocabAppCurrentListName_v2";
+  const QUIZ_MODE_STORAGE_KEY = "vocabAppQuizMode_v1";
   const LEGACY_STORAGE_KEY = "vocabAppWordLists";
 
   // オフライン時の初回起動用フォールバック。
@@ -292,6 +305,8 @@
   let sessionPerfectCount = 0;
   let sessionStruggleCount = 0;
   let isProcessing = false;
+  let quizMode = "meaning_to_word";
+  let sessionQuizMode = "meaning_to_word";
 
   // ============================================================
   // 初期化
@@ -307,6 +322,9 @@
     rebuildAppWordLists();
     restoreCurrentList();
     updateSelectBox();
+
+    const modeSelect = document.getElementById('quiz-mode-select');
+    if (modeSelect) modeSelect.value = quizMode;
 
     const loading = document.getElementById('startup-loading');
     if (loading) loading.style.display = 'none';
@@ -332,29 +350,77 @@
     return cloneData(data || {});
   }
 
-  function normalizeWordListData(data) {
-    if (!Array.isArray(data)) {
-      throw new Error('JSONの形式が正しくありません。単語オブジェクトの配列で指定してください。');
-    }
+  function cleanAnswerArray(values) {
+    if (!Array.isArray(values)) values = [values];
+    return values
+      .filter(v => typeof v === 'string')
+      .map(v => v.trim())
+      .filter(Boolean);
+  }
 
-    return data.map(item => {
-      let words = item && item.word;
-      if (!Array.isArray(words)) words = [words];
-      words = words
-        .filter(v => typeof v === 'string')
-        .map(v => v.trim())
-        .filter(Boolean);
+  function clampImportance(value) {
+    let importance = Number(value);
+    if (!Number.isFinite(importance)) importance = 3;
+    return Math.max(1, Math.min(5, importance));
+  }
 
-      let importance = Number(item && item.importance);
-      if (!Number.isFinite(importance)) importance = 3;
-      importance = Math.max(1, Math.min(5, importance));
+  function normalizeEntry(item) {
+    if (!item || typeof item !== 'object') return null;
+
+    // 新形式:
+    // {
+    //   "meaning_to_word": {"question":"受け入れる", "answers":["accept"]},
+    //   "word_to_meaning": {"question":"accept", "answers":["受け入れる"]},
+    //   "importance": 3
+    // }
+    const hasNewFormat = item.meaning_to_word || item.word_to_meaning;
+    if (hasNewFormat) {
+      const m2w = item.meaning_to_word || {};
+      const w2m = item.word_to_meaning || {};
+      const m2wQuestion = String(m2w.question ?? '').trim();
+      const w2mQuestion = String(w2m.question ?? '').trim();
+      const m2wAnswers = cleanAnswerArray(m2w.answers);
+      const w2mAnswers = cleanAnswerArray(w2m.answers);
+
+      if (!m2wQuestion && !w2mQuestion) return null;
 
       return {
-        meaning: item && item.meaning ? String(item.meaning) : "不明",
-        word: words,
-        importance
+        meaning_to_word: {
+          question: m2wQuestion || w2mAnswers[0] || '',
+          answers: m2wAnswers
+        },
+        word_to_meaning: {
+          question: w2mQuestion || m2wAnswers[0] || '',
+          answers: w2mAnswers
+        },
+        importance: clampImportance(item.importance)
       };
-    }).filter(item => item.word.length > 0);
+    }
+
+    // 旧形式から自動変換:
+    // {"meaning":"受け入れる","word":["accept","take in"],"importance":3}
+    const meaning = item.meaning ? String(item.meaning).trim() : '';
+    const words = cleanAnswerArray(item.word);
+    if (!meaning || words.length === 0) return null;
+
+    return {
+      meaning_to_word: {
+        question: meaning,
+        answers: words
+      },
+      word_to_meaning: {
+        question: words[0],
+        answers: [meaning]
+      },
+      importance: clampImportance(item.importance)
+    };
+  }
+
+  function normalizeWordListData(data) {
+    if (!Array.isArray(data)) {
+      throw new Error('JSONの形式が正しくありません。出題方向別データの配列で指定してください。');
+    }
+    return data.map(normalizeEntry).filter(Boolean);
   }
 
   function normalizeListMap(data) {
@@ -402,6 +468,9 @@
       if (startedLists[name] === undefined) startedLists[name] = true;
     });
     saveStartedLists();
+
+    const savedMode = localStorage.getItem(QUIZ_MODE_STORAGE_KEY);
+    quizMode = savedMode === "word_to_meaning" ? "word_to_meaning" : "meaning_to_word";
   }
 
   function saveInitialWordLists() {
@@ -583,6 +652,55 @@
     saveCurrentListName();
   }
 
+  function changeQuizMode() {
+    const select = document.getElementById('quiz-mode-select');
+    quizMode = select.value === "word_to_meaning" ? "word_to_meaning" : "meaning_to_word";
+    localStorage.setItem(QUIZ_MODE_STORAGE_KEY, quizMode);
+  }
+
+  function applyQuizModeUI(mode) {
+    const label = document.getElementById('quiz-prompt-label');
+    const display = document.getElementById('word-meaning');
+    const input = document.getElementById('answer-input');
+    const speechBtn = document.getElementById('speech-btn');
+
+    if (mode === "word_to_meaning") {
+      label.textContent = "英単語";
+      display.style.color = "var(--text)";
+      input.placeholder = "日本語を入力してEnter";
+      speechBtn.style.display = "none";
+    } else {
+      label.textContent = "日本語";
+      display.style.color = "var(--accent)";
+      input.placeholder = "英単語を入力してEnter";
+      speechBtn.style.display = "inline-block";
+      speechBtn.textContent = "発音する 🎤";
+    }
+  }
+
+  function getQuizDirectionData(wordData, mode) {
+    if (mode === "word_to_meaning") {
+      return wordData.word_to_meaning || { question: '', answers: [] };
+    }
+    return wordData.meaning_to_word || { question: '', answers: [] };
+  }
+
+  function getQuestionText(wordData, mode) {
+    return String(getQuizDirectionData(wordData, mode).question || '');
+  }
+
+  function getAcceptedAnswers(wordData, mode) {
+    return cleanAnswerArray(getQuizDirectionData(wordData, mode).answers);
+  }
+
+  function normalizeTypedAnswer(value) {
+    return String(value || "").normalize('NFKC').trim().toLowerCase();
+  }
+
+  function answersForDisplay(wordData, mode) {
+    return getAcceptedAnswers(wordData, mode).join(" / ");
+  }
+
   // ============================================================
   // カスタムJSON読み込み・書き出し
   // ============================================================
@@ -630,84 +748,74 @@
       return;
     }
 
-    const meaningInput = document.getElementById('new-word-meaning');
-    const answerInput = document.getElementById('new-word-answer');
-    const importanceInput = document.getElementById('new-word-importance');
-
-    const meaning = meaningInput.value.trim();
-    const rawAnswers = answerInput.value.trim();
-
-    if (!meaning) {
-      alert("意味を入力してください。");
-      meaningInput.focus();
-      return;
-    }
-
-    if (!rawAnswers) {
-      alert("英単語・表現を入力してください。");
-      answerInput.focus();
-      return;
-    }
-
-    const words = rawAnswers
-      .split(/[,、\n]+/)
-      .map(word => word.trim())
-      .filter(Boolean);
-
-    if (words.length === 0) {
-      alert("有効な英単語・表現を入力してください。");
-      answerInput.focus();
-      return;
-    }
-
-    const importance = Math.max(
-      1,
-      Math.min(5, Number(importanceInput.value) || 3)
+    const m2wQuestion = document.getElementById('new-m2w-question').value.trim();
+    const m2wAnswers = cleanAnswerArray(
+      document.getElementById('new-m2w-answers').value.split(/[,、\n]+/)
     );
+    const w2mQuestion = document.getElementById('new-w2m-question').value.trim();
+    const w2mAnswers = cleanAnswerArray(
+      document.getElementById('new-w2m-answers').value.split(/[,、\n]+/)
+    );
+    const importance = clampImportance(document.getElementById('new-word-importance').value);
 
-    // 標準リストの場合は、この追加操作を「学習用コピーの作成」とみなす。
-    // 以後、追加した単語も含めてローカルのカスタマイズデータだけを更新する。
+    if (!m2wQuestion || m2wAnswers.length === 0) {
+      alert("「日本語 → 英語」の問題と正解を入力してください。");
+      document.getElementById('new-m2w-question').focus();
+      return;
+    }
+    if (!w2mQuestion || w2mAnswers.length === 0) {
+      alert("「英語 → 日本語」の問題と正解を入力してください。");
+      document.getElementById('new-w2m-question').focus();
+      return;
+    }
+
     createWorkingCopyIfNeeded(currentListName);
 
     const targetList = appWordLists[currentListName];
+    const newEntry = {
+      meaning_to_word: {
+        question: m2wQuestion,
+        answers: m2wAnswers
+      },
+      word_to_meaning: {
+        question: w2mQuestion,
+        answers: w2mAnswers
+      },
+      importance
+    };
 
-    // 同じ意味＋単語の組み合わせが既にある場合は重複追加しない。
     const duplicate = targetList.some(item => {
-      const sameMeaning = item.meaning === meaning;
-      const existingWords = new Set((item.word || []).map(w => w.toLowerCase()));
-      const allWordsExist = words.every(w => existingWords.has(w.toLowerCase()));
-      return sameMeaning && allWordsExist;
+      return normalizeTypedAnswer(item.meaning_to_word?.question) === normalizeTypedAnswer(m2wQuestion)
+        && normalizeTypedAnswer(item.word_to_meaning?.question) === normalizeTypedAnswer(w2mQuestion)
+        && JSON.stringify(item.meaning_to_word?.answers || []) === JSON.stringify(m2wAnswers)
+        && JSON.stringify(item.word_to_meaning?.answers || []) === JSON.stringify(w2mAnswers);
     });
 
     if (duplicate) {
-      alert("同じ単語がすでに登録されています。");
+      alert("同じ問題データがすでに登録されています。");
       return;
     }
 
-    targetList.push({
-      meaning,
-      word: words,
-      importance
-    });
-
+    targetList.push(newEntry);
     overwriteWorkingCopy(currentListName);
     rebuildAppWordLists();
     updateSelectBox();
-
     document.getElementById('list-select').value = currentListName;
 
-    meaningInput.value = "";
-    answerInput.value = "";
-    importanceInput.value = "3";
+    document.getElementById('new-m2w-question').value = "";
+    document.getElementById('new-m2w-answers').value = "";
+    document.getElementById('new-w2m-question').value = "";
+    document.getElementById('new-w2m-answers').value = "";
+    document.getElementById('new-word-importance').value = "3";
 
-    alert(`「${words.join(" / ")}」を「${currentListName}」に追加しました。`);
+    alert(`新しい単語データを「${currentListName}」に追加しました。`);
   }
 
   function exportCurrentList() {
     if (!currentListName || !appWordLists[currentListName]) return;
 
     const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(
-      JSON.stringify(appWordLists[currentListName], null, 2)
+      JSON.stringify(appWordLists[currentListName].map(normalizeEntry), null, 2)
     );
     const a = document.createElement('a');
     a.href = dataStr;
@@ -729,6 +837,9 @@
     // ここで初めて、標準URLデータをローカルの学習用コピーへ固定する。
     createWorkingCopyIfNeeded(currentListName);
     updateSelectBox();
+
+    sessionQuizMode = quizMode;
+    applyQuizModeUI(sessionQuizMode);
 
     const list = appWordLists[currentListName];
     if (!list || list.length === 0) {
@@ -767,8 +878,10 @@
       `問題: ${currentQuestionIndex + 1} / ${sessionPool.length}`;
     document.getElementById('importance-badge').textContent =
       `重要度: ${currentWordData.importance}`;
-    document.getElementById('word-meaning').textContent = currentWordData.meaning;
+
+    document.getElementById('word-meaning').textContent = getQuestionText(currentWordData, sessionQuizMode);
     document.getElementById('hint-display').textContent = "";
+    applyQuizModeUI(sessionQuizMode);
 
     const input = document.getElementById('answer-input');
     input.classList.remove('shake', 'correct-effect');
@@ -791,7 +904,10 @@
 
     if (!userAnswer) return;
 
-    const isCorrect = currentWordData.word.some(w => w.toLowerCase() === userAnswer);
+    const acceptedAnswers = getAcceptedAnswers(currentWordData, sessionQuizMode);
+    const isCorrect = acceptedAnswers.some(answer =>
+      normalizeTypedAnswer(answer) === normalizeTypedAnswer(userAnswer)
+    );
 
     if (isCorrect) {
       handleCorrect();
@@ -830,7 +946,8 @@
       setTimeout(() => { showAnswerScreen(false); }, 600);
     } else {
       input.value = "";
-      const hintChar = currentWordData.word[0].charAt(0).toUpperCase();
+      const hintSource = getQuestionText(currentWordData, sessionQuizMode);
+      const hintChar = String(hintSource || "").charAt(0);
       document.getElementById('hint-display').textContent =
         `💡 ヒント: 頭文字は「${hintChar}」`;
     }
@@ -881,8 +998,8 @@
       titleEl.style.color = "var(--danger-text)";
     }
 
-    document.getElementById('correct-word').textContent = currentWordData.word.join(" / ");
-    document.getElementById('answer-meaning').textContent = currentWordData.meaning;
+    document.getElementById('correct-word').textContent = getQuestionText(currentWordData, sessionQuizMode);
+    document.getElementById('answer-meaning').textContent = `正解：${answersForDisplay(currentWordData, sessionQuizMode)}`;
     document.getElementById('ans-time').textContent = `${timeSpent}秒`;
     document.getElementById('ans-mistakes').textContent = `${currentMistakes}回`;
 
@@ -913,7 +1030,7 @@
   // 音声認識・画面・テーマ
   // ============================================================
   function startSpeechRecognition() {
-    if (isProcessing) return;
+    if (isProcessing || sessionQuizMode === "word_to_meaning") return;
 
     const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
     if (!SpeechRecognition) {
