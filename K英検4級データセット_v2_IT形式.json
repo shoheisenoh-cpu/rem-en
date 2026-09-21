@@ -1,0 +1,2534 @@
+[
+  {
+    "meaning": "受け入れる",
+    "word": [
+      "accept"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "～に到着する",
+    "word": [
+      "arrive at",
+      "arrive at ~",
+      "arrive at ～"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "借りる",
+    "word": [
+      "borrow"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "持ってくる",
+    "word": [
+      "bring"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "建てる",
+    "word": [
+      "build"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "運ぶ、持ち歩く",
+    "word": [
+      "carry"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "捕まえる、乗る",
+    "word": [
+      "catch"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "選ぶ",
+    "word": [
+      "choose"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "閉める",
+    "word": [
+      "close"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "集める",
+    "word": [
+      "collect"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "決める",
+    "word": [
+      "decide"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "説明する",
+    "word": [
+      "describe"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "楽しむ",
+    "word": [
+      "enjoy"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "入る",
+    "word": [
+      "enter"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "終える",
+    "word": [
+      "finish"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "忘れる",
+    "word": [
+      "forget"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "起こる",
+    "word": [
+      "happen"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "招待する",
+    "word": [
+      "invite"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "参加する",
+    "word": [
+      "join"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "去る、置いていく",
+    "word": [
+      "leave"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "貸す",
+    "word": [
+      "lend"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "なくす、負ける",
+    "word": [
+      "lose"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "意味する",
+    "word": [
+      "mean"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "乗り遅れる、恋しく思う",
+    "word": [
+      "miss"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "練習する",
+    "word": [
+      "practice"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "覚えている、思い出す",
+    "word": [
+      "remember"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "戻る、返す",
+    "word": [
+      "return"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "救う、蓄える",
+    "word": [
+      "save"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "（時間・お金を）使う",
+    "word": [
+      "spend"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "滞在する",
+    "word": [
+      "stay"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "教える",
+    "word": [
+      "teach"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "旅行する",
+    "word": [
+      "travel"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "理解する",
+    "word": [
+      "understand"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "訪れる",
+    "word": [
+      "visit"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "心配する",
+    "word": [
+      "worry"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "言う",
+    "word": [
+      "say"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "伝える",
+    "word": [
+      "tell"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "見る",
+    "word": [
+      "look"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "見える、見る",
+    "word": [
+      "see"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "注意して見る",
+    "word": [
+      "watch"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "聞こえる",
+    "word": [
+      "hear"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "注意して聞く",
+    "word": [
+      "listen"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "取る、持っていく",
+    "word": [
+      "take"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "行く",
+    "word": [
+      "go"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "来る",
+    "word": [
+      "come"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "得る、着く",
+    "word": [
+      "get"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "持つ、食べる",
+    "word": [
+      "have"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "欲しい、～したい",
+    "word": [
+      "want"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "必要とする",
+    "word": [
+      "need"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "試す、～しようとする",
+    "word": [
+      "try"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "話す",
+    "word": [
+      "speak"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "読む",
+    "word": [
+      "read"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "書く",
+    "word": [
+      "write"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "勉強する",
+    "word": [
+      "study"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "する、遊ぶ",
+    "word": [
+      "play"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "作る",
+    "word": [
+      "make"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "使う",
+    "word": [
+      "use"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "怖がって",
+    "word": [
+      "afraid"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "怒って",
+    "word": [
+      "angry"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "美しい",
+    "word": [
+      "beautiful"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "注意深い",
+    "word": [
+      "careful"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "難しい",
+    "word": [
+      "difficult"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "簡単な",
+    "word": [
+      "easy"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "わくわくした",
+    "word": [
+      "excited"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "有名な",
+    "word": [
+      "famous"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "親しみやすい",
+    "word": [
+      "friendly"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "重要な",
+    "word": [
+      "important"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "興味を持っている",
+    "word": [
+      "interested"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "親切な",
+    "word": [
+      "kind"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "人気のある",
+    "word": [
+      "popular"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "静かな",
+    "word": [
+      "quiet"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "準備ができた",
+    "word": [
+      "ready"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "病気の",
+    "word": [
+      "sick"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "奇妙な",
+    "word": [
+      "strange"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "驚いた",
+    "word": [
+      "surprised"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "疲れた",
+    "word": [
+      "tired"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "役に立つ",
+    "word": [
+      "useful"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "素晴らしい",
+    "word": [
+      "wonderful"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "面白い、興味深い",
+    "word": [
+      "interesting"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "違った",
+    "word": [
+      "different"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "外国の",
+    "word": [
+      "foreign"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "暑い、熱い",
+    "word": [
+      "hot"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "暖かい",
+    "word": [
+      "warm"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "涼しい、かっこいい",
+    "word": [
+      "cool"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "寒い、冷たい",
+    "word": [
+      "cold"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "晴れた",
+    "word": [
+      "sunny"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "曇った",
+    "word": [
+      "cloudy"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "雨の",
+    "word": [
+      "rainy"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "雪の",
+    "word": [
+      "snowy"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "風の強い",
+    "word": [
+      "windy"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "人",
+    "word": [
+      "person"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "生徒",
+    "word": [
+      "student"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "先生",
+    "word": [
+      "teacher"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "クラスメート",
+    "word": [
+      "classmate"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "メンバー",
+    "word": [
+      "member"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "クラス、授業",
+    "word": [
+      "class"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "教室",
+    "word": [
+      "classroom"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "授業",
+    "word": [
+      "lesson"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "教科",
+    "word": [
+      "subject"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "テスト",
+    "word": [
+      "test"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "試験",
+    "word": [
+      "exam"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "宿題",
+    "word": [
+      "homework"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "教科書",
+    "word": [
+      "textbook"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "辞書",
+    "word": [
+      "dictionary"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "ノート",
+    "word": [
+      "notebook"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "質問、問題",
+    "word": [
+      "question"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "答え",
+    "word": [
+      "answer"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "成績、学年",
+    "word": [
+      "grade"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "部活動",
+    "word": [
+      "club"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "チーム",
+    "word": [
+      "team"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "助言",
+    "word": [
+      "advice"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "情報",
+    "word": [
+      "information"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "考え、アイデア",
+    "word": [
+      "idea"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "例",
+    "word": [
+      "example"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "問題",
+    "word": [
+      "problem"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "計画",
+    "word": [
+      "plan"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "行事、出来事",
+    "word": [
+      "event"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "パーティー",
+    "word": [
+      "party"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "休日",
+    "word": [
+      "holiday"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "休暇",
+    "word": [
+      "vacation"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "趣味",
+    "word": [
+      "hobby"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "未来",
+    "word": [
+      "future"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "言語",
+    "word": [
+      "language"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "国",
+    "word": [
+      "country"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "都市",
+    "word": [
+      "city"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "村",
+    "word": [
+      "village"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "建物",
+    "word": [
+      "building"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "駅",
+    "word": [
+      "station"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "図書館",
+    "word": [
+      "library"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "博物館",
+    "word": [
+      "museum"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "病院",
+    "word": [
+      "hospital"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "レストラン",
+    "word": [
+      "restaurant"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "空港",
+    "word": [
+      "airport"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "入口",
+    "word": [
+      "entrance"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "階、床",
+    "word": [
+      "floor"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "角",
+    "word": [
+      "corner"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "道、方法",
+    "word": [
+      "way"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "場所",
+    "word": [
+      "place"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "寝室",
+    "word": [
+      "bedroom"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "台所",
+    "word": [
+      "kitchen"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "浴室",
+    "word": [
+      "bathroom"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "居間",
+    "word": [
+      "living room"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "庭",
+    "word": [
+      "garden"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "ドア",
+    "word": [
+      "door"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "窓",
+    "word": [
+      "window"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "テーブル",
+    "word": [
+      "table"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "いす",
+    "word": [
+      "chair"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "ベッド",
+    "word": [
+      "bed"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "コンピューター",
+    "word": [
+      "computer"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "電話",
+    "word": [
+      "phone"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "テレビ",
+    "word": [
+      "television"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "食べ物",
+    "word": [
+      "food"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "飲み物",
+    "word": [
+      "drink"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "食事",
+    "word": [
+      "meal"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "朝食",
+    "word": [
+      "breakfast"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "昼食",
+    "word": [
+      "lunch"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "夕食",
+    "word": [
+      "dinner"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "野菜",
+    "word": [
+      "vegetable"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "果物",
+    "word": [
+      "fruit"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "肉",
+    "word": [
+      "meat"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "魚",
+    "word": [
+      "fish"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "パン",
+    "word": [
+      "bread"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "米、ご飯",
+    "word": [
+      "rice"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "卵",
+    "word": [
+      "egg"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "チーズ",
+    "word": [
+      "cheese"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "ケーキ",
+    "word": [
+      "cake"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "クッキー",
+    "word": [
+      "cookie"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "サンドイッチ",
+    "word": [
+      "sandwich"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "スープ",
+    "word": [
+      "soup"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "サラダ",
+    "word": [
+      "salad"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "水",
+    "word": [
+      "water"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "ジュース",
+    "word": [
+      "juice"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "牛乳",
+    "word": [
+      "milk"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "お茶",
+    "word": [
+      "tea"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "コーヒー",
+    "word": [
+      "coffee"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "天気",
+    "word": [
+      "weather"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "空",
+    "word": [
+      "sky"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "雲",
+    "word": [
+      "cloud"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "雨",
+    "word": [
+      "rain"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "雪",
+    "word": [
+      "snow"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "風",
+    "word": [
+      "wind"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "山",
+    "word": [
+      "mountain"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "川",
+    "word": [
+      "river"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "湖",
+    "word": [
+      "lake"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "海",
+    "word": [
+      "sea"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "海岸",
+    "word": [
+      "beach"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "森",
+    "word": [
+      "forest"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "木",
+    "word": [
+      "tree"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "花",
+    "word": [
+      "flower"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "動物",
+    "word": [
+      "animal"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "季節",
+    "word": [
+      "season"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "電車",
+    "word": [
+      "train"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "バス",
+    "word": [
+      "bus"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "地下鉄",
+    "word": [
+      "subway"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "飛行機",
+    "word": [
+      "airplane"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "自転車",
+    "word": [
+      "bicycle"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "切符",
+    "word": [
+      "ticket"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "バス停",
+    "word": [
+      "bus stop"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "旅行",
+    "word": [
+      "trip"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "ホテル",
+    "word": [
+      "hotel"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "地図",
+    "word": [
+      "map"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "道路",
+    "word": [
+      "road"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "通り",
+    "word": [
+      "street"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "橋",
+    "word": [
+      "bridge"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "たくさんの～",
+    "word": [
+      "a lot of"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "少し",
+    "word": [
+      "a little"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "ほとんどない、少数しかない",
+    "word": [
+      "few"
+    ],
+    "importance": 3
+  },
+ {
+    "meaning": "少しの、いくつかの",
+    "word": [
+      "a few"
+    ],
+    "importance": 3
+  }, 
+ {
+    "meaning": "～することができる",
+    "word": [
+      "be able to"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "～が得意",
+    "word": [
+      "be good at"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "～に興味がある",
+    "word": [
+      "be interested in"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "～を怖がる",
+    "word": [
+      "be afraid of"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "～と違う",
+    "word": [
+      "be different from"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "～で有名",
+    "word": [
+      "be famous for"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "～でいっぱい",
+    "word": [
+      "be full of"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "～の準備ができている",
+    "word": [
+      "be ready for"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "～に遅れる",
+    "word": [
+      "be late for"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "～に親切",
+    "word": [
+      "be kind to"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "～に親切",
+    "word": [
+      "be nice to"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "～を心配する",
+    "word": [
+      "be worried about"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "戻ってくる",
+    "word": [
+      "come back"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "～出身である",
+    "word": [
+      "come from"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "起きる",
+    "word": [
+      "get up"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "～に着く",
+    "word": [
+      "get to"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "家に着く",
+    "word": [
+      "get home"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "戻る",
+    "word": [
+      "get back"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "～に乗る",
+    "word": [
+      "get on"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "～から降りる",
+    "word": [
+      "get off"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "外出する",
+    "word": [
+      "go out"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "戻る",
+    "word": [
+      "go back"
+    ],
+    "importance": 3
+  },  {
+    "meaning": "買い物に行く",
+    "word": [
+      "go shopping"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "泳ぎに行く",
+    "word": [
+      "go swimming"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "釣りに行く",
+    "word": [
+      "go fishing"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "寝る",
+    "word": [
+      "go to bed"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "～しなければならない",
+    "word": [
+      "have to"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "楽しい時間を過ごす",
+    "word": [
+      "have a good time"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "見てみる",
+    "word": [
+      "have a look"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "朝食を食べる",
+    "word": [
+      "have breakfast"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "昼食を食べる",
+    "word": [
+      "have lunch"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "夕食を食べる",
+    "word": [
+      "have dinner"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "～を見る",
+    "word": [
+      "look at"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "～を探す",
+    "word": [
+      "look for"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "～のように見える",
+    "word": [
+      "look like"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "～を聞く",
+    "word": [
+      "listen to"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "～を待つ",
+    "word": [
+      "wait for"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "～について話す",
+    "word": [
+      "talk about"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "～について考える",
+    "word": [
+      "think about"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "～の世話をする",
+    "word": [
+      "take care of"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "写真を撮る",
+    "word": [
+      "take a picture"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "散歩する",
+    "word": [
+      "take a walk"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "バスに乗る",
+    "word": [
+      "take a bus"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "電車に乗る",
+    "word": [
+      "take a train"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "～しようとする",
+    "word": [
+      "try to"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "～したい",
+    "word": [
+      "want to"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "～する必要がある",
+    "word": [
+      "need to"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "～したい",
+    "word": [
+      "would like to"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "～する予定",
+    "word": [
+      "be going to"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "～はどうですか",
+    "word": [
+      "How about",
+      "How about ~?",
+      "How about ～?"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "～してはどうですか",
+    "word": [
+      "Why don't you",
+      "Why don't you ~",
+      "Why don't you ~?",
+      "Why don't you ～",
+      "Why don't you ～?"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "～はいかがですか",
+    "word": [
+      "Would you like",
+      "Would you like ~",
+      "Would you like ~?",
+      "Would you like ～",
+      "Would you like ～?"
+
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "もちろん",
+    "word": [
+      "of course"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "例えば",
+    "word": [
+      "for example"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "最初は",
+    "word": [
+      "at first"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "放課後",
+    "word": [
+      "after school"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "週末に",
+    "word": [
+      "on weekends"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "～の前に",
+    "word": [
+      "in front of",
+      "in front of ~",
+      "in front of ～"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "～の隣に",
+    "word": [
+      "next to",
+      "next to ~",
+      "next to ～"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "AとBの間に",
+    "word": [
+      "between A and B"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "～へ行く途中で",
+    "word": [
+      "on the way to",
+      "on the way to ~",
+      "on the way to ～"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "これからは",
+    "word": [
+      "from now on"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "今すぐ、ちょうど今",
+    "word": [
+      "right now"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "週に1回",
+    "word": [
+      "once a week"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "毎日",
+    "word": [
+      "every day"
+    ],
+    "importance": 3
+  },
+  {
+    "meaning": "例えば",
+    "word": [
+      "for example"
+    ],
+    "importance": 5
+  },
+  {
+    "meaning": "～の一種",
+    "word": [
+      "a kind of",
+      "a kind of ~",
+      "a kind of ～",
+      "a kinds of",
+      "a kinds of ~",
+      "a kinds of ～"
+    ],
+    "importance": 5
+  },
+  {
+    "meaning": "世界中（の全ての場所）で",
+    "word": [
+      "all over the world"
+    ],
+    "importance": 5
+  },
+  {
+    "meaning": "世界中（のどこか）で",
+    "word": [
+      "around the world"
+    ],
+    "importance": 5
+  },
+  {
+    "meaning": "昨日",
+    "word": [
+      "yesterday"
+    ],
+    "importance": 5
+  },
+  {
+    "meaning": "～する必要がある",
+    "word": [
+      "have to",
+      "have to do",
+      "have to ~",
+      "have to ～"
+    ],
+    "importance": 5
+  },
+  {
+    "meaning": "～していただけませんか？",
+    "word": [
+      "Could you ~?",
+      "Could you?",
+      "Could you ～?",
+      "Could you ～?",
+      "Could you ~",
+      "Could you",
+      "Could you ～"
+    ],
+    "importance": 5
+  },
+  {
+    "meaning": "～を教えていただけませんか？",
+    "word": ["Could you tell me ~, please?","Could you tell me ～, please?","Could you tell me, please?","Could you tell me ~, please","Could you tell me ～, please","Could you tell me, please","Could you tell me ~","Could you tell me ～","Could you tell me","Could you tell me ~?","Could you tell me ～?","Could you tell me?"],
+    "importance": 5
+  },
+{
+"meaning": "家に帰る",
+"word": ["go home"],
+"importance": 5
+},
+{
+"meaning": "熱がある",
+"word": ["have a fever"],
+"importance": 5
+},
+{
+"meaning": "〜と一緒にいる",
+"word": ["stay with"],
+"importance": 5
+},
+{
+"meaning": "風邪をひいている",
+"word": ["have a cold"],
+"importance": 5
+},
+{
+"meaning": "病気の、具合が悪い",
+"word": ["sick"],
+"importance": 5
+},
+{
+"meaning": "両方、両者",
+"word": ["both"],
+"importance": 5
+},
+{
+"meaning": "雨、雨が降る",
+"word": ["rain"],
+"importance": 5
+},
+{
+"meaning": "買った",
+"word": ["bought"],
+"importance": 5
+},
+{
+"meaning": "聞こえた、聞いた",
+"word": ["heard"],
+"importance": 5
+},
+{
+"meaning": "聞こえる、聞く",
+"word": ["hear"],
+"importance": 5
+},
+{
+"meaning": "動く、引っ越す",
+"word": ["move"],
+"importance": 5
+},
+{
+"meaning": "フランスへ引っ越す",
+"word": ["move to France"],
+"importance": 5
+},
+{
+"meaning": "～へ引っ越す",
+"word": ["move to ～","move to","move to ~"],
+"importance": 5
+},
+{
+"meaning": "〜したい、〜することを望む",
+"word": ["want to do","want to ~","want to ～","want to"],
+"importance": 5
+},
+{
+"meaning": "風呂に入る",
+"word": ["take a bath"],
+"importance": 5
+},
+{
+"meaning": "〜するのが得意である",
+"word": ["be good at ~ing","be good at","be good at -ing","be good at ing","be good at ～ing","be good at doing"],
+"importance": 5
+},
+{
+"meaning": "帰宅した、家に帰ってきた",
+"word": ["came home"],
+"importance": 5
+},
+{
+"meaning": "趣味",
+"word": ["hobby"],
+"importance": 5
+},
+{
+"meaning": "長い間",
+"word": ["for a long time"],
+"importance": 5
+},
+{
+"meaning": "〜はあなたのためになる",
+"word": ["~ is good for you","is good for you","～ is good for you"],
+"importance": 5
+},
+{
+"meaning": "仕事、職業",
+"word": ["job"],
+"importance": 5
+},
+{
+"meaning": "〜だった（単数）",
+"word": ["was"],
+"importance": 5
+},
+{
+"meaning": "〜まで",
+"word": ["until"],
+"importance": 5
+},
+{
+"meaning": "聞く、耳を傾ける",
+"word": ["listen"],
+"importance": 5
+},
+{
+"meaning": "劇場、映画館",
+"word": ["theater"],
+"importance": 5
+},
+{
+"meaning": "〜と一緒に",
+"word": ["with"],
+"importance": 5
+},
+{
+"meaning": "旅",
+"word": ["trip"],
+"importance": 5
+},
+{
+"meaning": "脚、足",
+"word": ["leg"],
+"importance": 5
+},
+{
+"meaning": "〜だろう、〜するつもりである",
+"word": ["will"],
+"importance": 5
+},
+{
+"meaning": "親愛なる〜、〜さん",
+"word": ["dear ~","dear ~,","dear ～","dear ～,","dear"],
+"importance": 5
+},
+{
+"meaning": "いいね、素敵だね",
+"word": ["Sounds nice!","Sounds nice","Sounds good!","Sounds good"],
+"importance": 5
+},
+{
+"meaning": "なぜなら、〜なので",
+"word": ["because","because ~","because ～"],
+"importance": 5
+},
+{
+"meaning": "情報",
+"word": ["information"],
+"importance": 5
+},
+{
+"meaning": "お気に入りの、大好きな",
+"word": ["favorite"],
+"importance": 5
+},
+{
+"meaning": "作家、ライター",
+"word": ["writer"],
+"importance": 5
+},
+{
+"meaning": "〜時、時刻を表す",
+"word": ["o'clock"],
+"importance": 5
+},
+{
+"meaning": "〜するつもりである、〜しようとしている",
+"word": ["am going to","be going to","going to","am going to ~","be going to ~","going to ~","am going to ～","be going to ～","going to ～"],
+"importance": 5
+},
+{
+"meaning": "贈り物、プレゼント",
+"word": ["present"],
+"importance": 5
+},
+{
+"meaning": "〜を探す",
+"word": ["look for ~","look for","look for ～"],
+"importance": 5
+},
+{
+"meaning": "もっと、さらに",
+"word": ["more"],
+"importance": 5
+},
+{
+"meaning": "会議",
+"word": ["meeting"],
+"importance": 5
+},
+{
+"meaning": "希望、望む",
+"word": ["hope"],
+"importance": 5
+},
+{
+"meaning": "伝えた、話した",
+"word": ["told"],
+"importance": 5
+},
+{
+"meaning": "会う",
+"word": ["meet"],
+"importance": 5
+},
+{
+"meaning": "伝える、話す",
+"word": ["tell"],
+"importance": 5
+},
+{
+"meaning": "〜として、〜のように",
+"word": ["as","as ~","as ～"],
+"importance": 5
+},
+{
+"meaning": "多くの、たくさんの",
+"word": ["many"],
+"importance": 5
+},
+{
+"meaning": "置く、入れる",
+"word": ["put"],
+"importance": 5
+},
+{
+"meaning": "終わった、終了した",
+"word": ["ended"],
+"importance": 5
+},
+{
+"meaning": "それら、それらの",
+"word": ["Those"],
+"importance": 5
+},
+{
+"meaning": "〜より多い、〜以上",
+"word": ["more than ~"],
+"importance": 5
+},
+{
+"meaning": "尋ねる、頼む",
+"word": ["ask"],
+"importance": 5
+},
+{
+"meaning": "観光　観光名所",
+"word": ["sightseeing"],
+"importance": 5
+},
+{
+"meaning": "読む（過去形）",
+"word": ["read"],
+"importance": 5
+},
+{
+"meaning": "〜の前に",
+"word": ["Before ~","Before ~,","Before ～","Before ～,","before ~","before ~,","before ～","before ～,","before","Before"],
+"importance": 5
+},
+{
+"meaning": "〜の後に",
+"word": ["After ~","After ~,","After ～","After ～,","after ~","after ~,","after ～","after ～,","after","After"],
+"importance": 5
+},
+{
+"meaning": "言う",
+"word": ["say"],
+"importance": 5
+},
+{
+"meaning": "1年間",
+"word": ["for a year"],
+"importance": 5
+},
+{
+"meaning": "見つける",
+"word": ["find"],
+"importance": 5
+},
+{
+"meaning": "興味を持っている",
+"word": ["is interested","be interested","is interested in","be interested in","is interested in ~","be interested in ～","is interested in ~","be interested in ～"],
+"importance": 5
+},
+{
+"meaning": "雑誌（複数）",
+"word": ["magazines"],
+"importance": 5
+},
+{
+"meaning": "雑誌（単数）",
+"word": ["magazine"],
+"importance": 5
+},
+{
+"meaning": "言った",
+"word": ["said"],
+"importance": 5
+},
+{
+"meaning": "滞在した、とどまった",
+"word": ["stayed"],
+"importance": 5
+},
+{
+"meaning": "去った、出発した、残した",
+"word": ["left"],
+"importance": 5
+},
+{
+"meaning": "見つけた",
+"word": ["found"],
+"importance": 5
+},
+{
+"meaning": "理解する",
+"word": ["understand"],
+"importance": 5
+},
+{
+"meaning": "〜ほど…ではない",
+"word": ["is not as ~ as ~","be not as ~ as ~","is not as ~","be not as ~","is not as ～ as ～","be not as ～ as ～","is not as ～","be not as ～","is not as 状態 as 誰か","be not as 状態 as 誰か","is not as （状態） as （誰か）","be not as （状態） as （誰か）","is not as (状態) as (誰か)","be not as (状態) as (誰か)"],
+"importance": 5
+},
+{
+"meaning": "雪が降っている",
+"word": ["It's snowing","It is snowing"],
+"importance": 5
+},
+{
+"meaning": "そこ",
+"word": ["there"],
+"importance": 5
+},
+{
+"meaning": "ここ",
+"word": ["here"],
+"importance": 5
+},
+{
+"meaning": "去る、出発する",
+"word": ["leave"],
+"importance": 5
+},
+{
+"meaning": "〜したい",
+"word": ["want to ~","want to ～","want to"],
+"importance": 5
+},
+{
+"meaning": "早く、早い",
+"word": ["early"],
+"importance": 5
+},
+{
+"meaning": "〜がある、〜がいる",
+"word": ["There is ~","There are ~","There is ～","There are ～","There is","There are"],
+"importance": 5
+},
+{
+"meaning": "〜で",
+"word": ["at"],
+"importance": 5
+},
+{
+"meaning": "〜のために、〜に向かって",
+"word": ["for"],
+"importance": 5
+},
+{
+"meaning": "すべて、全部",
+"word": ["all"],
+"importance": 5
+},
+{
+"meaning": "〜することができる",
+"word": ["be able to ~","be able to ～","be able to"],
+"importance": 5
+},
+{
+"meaning": "悲しい、悲しんでいる",
+"word": ["sad"],
+"importance": 5
+},
+{
+"meaning": "行った",
+"word": ["went"],
+"importance": 5
+},
+{
+"meaning": "約〇〇、〇〇ほど",
+"word": ["about","about ~","about ～"],
+"importance": 5
+},
+{
+"meaning": "たくさんの〜",
+"word": ["a lot of ~","a lot of ～","a lot of"],
+"importance": 5
+},
+{
+"meaning": "インド",
+"word": ["India"],
+"importance": 5
+},
+{
+"meaning": "送る",
+"word": ["send"],
+"importance": 5
+},
+{
+"meaning": "これら、これらの",
+"word": ["These"],
+"importance": 5
+},
+{
+"meaning": "毎〜、すべての〜",
+"word": ["every","every ~","every ～"],
+"importance": 5
+},
+{
+"meaning": "授業、レッスン",
+"word": ["lesson","lessons"],
+"importance": 5
+},
+{
+"meaning": "止めた、止まった",
+"word": ["stopped"],
+"importance": 5
+},
+{
+"meaning": "わずかな、少数の",
+"word": ["few","few ~","few ～"],
+"importance": 5
+},
+{
+"meaning": "建てる",
+"word": ["build"],
+"importance": 5
+},
+{
+"meaning": "呼ぶ、電話をかける",
+"word": ["call"],
+"importance": 5
+},
+{
+"meaning": "ほかの、別の",
+"word": ["other"],
+"importance": 5
+},
+{
+"meaning": "目を覚ます、目覚める",
+"word": ["wake","wake up"],
+"importance": 5
+},
+{
+"meaning": "〜の間に",
+"word": ["during"],
+"importance": 5
+},
+{
+"meaning": "そして、〜と",
+"word": ["and"],
+"importance": 5
+},
+{
+"meaning": "泳いだ",
+"word": ["swam"],
+"importance": 5
+},
+{
+"meaning": "それらを、彼らを",
+"word": ["them"],
+"importance": 5
+},
+{
+"meaning": "～する予定がある、～しようと思っている",
+"word": ["be going to ~","be going to ～","be going to","going to ~","going to ～","going to"],
+"importance": 5
+},
+{
+"meaning": "〜するのを楽しみにしている",
+"word": ["looking forward to ~ing","looking forward to -ing","looking forward to ～ing","looking forward to doing"],
+"importance": 5
+},
+{
+"meaning": "〜より",
+"word": ["than"],
+"importance": 5
+},
+{
+"meaning": "〜と同じくらい背が高い",
+"word": ["as tall as","as tall as ~","as tall as ～"],
+"importance": 5
+},
+{
+"meaning": "〜するのが得意である",
+"word": ["be good at doing","be good at -ing","be good at ～ing","be good at ~ing","good at doing","good at -ing","good at ～ing","good at ~ing"],
+"importance": 5
+},
+{
+"meaning": "〜と同じくらいよく",
+"word": ["as well as","as well as ~","as well as ～"],
+"importance": 5
+},
+{
+"meaning": "〜はいかがですか",
+"word": ["Would you like ~?","Would you like ～?","Would you like"],
+"importance": 5
+},
+{
+"meaning": "よくできました",
+"word": ["well done"],
+"importance": 5
+},
+{
+"meaning": "どうでしたか",
+"word": ["How was it?"],
+"importance": 5
+}
+]
