@@ -7074,4 +7074,102 @@
     },
     "importance": 5
   }
+{
+  "meaning_to_word": {
+    "question": "それぞれの",
+    "answers": [
+      "each"
+    ]
+  },
+  "word_to_meaning": {
+    "question": "each",
+    "answers": [
+      "それぞれの",
+      "それぞれの",
+      "各",
+      "かく",
+      "それぞれ",
+      "それぞれ",
+      "各自の",
+      "かくじの"
+    ]
+  },
+  "importance": 5
+}
+
+{
+  "meaning_to_word": {
+    "question": "お互いに",
+    "answers": [
+      "each other"
+    ]
+  },
+  "word_to_meaning": {
+    "question": "each other",
+    "answers": [
+      "お互い",
+      "おたがい",
+      "お互いに",
+      "おたがいに",
+      "互いに",
+      "たがいに"
+    ]
+  },
+  "importance": 5
+}
+{
+  "meaning_to_word": {
+    "question": "お腹いっぱい",
+    "answers": [
+      "I'm full",
+      "I am full"
+    ]
+  },
+  "word_to_meaning": {
+    "question": "I'm full",
+    "answers": [
+      "お腹いっぱい",
+      "おなかいっぱい",
+      "お腹がいっぱい",
+      "おなかがいっぱい",
+      "満腹だ",
+      "まんぷくだ",
+      "満腹である",
+      "まんぷくである"
+    ]
+  },
+  "importance": 5
+}
+{
+  "meaning_to_word": {
+    "question": "もう一つの",
+    "answers": [
+      "another"
+    ]
+  },
+  "word_to_meaning": {
+    "question": "another",
+    "answers": [
+      "もう一つの",
+      "べつの",
+      "別の",
+      "もうひとつの",
+      "もう1つの",
+      "他の",
+      "ほかの",
+      "もう一人の",
+      "もうひとりの"
+    ]
+  },
+  "importance": 5
+}
+
+
+
+
+
+
+  
+
+  
 ]
