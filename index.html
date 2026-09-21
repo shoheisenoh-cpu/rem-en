@@ -112,6 +112,13 @@
 </head>
 <body>
 
+<div id="startup-loading" style="position:fixed;inset:0;background:rgba(15,23,42,.96);display:flex;align-items:center;justify-content:center;z-index:9999;padding:20px;text-align:center;">
+  <div>
+    <div style="font-size:18px;font-weight:900;margin-bottom:8px;">標準単語データを読み込み中…</div>
+    <div style="font-size:12px;color:#94a3b8;">最新のJSONを取得しています</div>
+  </div>
+</div>
+
 <div class="app-container">
   <div class="top-bar">
     <h1 style="font-size: 16px;">単語学習アプリ</h1>
@@ -138,6 +145,40 @@
     <div style="text-align: center; display: flex; flex-direction: column; gap: 10px;">
         <button class="primary" onclick="startSession()" style="width: 100%; font-size: 16px; padding: 14px;">学習スタート</button>
         <button class="btn-gray" onclick="exportCurrentList()" style="width: 100%;">現在選択中のリストを書き出す</button>
+    </div>
+
+    <!-- ==================== 単語追加 ==================== -->
+    <div class="card" style="margin-top: 30px;">
+      <label>選択中の単語リストに、新しい単語を追加</label>
+
+      <div style="margin-bottom: 8px;">
+        <label for="new-word-meaning">意味</label>
+        <input type="text" id="new-word-meaning" placeholder="例：受け入れる">
+      </div>
+
+      <div style="margin-bottom: 8px;">
+        <label for="new-word-answer">英単語・表現</label>
+        <input type="text" id="new-word-answer" placeholder="例：accept">
+        <p style="font-size: 11px; color: var(--muted); margin-top: -4px;">
+          複数の正解を登録する場合は「,」または改行で区切れます。
+        </p>
+      </div>
+
+      <div style="margin-bottom: 10px;">
+        <label for="new-word-importance">重要度</label>
+        <select id="new-word-importance" style="margin-bottom: 0;">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3" selected>3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
+      </div>
+
+      <button class="primary" onclick="addNewWord()" style="width: 100%;">この単語を追加</button>
+      <p style="font-size: 11px; color: var(--muted); margin-top: 8px;">
+        ※標準リストに追加した場合も、その時点でローカルのカスタマイズコピーが作成されます。
+      </p>
     </div>
   </div>
 
@@ -214,167 +255,497 @@
 
 <script>
   const MAX_QUESTIONS_PER_SESSION = 30;
-  
-  // デフォルトの内蔵データ
-  const defaultWordLists = {
-    "IT・テクノロジー": [
-      { "meaning": "開発者", "word": ["developer", "programmer"], "importance": 3 },
-      { "meaning": "美しい", "word": ["beautiful", "elegant"], "importance": 2 },
-      { "meaning": "ソフトウェア", "word": ["software"], "importance": 3 },
-      { "meaning": "キーボード", "word": ["keyboard"], "importance": 1 },
-      { "meaning": "環境", "word": ["environment"], "importance": 4 },
-      { "meaning": "実装する", "word": ["implement"], "importance": 4 },
-      { "meaning": "変数", "word": ["variable"], "importance": 3 }
-    ],
-    "日常英会話 (Basic)": [
-      { "meaning": "素晴らしい", "word": ["awesome", "great", "wonderful"], "importance": 3 },
-      { "meaning": "正確な", "word": ["accurate", "exact"], "importance": 3 },
-      { "meaning": "しかしながら", "word": ["however"], "importance": 2 },
-      { "meaning": "おそらく", "word": ["probably", "perhaps"], "importance": 3 }
-    ]
-  };
 
-  let appWordLists = {}; 
-  let currentListName = ""; 
+  // ============================================================
+  // 標準データ
+  // ============================================================
+  // ページ起動時は必ずこのURLから最新JSONを取得する。
+  const DEFAULT_DATA_URL = "https://raw.githubusercontent.com/shoheisenoh-cpu/rem-en/refs/heads/main/K%E8%8B%B1%E6%A4%9C4%E7%B4%9A%E3%83%87%E3%83%BC%E3%82%BF%E3%82%BB%E3%83%83%E3%83%88_v2_IT%E5%BD%A2%E5%BC%8F.json";
+  const DEFAULT_LIST_NAME = "K英検4級 (標準)";
 
-  let sessionPool = []; 
+  // localStorage は「初期データ」と「学習後のカスタマイズ」を完全に分離する。
+  const INITIAL_DATA_STORAGE_KEY = "vocabAppInitialWordLists_v2";
+  const CUSTOM_DATA_STORAGE_KEY = "vocabAppCustomizedWordLists_v2";
+  const STARTED_LISTS_STORAGE_KEY = "vocabAppStartedLists_v2";
+  const CURRENT_LIST_STORAGE_KEY = "vocabAppCurrentListName_v2";
+  const LEGACY_STORAGE_KEY = "vocabAppWordLists";
+
+  // オフライン時の初回起動用フォールバック。
+  // オンライン起動時は必ず DEFAULT_DATA_URL の結果が優先される。
+  const FALLBACK_STANDARD_DATA = [{"meaning":"受け入れる","word":["accept"],"importance":3},{"meaning":"到着する","word":["arrive"],"importance":3},{"meaning":"借りる","word":["borrow"],"importance":3},{"meaning":"持ってくる","word":["bring"],"importance":3},{"meaning":"建てる","word":["build"],"importance":3},{"meaning":"運ぶ、持ち歩く","word":["carry"],"importance":3},{"meaning":"捕まえる、乗る","word":["catch"],"importance":3},{"meaning":"選ぶ","word":["choose"],"importance":3},{"meaning":"閉める","word":["close"],"importance":3},{"meaning":"集める","word":["collect"],"importance":3},{"meaning":"決める","word":["decide"],"importance":3},{"meaning":"説明する","word":["describe"],"importance":3},{"meaning":"楽しむ","word":["enjoy"],"importance":3},{"meaning":"入る","word":["enter"],"importance":3},{"meaning":"終える","word":["finish"],"importance":3},{"meaning":"忘れる","word":["forget"],"importance":3},{"meaning":"起こる","word":["happen"],"importance":3},{"meaning":"招待する","word":["invite"],"importance":3},{"meaning":"参加する","word":["join"],"importance":3},{"meaning":"去る、置いていく","word":["leave"],"importance":3},{"meaning":"貸す","word":["lend"],"importance":3},{"meaning":"なくす、負ける","word":["lose"],"importance":3},{"meaning":"意味する","word":["mean"],"importance":3},{"meaning":"乗り遅れる、恋しく思う","word":["miss"],"importance":3},{"meaning":"練習する","word":["practice"],"importance":3},{"meaning":"覚えている、思い出す","word":["remember"],"importance":3},{"meaning":"戻る、返す","word":["return"],"importance":3},{"meaning":"救う、蓄える","word":["save"],"importance":3},{"meaning":"（時間・お金を）使う","word":["spend"],"importance":3},{"meaning":"滞在する","word":["stay"],"importance":3},{"meaning":"教える","word":["teach"],"importance":3},{"meaning":"旅行する","word":["travel"],"importance":3},{"meaning":"理解する","word":["understand"],"importance":3},{"meaning":"訪れる","word":["visit"],"importance":3},{"meaning":"心配する","word":["worry"],"importance":3},{"meaning":"言う","word":["say"],"importance":3},{"meaning":"伝える","word":["tell"],"importance":3},{"meaning":"見る","word":["look"],"importance":3},{"meaning":"見える、見る","word":["see"],"importance":3},{"meaning":"注意して見る","word":["watch"],"importance":3},{"meaning":"聞こえる","word":["hear"],"importance":3},{"meaning":"注意して聞く","word":["listen"],"importance":3},{"meaning":"取る、持っていく","word":["take"],"importance":3},{"meaning":"行く","word":["go"],"importance":3},{"meaning":"来る","word":["come"],"importance":3},{"meaning":"得る、着く","word":["get"],"importance":3},{"meaning":"持つ、食べる","word":["have"],"importance":3},{"meaning":"欲しい、～したい","word":["want"],"importance":3},{"meaning":"必要とする","word":["need"],"importance":3},{"meaning":"試す、～しようとする","word":["try"],"importance":3},{"meaning":"話す","word":["speak"],"importance":3},{"meaning":"読む","word":["read"],"importance":3},{"meaning":"書く","word":["write"],"importance":3},{"meaning":"勉強する","word":["study"],"importance":3},{"meaning":"する、遊ぶ","word":["play"],"importance":3},{"meaning":"作る","word":["make"],"importance":3},{"meaning":"使う","word":["use"],"importance":3},{"meaning":"怖がって","word":["afraid"],"importance":3},{"meaning":"怒って","word":["angry"],"importance":3},{"meaning":"美しい","word":["beautiful"],"importance":3},{"meaning":"注意深い","word":["careful"],"importance":3},{"meaning":"難しい","word":["difficult"],"importance":3},{"meaning":"簡単な","word":["easy"],"importance":3},{"meaning":"わくわくした","word":["excited"],"importance":3},{"meaning":"有名な","word":["famous"],"importance":3},{"meaning":"親しみやすい","word":["friendly"],"importance":3},{"meaning":"重要な","word":["important"],"importance":3},{"meaning":"興味を持っている","word":["interested"],"importance":3},{"meaning":"親切な","word":["kind"],"importance":3},{"meaning":"人気のある","word":["popular"],"importance":3},{"meaning":"静かな","word":["quiet"],"importance":3},{"meaning":"準備ができた","word":["ready"],"importance":3},{"meaning":"病気の","word":["sick"],"importance":3},{"meaning":"奇妙な","word":["strange"],"importance":3},{"meaning":"驚いた","word":["surprised"],"importance":3},{"meaning":"疲れた","word":["tired"],"importance":3},{"meaning":"役に立つ","word":["useful"],"importance":3},{"meaning":"素晴らしい","word":["wonderful"],"importance":3},{"meaning":"面白い、興味深い","word":["interesting"],"importance":3},{"meaning":"違った","word":["different"],"importance":3},{"meaning":"外国の","word":["foreign"],"importance":3},{"meaning":"暑い、熱い","word":["hot"],"importance":3},{"meaning":"暖かい","word":["warm"],"importance":3},{"meaning":"涼しい、かっこいい","word":["cool"],"importance":3},{"meaning":"寒い、冷たい","word":["cold"],"importance":3},{"meaning":"晴れた","word":["sunny"],"importance":3},{"meaning":"曇った","word":["cloudy"],"importance":3},{"meaning":"雨の","word":["rainy"],"importance":3},{"meaning":"雪の","word":["snowy"],"importance":3},{"meaning":"風の強い","word":["windy"],"importance":3},{"meaning":"人","word":["person"],"importance":3},{"meaning":"生徒","word":["student"],"importance":3},{"meaning":"先生","word":["teacher"],"importance":3},{"meaning":"クラスメート","word":["classmate"],"importance":3},{"meaning":"メンバー","word":["member"],"importance":3},{"meaning":"クラス、授業","word":["class"],"importance":3},{"meaning":"教室","word":["classroom"],"importance":3},{"meaning":"授業","word":["lesson"],"importance":3},{"meaning":"教科","word":["subject"],"importance":3},{"meaning":"テスト","word":["test"],"importance":3},{"meaning":"試験","word":["exam"],"importance":3},{"meaning":"宿題","word":["homework"],"importance":3},{"meaning":"教科書","word":["textbook"],"importance":3},{"meaning":"辞書","word":["dictionary"],"importance":3},{"meaning":"ノート","word":["notebook"],"importance":3},{"meaning":"質問、問題","word":["question"],"importance":3},{"meaning":"答え","word":["answer"],"importance":3},{"meaning":"成績、学年","word":["grade"],"importance":3},{"meaning":"部活動","word":["club"],"importance":3},{"meaning":"チーム","word":["team"],"importance":3},{"meaning":"助言","word":["advice"],"importance":3},{"meaning":"情報","word":["information"],"importance":3},{"meaning":"考え、アイデア","word":["idea"],"importance":3},{"meaning":"例","word":["example"],"importance":3},{"meaning":"問題","word":["problem"],"importance":3},{"meaning":"計画","word":["plan"],"importance":3},{"meaning":"行事、出来事","word":["event"],"importance":3},{"meaning":"パーティー","word":["party"],"importance":3},{"meaning":"休日","word":["holiday"],"importance":3},{"meaning":"休暇","word":["vacation"],"importance":3},{"meaning":"趣味","word":["hobby"],"importance":3},{"meaning":"未来","word":["future"],"importance":3},{"meaning":"言語","word":["language"],"importance":3},{"meaning":"国","word":["country"],"importance":3},{"meaning":"都市","word":["city"],"importance":3},{"meaning":"村","word":["village"],"importance":3},{"meaning":"建物","word":["building"],"importance":3},{"meaning":"駅","word":["station"],"importance":3},{"meaning":"図書館","word":["library"],"importance":3},{"meaning":"博物館","word":["museum"],"importance":3},{"meaning":"病院","word":["hospital"],"importance":3},{"meaning":"レストラン","word":["restaurant"],"importance":3},{"meaning":"空港","word":["airport"],"importance":3},{"meaning":"入口","word":["entrance"],"importance":3},{"meaning":"階、床","word":["floor"],"importance":3},{"meaning":"角","word":["corner"],"importance":3},{"meaning":"道、方法","word":["way"],"importance":3},{"meaning":"場所","word":["place"],"importance":3},{"meaning":"寝室","word":["bedroom"],"importance":3},{"meaning":"台所","word":["kitchen"],"importance":3},{"meaning":"浴室","word":["bathroom"],"importance":3},{"meaning":"居間","word":["living room"],"importance":3},{"meaning":"庭","word":["garden"],"importance":3},{"meaning":"ドア","word":["door"],"importance":3},{"meaning":"窓","word":["window"],"importance":3},{"meaning":"テーブル","word":["table"],"importance":3},{"meaning":"いす","word":["chair"],"importance":3},{"meaning":"ベッド","word":["bed"],"importance":3},{"meaning":"コンピューター","word":["computer"],"importance":3},{"meaning":"電話","word":["phone"],"importance":3},{"meaning":"テレビ","word":["television"],"importance":3},{"meaning":"食べ物","word":["food"],"importance":3},{"meaning":"飲み物","word":["drink"],"importance":3},{"meaning":"食事","word":["meal"],"importance":3},{"meaning":"朝食","word":["breakfast"],"importance":3},{"meaning":"昼食","word":["lunch"],"importance":3},{"meaning":"夕食","word":["dinner"],"importance":3},{"meaning":"野菜","word":["vegetable"],"importance":3},{"meaning":"果物","word":["fruit"],"importance":3},{"meaning":"肉","word":["meat"],"importance":3},{"meaning":"魚","word":["fish"],"importance":3},{"meaning":"パン","word":["bread"],"importance":3},{"meaning":"米、ご飯","word":["rice"],"importance":3},{"meaning":"卵","word":["egg"],"importance":3},{"meaning":"チーズ","word":["cheese"],"importance":3},{"meaning":"ケーキ","word":["cake"],"importance":3},{"meaning":"クッキー","word":["cookie"],"importance":3},{"meaning":"サンドイッチ","word":["sandwich"],"importance":3},{"meaning":"スープ","word":["soup"],"importance":3},{"meaning":"サラダ","word":["salad"],"importance":3},{"meaning":"水","word":["water"],"importance":3},{"meaning":"ジュース","word":["juice"],"importance":3},{"meaning":"牛乳","word":["milk"],"importance":3},{"meaning":"お茶","word":["tea"],"importance":3},{"meaning":"コーヒー","word":["coffee"],"importance":3},{"meaning":"天気","word":["weather"],"importance":3},{"meaning":"空","word":["sky"],"importance":3},{"meaning":"雲","word":["cloud"],"importance":3},{"meaning":"雨","word":["rain"],"importance":3},{"meaning":"雪","word":["snow"],"importance":3},{"meaning":"風","word":["wind"],"importance":3},{"meaning":"山","word":["mountain"],"importance":3},{"meaning":"川","word":["river"],"importance":3},{"meaning":"湖","word":["lake"],"importance":3},{"meaning":"海","word":["sea"],"importance":3},{"meaning":"海岸","word":["beach"],"importance":3},{"meaning":"森","word":["forest"],"importance":3},{"meaning":"木","word":["tree"],"importance":3},{"meaning":"花","word":["flower"],"importance":3},{"meaning":"動物","word":["animal"],"importance":3},{"meaning":"季節","word":["season"],"importance":3},{"meaning":"電車","word":["train"],"importance":3},{"meaning":"バス","word":["bus"],"importance":3},{"meaning":"地下鉄","word":["subway"],"importance":3},{"meaning":"飛行機","word":["airplane"],"importance":3},{"meaning":"自転車","word":["bicycle"],"importance":3},{"meaning":"切符","word":["ticket"],"importance":3},{"meaning":"バス停","word":["bus stop"],"importance":3},{"meaning":"旅行","word":["trip"],"importance":3},{"meaning":"ホテル","word":["hotel"],"importance":3},{"meaning":"地図","word":["map"],"importance":3},{"meaning":"道路","word":["road"],"importance":3},{"meaning":"通り","word":["street"],"importance":3},{"meaning":"橋","word":["bridge"],"importance":3},{"meaning":"たくさんの～","word":["a lot of"],"importance":3},{"meaning":"少し","word":["a little"],"importance":3},{"meaning":"少しの","word":["a few"],"importance":3},{"meaning":"～することができる","word":["be able to"],"importance":3},{"meaning":"～が得意","word":["be good at"],"importance":3},{"meaning":"～に興味がある","word":["be interested in"],"importance":3},{"meaning":"～を怖がる","word":["be afraid of"],"importance":3},{"meaning":"～と違う","word":["be different from"],"importance":3},{"meaning":"～で有名","word":["be famous for"],"importance":3},{"meaning":"～でいっぱい","word":["be full of"],"importance":3},{"meaning":"～の準備ができている","word":["be ready for"],"importance":3},{"meaning":"～に遅れる","word":["be late for"],"importance":3},{"meaning":"～に親切","word":["be kind to"],"importance":3},{"meaning":"～に親切","word":["be nice to"],"importance":3},{"meaning":"～を心配する","word":["be worried about"],"importance":3},{"meaning":"戻ってくる","word":["come back"],"importance":3},{"meaning":"～出身である","word":["come from"],"importance":3},{"meaning":"起きる","word":["get up"],"importance":3},{"meaning":"～に着く","word":["get to"],"importance":3},{"meaning":"家に着く","word":["get home"],"importance":3},{"meaning":"戻る","word":["get back"],"importance":3},{"meaning":"～に乗る","word":["get on"],"importance":3},{"meaning":"～から降りる","word":["get off"],"importance":3},{"meaning":"外出する","word":["go out"],"importance":3},{"meaning":"戻る","word":["go back"],"importance":3},{"meaning":"家に帰る","word":["go home"],"importance":3},{"meaning":"買い物に行く","word":["go shopping"],"importance":3},{"meaning":"泳ぎに行く","word":["go swimming"],"importance":3},{"meaning":"釣りに行く","word":["go fishing"],"importance":3},{"meaning":"寝る","word":["go to bed"],"importance":3},{"meaning":"～しなければならない","word":["have to"],"importance":3},{"meaning":"楽しい時間を過ごす","word":["have a good time"],"importance":3},{"meaning":"見てみる","word":["have a look"],"importance":3},{"meaning":"朝食を食べる","word":["have breakfast"],"importance":3},{"meaning":"昼食を食べる","word":["have lunch"],"importance":3},{"meaning":"夕食を食べる","word":["have dinner"],"importance":3},{"meaning":"～を見る","word":["look at"],"importance":3},{"meaning":"～を探す","word":["look for"],"importance":3},{"meaning":"～のように見える","word":["look like"],"importance":3},{"meaning":"～を聞く","word":["listen to"],"importance":3},{"meaning":"～を待つ","word":["wait for"],"importance":3},{"meaning":"～について話す","word":["talk about"],"importance":3},{"meaning":"～について考える","word":["think about"],"importance":3},{"meaning":"～の世話をする","word":["take care of"],"importance":3},{"meaning":"写真を撮る","word":["take a picture"],"importance":3},{"meaning":"散歩する","word":["take a walk"],"importance":3},{"meaning":"バスに乗る","word":["take a bus"],"importance":3},{"meaning":"電車に乗る","word":["take a train"],"importance":3},{"meaning":"～しようとする","word":["try to"],"importance":3},{"meaning":"～したい","word":["want to"],"importance":3},{"meaning":"～する必要がある","word":["need to"],"importance":3},{"meaning":"～したい","word":["would like to"],"importance":3},{"meaning":"～する予定","word":["be going to"],"importance":3},{"meaning":"～はどうですか","word":["How about"],"importance":3},{"meaning":"～してはどうですか","word":["Why don't you"],"importance":3},{"meaning":"～はいかがですか","word":["Would you like"],"importance":3},{"meaning":"もちろん","word":["of course"],"importance":3},{"meaning":"例えば","word":["for example"],"importance":3},{"meaning":"最初は","word":["at first"],"importance":3},{"meaning":"放課後","word":["after school"],"importance":3},{"meaning":"週末に","word":["on weekends"],"importance":3},{"meaning":"～の前に","word":["in front of"],"importance":3},{"meaning":"～の隣に","word":["next to"],"importance":3},{"meaning":"AとBの間に","word":["between A and B"],"importance":3},{"meaning":"～へ行く途中で","word":["on the way to"],"importance":3},{"meaning":"これからは","word":["from now on"],"importance":3},{"meaning":"今すぐ、ちょうど今","word":["right now"],"importance":3},{"meaning":"週に1回","word":["once a week"],"importance":3},{"meaning":"毎日","word":["every day"],"importance":3},{"meaning":"毎日","word":["every day"],"importance":3}];
+
+  let initialWordLists = {};
+  let customWordLists = {};
+  let startedLists = {};
+  let appWordLists = {};
+  let currentListName = "";
+
+  let sessionPool = [];
   let currentQuestionIndex = 0;
   let currentWordData = null;
-  let originalIndexInList = 0; 
+  let originalIndexInList = 0;
 
   let questionStartTime = 0;
   let currentMistakes = 0;
   let isSkipped = false;
-  
+
   let sessionPerfectCount = 0;
   let sessionStruggleCount = 0;
-
   let isProcessing = false;
 
-  function initApp() {
-    // localStorageから保存データを読み込み（復元）
-    const savedData = localStorage.getItem('vocabAppWordLists');
-    if (savedData) {
-      try {
-        appWordLists = JSON.parse(savedData);
-      } catch (e) {
-        appWordLists = JSON.parse(JSON.stringify(defaultWordLists));
-      }
-    } else {
-      appWordLists = JSON.parse(JSON.stringify(defaultWordLists));
-    }
-    
+  // ============================================================
+  // 初期化
+  // ============================================================
+  async function initApp() {
+    migrateLegacyStorage();
+    loadStoredState();
+
+    // 起動するたびにURLから最新の「初期データ」を取得。
+    // 既に学習開始済みの「作業コピー」には自動で混ぜない。
+    await refreshInitialData();
+
+    rebuildAppWordLists();
+    restoreCurrentList();
     updateSelectBox();
-    
-    // Enterキーで解答
+
+    const loading = document.getElementById('startup-loading');
+    if (loading) loading.style.display = 'none';
+
     document.getElementById('answer-input').addEventListener('keypress', function(e) {
       if (e.key === 'Enter') submitAnswer();
     });
 
-    // 次の問題へボタンのEnter対応
     document.addEventListener('keypress', function(e) {
-        if (e.key === 'Enter' && document.getElementById('answer-screen').classList.contains('active')) {
-            if(!document.getElementById('next-btn').disabled) {
-                proceedToNextQuestion();
-            }
+      if (e.key === 'Enter' && document.getElementById('answer-screen').classList.contains('active')) {
+        if (!document.getElementById('next-btn').disabled) {
+          proceedToNextQuestion();
         }
+      }
     });
   }
 
+  function cloneData(data) {
+    return JSON.parse(JSON.stringify(data));
+  }
+
+  function cloneWordLists(data) {
+    return cloneData(data || {});
+  }
+
+  function normalizeWordListData(data) {
+    if (!Array.isArray(data)) {
+      throw new Error('JSONの形式が正しくありません。単語オブジェクトの配列で指定してください。');
+    }
+
+    return data.map(item => {
+      let words = item && item.word;
+      if (!Array.isArray(words)) words = [words];
+      words = words
+        .filter(v => typeof v === 'string')
+        .map(v => v.trim())
+        .filter(Boolean);
+
+      let importance = Number(item && item.importance);
+      if (!Number.isFinite(importance)) importance = 3;
+      importance = Math.max(1, Math.min(5, importance));
+
+      return {
+        meaning: item && item.meaning ? String(item.meaning) : "不明",
+        word: words,
+        importance
+      };
+    }).filter(item => item.word.length > 0);
+  }
+
+  function normalizeListMap(data) {
+    const result = {};
+    if (!data || typeof data !== 'object' || Array.isArray(data)) return result;
+
+    Object.entries(data).forEach(([name, list]) => {
+      try {
+        result[name] = normalizeWordListData(list);
+      } catch (_) {
+        // 不正な個別リストは無視して他のリストを復元する。
+      }
+    });
+    return result;
+  }
+
+  function loadStoredState() {
+    try {
+      const initialSaved = localStorage.getItem(INITIAL_DATA_STORAGE_KEY);
+      initialWordLists = initialSaved ? normalizeListMap(JSON.parse(initialSaved)) : {};
+    } catch (_) {
+      initialWordLists = {};
+    }
+
+    try {
+      const customSaved = localStorage.getItem(CUSTOM_DATA_STORAGE_KEY);
+      customWordLists = customSaved ? normalizeListMap(JSON.parse(customSaved)) : {};
+    } catch (_) {
+      customWordLists = {};
+    }
+
+    try {
+      const startedSaved = localStorage.getItem(STARTED_LISTS_STORAGE_KEY);
+      startedLists = startedSaved ? JSON.parse(startedSaved) : {};
+      if (!startedLists || typeof startedLists !== 'object' || Array.isArray(startedLists)) {
+        startedLists = {};
+      }
+    } catch (_) {
+      startedLists = {};
+    }
+
+    // カスタマイズデータがあるリストは、旧形式などからの復元を含めて
+    // 既に作業コピーが存在するとみなし、開始済みとして扱う。
+    Object.keys(customWordLists).forEach(name => {
+      if (startedLists[name] === undefined) startedLists[name] = true;
+    });
+    saveStartedLists();
+  }
+
+  function saveInitialWordLists() {
+    localStorage.setItem(INITIAL_DATA_STORAGE_KEY, JSON.stringify(initialWordLists));
+  }
+
+  function saveCustomWordLists() {
+    localStorage.setItem(CUSTOM_DATA_STORAGE_KEY, JSON.stringify(customWordLists));
+  }
+
+  function saveStartedLists() {
+    localStorage.setItem(STARTED_LISTS_STORAGE_KEY, JSON.stringify(startedLists));
+  }
+
+  function saveCurrentListName() {
+    if (currentListName) {
+      localStorage.setItem(CURRENT_LIST_STORAGE_KEY, currentListName);
+    }
+  }
+
+  function migrateLegacyStorage() {
+    // 新形式が既に存在するなら移行済み。
+    if (localStorage.getItem(CUSTOM_DATA_STORAGE_KEY)) return;
+
+    const legacySaved = localStorage.getItem(LEGACY_STORAGE_KEY);
+    if (!legacySaved) return;
+
+    try {
+      const parsed = normalizeListMap(JSON.parse(legacySaved));
+      localStorage.setItem(CUSTOM_DATA_STORAGE_KEY, JSON.stringify(parsed));
+
+      const started = {};
+      Object.keys(parsed).forEach(name => { started[name] = true; });
+      localStorage.setItem(STARTED_LISTS_STORAGE_KEY, JSON.stringify(started));
+    } catch (_) {
+      // 壊れた旧データは無視して新形式で開始。
+    }
+  }
+
+  async function refreshInitialData() {
+    let nextInitialList = null;
+
+    try {
+      // cache:'no-store' により、ページを開くたびに最新取得を試みる。
+      const response = await fetch(DEFAULT_DATA_URL, {
+        cache: 'no-store',
+        headers: { 'Accept': 'application/json' }
+      });
+
+      if (!response.ok) throw new Error(`HTTP ${response.status}`);
+
+      const remoteData = await response.json();
+      nextInitialList = normalizeWordListData(remoteData);
+    } catch (error) {
+      console.warn('標準JSONの取得に失敗しました。保存済みデータまたは組み込みコピーを使用します。', error);
+
+      // まず localStorage の初期コピー、それも無ければHTML内のフォールバック。
+      nextInitialList = initialWordLists[DEFAULT_LIST_NAME]
+        ? cloneData(initialWordLists[DEFAULT_LIST_NAME])
+        : normalizeWordListData(FALLBACK_STANDARD_DATA);
+    }
+
+    // URLから取得したもの（またはフォールバック）を「初期化データ」として保存。
+    initialWordLists = { [DEFAULT_LIST_NAME]: nextInitialList };
+    saveInitialWordLists();
+  }
+
+  // ============================================================
+  // データ構造
+  // ============================================================
+  function rebuildAppWordLists() {
+    const result = {};
+
+    // 標準データ：未学習なら最新の初期データ、
+    // 学習開始済みならローカルに保存した作業コピーを使う。
+    Object.entries(initialWordLists).forEach(([name, initialList]) => {
+      const hasWorkingCopy = Boolean(startedLists[name] && customWordLists[name]);
+      result[name] = hasWorkingCopy
+        ? cloneData(customWordLists[name])
+        : cloneData(initialList);
+    });
+
+    // 外部JSONなどで追加した、初期データに存在しないリスト。
+    Object.entries(customWordLists).forEach(([name, list]) => {
+      if (!result[name]) result[name] = cloneData(list);
+    });
+
+    appWordLists = result;
+  }
+
+  function isInitialList(listName) {
+    return Object.prototype.hasOwnProperty.call(initialWordLists, listName);
+  }
+
+  function createWorkingCopyIfNeeded(listName) {
+    if (!listName || !appWordLists[listName]) return false;
+
+    // 標準セットは「学習スタート」の瞬間にURLデータのコピーを作る。
+    // 以後はこのローカルコピーだけを書き換えていく。
+    if (isInitialList(listName) && !startedLists[listName]) {
+      customWordLists[listName] = cloneData(appWordLists[listName]);
+      startedLists[listName] = true;
+      saveCustomWordLists();
+      saveStartedLists();
+      rebuildAppWordLists();
+      return true;
+    }
+
+    // カスタムJSONのリストにも作業コピーが無ければ保存しておく。
+    if (!customWordLists[listName]) {
+      customWordLists[listName] = cloneData(appWordLists[listName]);
+      startedLists[listName] = true;
+      saveCustomWordLists();
+      saveStartedLists();
+      rebuildAppWordLists();
+      return true;
+    }
+
+    return false;
+  }
+
+  function overwriteWorkingCopy(listName) {
+    if (!listName || !appWordLists[listName]) return;
+
+    customWordLists[listName] = cloneData(appWordLists[listName]);
+    startedLists[listName] = true;
+    saveCustomWordLists();
+    saveStartedLists();
+  }
+
+  function wordKey(item) {
+    return `${item.meaning}::${(item.word || []).join('|')}`;
+  }
+
+  // ============================================================
+  // select
+  // ============================================================
   function updateSelectBox() {
     const select = document.getElementById('list-select');
     select.innerHTML = '';
-    for (let listName in appWordLists) {
-      let opt = document.createElement('option');
-      opt.value = listName;
-      opt.textContent = `${listName} (${appWordLists[listName].length}語)`;
-      select.appendChild(opt);
+
+    Object.keys(appWordLists).forEach(listName => {
+      const option = document.createElement('option');
+      option.value = listName;
+
+      const wordCount = appWordLists[listName].length;
+      const status = isInitialList(listName)
+        ? (startedLists[listName] ? '・保存済み' : '・最新')
+        : '・カスタム';
+
+      option.textContent = `${listName} (${wordCount}語${status})`;
+      select.appendChild(option);
+    });
+
+    if (select.options.length === 0) {
+      currentListName = '';
+      return;
     }
-    if(Object.keys(appWordLists).length > 0) {
-      if(!currentListName || !appWordLists[currentListName]) {
-        currentListName = select.options[0].value;
-      }
-      select.value = currentListName;
+
+    if (!currentListName || !appWordLists[currentListName]) {
+      currentListName = select.options[0].value;
+    }
+
+    select.value = currentListName;
+    saveCurrentListName();
+  }
+
+  function restoreCurrentList() {
+    const savedName = localStorage.getItem(CURRENT_LIST_STORAGE_KEY);
+    if (savedName && appWordLists[savedName]) {
+      currentListName = savedName;
+    } else if (!currentListName || !appWordLists[currentListName]) {
+      currentListName = Object.keys(appWordLists)[0] || '';
     }
   }
 
   function changeWordList() {
     currentListName = document.getElementById('list-select').value;
+    saveCurrentListName();
   }
 
-  function saveWordLists() {
-    localStorage.setItem('vocabAppWordLists', JSON.stringify(appWordLists));
-  }
-
+  // ============================================================
+  // カスタムJSON読み込み・書き出し
+  // ============================================================
   function loadCustomFile(event) {
     const file = event.target.files[0];
     if (!file) return;
+
     const reader = new FileReader();
     reader.onload = function(e) {
       try {
-        const data = JSON.parse(e.target.result);
-        
-        let validData = [];
-        if(Array.isArray(data)) {
-          validData = data.map(item => {
-            let w = item.word;
-            if(!Array.isArray(w)) w = [w]; 
-            return {
-              meaning: item.meaning || "不明",
-              word: w,
-              importance: item.importance || 3
-            };
-          });
-        } else {
-          alert("JSONの形式が正しくありません。単語オブジェクトの配列で指定してください。");
-          return;
+        const validData = normalizeWordListData(JSON.parse(e.target.result));
+        let newListName = file.name.replace(/\.json$/i, '');
+
+        if (appWordLists[newListName] || initialWordLists[newListName]) {
+          newListName += `_${Date.now().toString().slice(-4)}`;
         }
-        
-        let newListName = file.name.replace('.json', '');
-        if(appWordLists[newListName]) newListName += `_${Date.now().toString().slice(-4)}`;
-        
-        appWordLists[newListName] = validData;
-        saveWordLists();
+
+        customWordLists[newListName] = validData;
+        startedLists[newListName] = true;
+        saveCustomWordLists();
+        saveStartedLists();
+
+        rebuildAppWordLists();
+        currentListName = newListName;
         updateSelectBox();
-        
+
         document.getElementById('list-select').value = newListName;
         changeWordList();
-        
+
         alert(`リスト「${newListName}」を読み込みました（${validData.length}語）。`);
-      } catch(err) {
+      } catch (err) {
+        console.error(err);
         alert("JSONファイルの読み込みに失敗しました。フォーマットを確認してください。");
+      } finally {
+        event.target.value = "";
       }
-      event.target.value = ""; 
     };
+
     reader.readAsText(file);
   }
 
+  function addNewWord() {
+    if (!currentListName || !appWordLists[currentListName]) {
+      alert("先に単語リストを選択してください。");
+      return;
+    }
+
+    const meaningInput = document.getElementById('new-word-meaning');
+    const answerInput = document.getElementById('new-word-answer');
+    const importanceInput = document.getElementById('new-word-importance');
+
+    const meaning = meaningInput.value.trim();
+    const rawAnswers = answerInput.value.trim();
+
+    if (!meaning) {
+      alert("意味を入力してください。");
+      meaningInput.focus();
+      return;
+    }
+
+    if (!rawAnswers) {
+      alert("英単語・表現を入力してください。");
+      answerInput.focus();
+      return;
+    }
+
+    const words = rawAnswers
+      .split(/[,、\n]+/)
+      .map(word => word.trim())
+      .filter(Boolean);
+
+    if (words.length === 0) {
+      alert("有効な英単語・表現を入力してください。");
+      answerInput.focus();
+      return;
+    }
+
+    const importance = Math.max(
+      1,
+      Math.min(5, Number(importanceInput.value) || 3)
+    );
+
+    // 標準リストの場合は、この追加操作を「学習用コピーの作成」とみなす。
+    // 以後、追加した単語も含めてローカルのカスタマイズデータだけを更新する。
+    createWorkingCopyIfNeeded(currentListName);
+
+    const targetList = appWordLists[currentListName];
+
+    // 同じ意味＋単語の組み合わせが既にある場合は重複追加しない。
+    const duplicate = targetList.some(item => {
+      const sameMeaning = item.meaning === meaning;
+      const existingWords = new Set((item.word || []).map(w => w.toLowerCase()));
+      const allWordsExist = words.every(w => existingWords.has(w.toLowerCase()));
+      return sameMeaning && allWordsExist;
+    });
+
+    if (duplicate) {
+      alert("同じ単語がすでに登録されています。");
+      return;
+    }
+
+    targetList.push({
+      meaning,
+      word: words,
+      importance
+    });
+
+    overwriteWorkingCopy(currentListName);
+    rebuildAppWordLists();
+    updateSelectBox();
+
+    document.getElementById('list-select').value = currentListName;
+
+    meaningInput.value = "";
+    answerInput.value = "";
+    importanceInput.value = "3";
+
+    alert(`「${words.join(" / ")}」を「${currentListName}」に追加しました。`);
+  }
+
   function exportCurrentList() {
-    if(!currentListName || !appWordLists[currentListName]) return;
-    const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(appWordLists[currentListName], null, 2));
+    if (!currentListName || !appWordLists[currentListName]) return;
+
+    const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(
+      JSON.stringify(appWordLists[currentListName], null, 2)
+    );
     const a = document.createElement('a');
     a.href = dataStr;
     a.download = `${currentListName}_updated.json`;
+    document.body.appendChild(a);
     a.click();
+    a.remove();
   }
 
+  // ============================================================
+  // 学習
+  // ============================================================
   function startSession() {
+    if (!currentListName || !appWordLists[currentListName]) {
+      alert("単語データがありません。");
+      return;
+    }
+
+    // ここで初めて、標準URLデータをローカルの学習用コピーへ固定する。
+    createWorkingCopyIfNeeded(currentListName);
+    updateSelectBox();
+
     const list = appWordLists[currentListName];
-    if(!list || list.length === 0) {
+    if (!list || list.length === 0) {
       alert("単語データがありません。");
       return;
     }
 
     let indices = list.map((_, i) => i);
     indices = indices.sort(() => Math.random() - 0.5);
-    
+
     const limit = Math.min(MAX_QUESTIONS_PER_SESSION, indices.length);
     sessionPool = indices.slice(0, limit);
-    
+
     currentQuestionIndex = 0;
     sessionPerfectCount = 0;
     sessionStruggleCount = 0;
-    
+
     loadNextWord();
   }
 
@@ -386,40 +757,42 @@
 
     originalIndexInList = sessionPool[currentQuestionIndex];
     currentWordData = appWordLists[currentListName][originalIndexInList];
-    
+
     currentMistakes = 0;
     isSkipped = false;
     isProcessing = false;
     questionStartTime = Date.now();
-    
-    document.getElementById('progress-indicator').textContent = `問題: ${currentQuestionIndex + 1} / ${sessionPool.length}`;
-    document.getElementById('importance-badge').textContent = `重要度: ${currentWordData.importance}`;
+
+    document.getElementById('progress-indicator').textContent =
+      `問題: ${currentQuestionIndex + 1} / ${sessionPool.length}`;
+    document.getElementById('importance-badge').textContent =
+      `重要度: ${currentWordData.importance}`;
     document.getElementById('word-meaning').textContent = currentWordData.meaning;
     document.getElementById('hint-display').textContent = "";
-    
+
     const input = document.getElementById('answer-input');
-    // 前の問題のエフェクトを必ず解除してから新しい問題を開始する
     input.classList.remove('shake', 'correct-effect');
     input.value = "";
     input.disabled = false;
     document.getElementById('submit-btn').disabled = false;
     document.getElementById('speech-btn').disabled = false;
-    
-    // 【修正箇所】次の問題を画面に表示するための処理を追加
-    showScreen('quiz-screen');
 
+    showScreen('quiz-screen');
     setTimeout(() => input.focus(), 100);
   }
 
   function submitAnswer(spokenAnswer = null) {
     if (isProcessing) return;
+
     const input = document.getElementById('answer-input');
-    const userAnswer = spokenAnswer ? spokenAnswer.toLowerCase().trim() : input.value.toLowerCase().trim();
-    
+    const userAnswer = spokenAnswer
+      ? spokenAnswer.toLowerCase().trim()
+      : input.value.toLowerCase().trim();
+
     if (!userAnswer) return;
-    
+
     const isCorrect = currentWordData.word.some(w => w.toLowerCase() === userAnswer);
-    
+
     if (isCorrect) {
       handleCorrect();
     } else {
@@ -431,13 +804,11 @@
     isProcessing = true;
 
     const input = document.getElementById('answer-input');
-    // 誤答エフェクトが残っていても正解時には必ず解除する
     input.classList.remove('shake');
     input.classList.remove('correct-effect');
     void input.offsetWidth;
     input.classList.add('correct-effect');
 
-    // 正解エフェクトを見せた後、必ず単語の説明画面へ進む
     setTimeout(() => {
       input.classList.remove('correct-effect');
       showAnswerScreen(true);
@@ -446,13 +817,13 @@
 
   function handleIncorrect() {
     currentMistakes++;
+
     const input = document.getElementById('answer-input');
-    // 正解エフェクトは誤答時に持ち越さない
     input.classList.remove('correct-effect');
     input.classList.remove('shake');
-    void input.offsetWidth; 
+    void input.offsetWidth;
     input.classList.add('shake');
-    
+
     if (currentMistakes >= 3) {
       isProcessing = true;
       isSkipped = true;
@@ -460,7 +831,8 @@
     } else {
       input.value = "";
       const hintChar = currentWordData.word[0].charAt(0).toUpperCase();
-      document.getElementById('hint-display').textContent = `💡 ヒント: 頭文字は「${hintChar}」`;
+      document.getElementById('hint-display').textContent =
+        `💡 ヒント: 頭文字は「${hintChar}」`;
     }
   }
 
@@ -473,12 +845,11 @@
 
   function showAnswerScreen(isSuccess) {
     const timeSpent = Math.floor((Date.now() - questionStartTime) / 1000);
-    
+
     if (isSuccess && currentMistakes === 0) sessionPerfectCount++;
     if (isSkipped) sessionStruggleCount++;
 
-    // ===== 重要度アルゴリズム =====
-    let oldImportance = currentWordData.importance || 3;
+    let oldImportance = Number(currentWordData.importance) || 3;
     let diff = 0;
 
     if (isSkipped) {
@@ -491,18 +862,15 @@
       diff += 1;
     }
 
-    if (timeSpent > 30) {
-      diff -= 1;
-    }
+    if (timeSpent > 30) diff -= 1;
 
     let newImportance = oldImportance + diff;
-    if (newImportance < 1) newImportance = 1;
-    if (newImportance > 5) newImportance = 5;
+    newImportance = Math.max(1, Math.min(5, newImportance));
 
-    // === データ更新と永続化 ===
+    // 現在の作業コピーを更新し、それをlocalStorageへ上書き保存。
     currentWordData.importance = newImportance;
     appWordLists[currentListName][originalIndexInList] = currentWordData;
-    saveWordLists();
+    overwriteWorkingCopy(currentListName);
 
     const titleEl = document.getElementById('answer-title');
     if (isSuccess) {
@@ -517,7 +885,7 @@
     document.getElementById('answer-meaning').textContent = currentWordData.meaning;
     document.getElementById('ans-time').textContent = `${timeSpent}秒`;
     document.getElementById('ans-mistakes').textContent = `${currentMistakes}回`;
-    
+
     const badge = document.getElementById('importance-update-label');
     badge.textContent = `${oldImportance} ➔ ${newImportance}`;
     badge.className = "badge";
@@ -526,26 +894,27 @@
     else badge.classList.add('info');
 
     showScreen('answer-screen');
-    
-    const nextBtn = document.getElementById('next-btn');
-    nextBtn.focus();
+    document.getElementById('next-btn').focus();
   }
 
-  // 【修正箇所】
   function proceedToNextQuestion() {
     currentQuestionIndex++;
-    loadNextWord(); 
-    // ※ loadNextWord 内で showScreen('quiz-screen') が呼ばれるように修正済み
+    loadNextWord();
   }
 
   function endSession() {
     document.getElementById('res-perfect').textContent = sessionPerfectCount;
     document.getElementById('res-struggle').textContent = sessionStruggleCount;
     showScreen('result-screen');
+    updateSelectBox();
   }
 
+  // ============================================================
+  // 音声認識・画面・テーマ
+  // ============================================================
   function startSpeechRecognition() {
     if (isProcessing) return;
+
     const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
     if (!SpeechRecognition) {
       alert("お使いのブラウザは音声認識に対応していません。(Chrome/Edgeを推奨)");
@@ -578,14 +947,14 @@
       btn.disabled = false;
       input.disabled = false;
     };
-    
+
     recognition.onend = function() {
-      if(!isProcessing) {
+      if (!isProcessing) {
         btn.textContent = "発音する 🎤";
         btn.disabled = false;
         input.disabled = false;
       }
-    }
+    };
 
     recognition.start();
   }
@@ -601,7 +970,12 @@
   }
 
   // 起動
-  initApp();
+  initApp().catch(error => {
+    console.error('アプリ初期化エラー:', error);
+    const loading = document.getElementById('startup-loading');
+    if (loading) loading.style.display = 'none';
+    updateSelectBox();
+  });
 </script>
 </body>
 </html>
