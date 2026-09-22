@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Permissions-Policy" content="microphone=(self)">
 <meta name="theme-color" content="#0284c7">
 <meta name="description" content="日本語と英語の単語を効率よく学習できる英単語学習アプリ">
 <link rel="manifest" href="./manifest.json">
@@ -166,6 +167,15 @@
       </select>
     </div>
 
+    <div class="card" id="microphone-permission-card" style="margin-bottom: 15px;">
+      <label>マイク権限</label>
+      <div style="display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;">
+        <span id="microphone-permission-status" style="font-size:13px;color:var(--muted);">マイク権限を確認できます。</span>
+        <button class="btn-gray" id="microphone-permission-btn" onclick="requestMicrophonePermissionFromButton()" style="padding:8px 14px;font-size:12px;">マイク権限を確認</button>
+      </div>
+      <p style="font-size:11px;color:var(--muted);margin-top:8px;">※許可されていない場合は、毎回マイク使用時にブラウザの許可を確認します。ブラウザ側で「今後確認しない」状態になった場合は、サイト設定からマイクを許可してください。</p>
+    </div>
+
     <div class="card">
       <label>外部ファイルから読み込む (JSON)</label>
       <input type="file" id="file-input" accept=".json" onchange="loadCustomFile(event)" style="font-size: 13px;">
@@ -287,6 +297,19 @@
 
 </div>
 
+  <!-- ==================== マイク権限案内 ==================== -->
+  <div id="microphone-permission-modal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:10000;padding:20px;align-items:center;justify-content:center;">
+    <div class="container" style="width:min(460px,100%);max-height:85vh;overflow:auto;margin:0;">
+      <h2 style="font-size:18px;margin-bottom:10px;">🎤 マイクの許可が必要です</h2>
+      <p id="microphone-permission-message" style="font-size:13px;line-height:1.7;color:var(--muted);margin-bottom:15px;"></p>
+      <div id="microphone-permission-instructions" class="card" style="font-size:12px;line-height:1.7;text-align:left;"></div>
+      <div style="display:flex;gap:10px;margin-top:12px;">
+        <button class="primary" onclick="requestMicrophonePermissionFromButton()" style="flex:1;">もう一度許可を確認</button>
+        <button class="btn-gray" onclick="closeMicrophonePermissionModal()" style="flex:1;">閉じる</button>
+      </div>
+    </div>
+  </div>
+
 <script>
   const MAX_QUESTIONS_PER_SESSION = 30;
 
@@ -350,6 +373,8 @@
 
     const loading = document.getElementById('startup-loading');
     if (loading) loading.style.display = 'none';
+
+    updateMicrophonePermissionStatus();
 
     document.getElementById('answer-input').addEventListener('keypress', function(e) {
       if (e.key === 'Enter') submitAnswer();
@@ -1082,7 +1107,98 @@
   // ============================================================
   // 音声認識・画面・テーマ
   // ============================================================
-  function startSpeechRecognition() {
+  async function getMicrophonePermissionState() {
+    try {
+      if (!navigator.permissions || !navigator.permissions.query) return 'unknown';
+      const permission = await navigator.permissions.query({ name: 'microphone' });
+      return permission.state || 'unknown';
+    } catch (_) {
+      return 'unknown';
+    }
+  }
+
+  function getMicrophoneInstructions() {
+    const ua = navigator.userAgent || '';
+    if (/Android/i.test(ua)) {
+      return `Android / Chrome系：このサイトを通常のブラウザで開ける場合は、アドレスバー左側のサイト情報（🔒など）→「権限」→「マイク」→「許可」にしてください。\n\nインストールしたPWAでアドレスバーが表示されない場合は、Chromeの「設定」→「サイトの設定」→「マイク」から、このサイトの許可状態を変更してください。\n\n一度「許可しない」を選んで以後確認されない場合は、サイトの権限設定を「許可」に変更してから、もう一度この画面の「もう一度許可を確認」を押してください。`;
+    }
+    if (/iPhone|iPad|iPod/i.test(ua)) {
+      return `iPhone / iPad：Safariのサイト設定でマイクを「許可」にしてください。端末の「設定」→「Safari」→「マイク」など、ブラウザのサイト権限から変更できる場合があります。変更後、このアプリへ戻ってもう一度確認してください。`;
+    }
+    if (/Firefox/i.test(ua)) {
+      return `Firefox：アドレスバーのサイト情報から「マイク」の許可状態を変更してください。許可へ変更した後、このアプリに戻ってもう一度確認してください。`;
+    }
+    if (/Edg/i.test(ua)) {
+      return `Microsoft Edge：アドレスバー左側のサイト情報→「このサイトのアクセス許可」→「マイク」→「許可」にしてください。`;
+    }
+    return `Chrome / Edge / Firefoxなど：アドレスバー左側のサイト情報から、このサイトの「マイク」を「許可」にしてください。\n\nブラウザ側で権限が完全に拒否されている場合、Webアプリから強制的に権限を付与することはできません。サイト設定を「許可」に変更したあと、もう一度確認してください。`;
+  }
+
+  function openMicrophonePermissionModal(message) {
+    const modal = document.getElementById('microphone-permission-modal');
+    const messageEl = document.getElementById('microphone-permission-message');
+    const instructionsEl = document.getElementById('microphone-permission-instructions');
+    if (!modal) return;
+    if (messageEl) messageEl.textContent = message || 'マイクを使用するための権限を確認できませんでした。';
+    if (instructionsEl) {
+      instructionsEl.textContent = getMicrophoneInstructions();
+      instructionsEl.style.whiteSpace = 'pre-line';
+    }
+    modal.style.display = 'flex';
+  }
+
+  function closeMicrophonePermissionModal() {
+    const modal = document.getElementById('microphone-permission-modal');
+    if (modal) modal.style.display = 'none';
+  }
+
+  async function updateMicrophonePermissionStatus() {
+    const statusEl = document.getElementById('microphone-permission-status');
+    if (!statusEl) return;
+    const state = await getMicrophonePermissionState();
+    if (state === 'granted') {
+      statusEl.textContent = '✅ マイクは許可されています。';
+      statusEl.style.color = 'var(--success-text)';
+    } else if (state === 'denied') {
+      statusEl.textContent = '⚠️ マイクが拒否されています。サイト設定から許可してください。';
+      statusEl.style.color = 'var(--danger-text)';
+    } else {
+      statusEl.textContent = 'マイクは未確認です。使用時に許可を確認します。';
+      statusEl.style.color = 'var(--muted)';
+    }
+  }
+
+  async function requestMicrophonePermission() {
+    if (!window.isSecureContext) {
+      openMicrophonePermissionModal('マイク入力は、安全な接続（HTTPS）または localhost で開いたページでのみ利用できます。');
+      return false;
+    }
+    if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) {
+      openMicrophonePermissionModal('このブラウザではマイクへのアクセス機能を利用できません。別の対応ブラウザ（Chrome / Edge / Firefoxなど）でお試しください。');
+      return false;
+    }
+
+    try {
+      // 毎回ユーザー操作から getUserMedia を呼び出し、ブラウザに現在のマイク権限を確認させる。
+      // state === "prompt" ならブラウザの許可ダイアログが表示される。
+      const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+      stream.getTracks().forEach(track => track.stop());
+      await updateMicrophonePermissionStatus();
+      closeMicrophonePermissionModal();
+      return true;
+    } catch (error) {
+      await updateMicrophonePermissionStatus();
+      const reason = error && (error.name || error.message) ? `（${error.name || error.message}）` : '';
+      openMicrophonePermissionModal(`マイクの使用が許可されませんでした${reason}。ブラウザが許可ダイアログを再表示できない状態では、サイト設定から「マイク」を許可する必要があります。`);
+      return false;
+    }
+  }
+
+  async function requestMicrophonePermissionFromButton() {
+    await requestMicrophonePermission();
+  }
+
+  async function startSpeechRecognition() {
     if (isProcessing || sessionQuizMode === "word_to_meaning") return;
 
     const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
@@ -1090,6 +1206,9 @@
       alert("お使いのブラウザは音声認識に対応していません。(Chrome/Edgeを推奨)");
       return;
     }
+
+    const microphoneReady = await requestMicrophonePermission();
+    if (!microphoneReady) return;
 
     const btn = document.getElementById('speech-btn');
     const input = document.getElementById('answer-input');
@@ -1112,10 +1231,15 @@
     };
 
     recognition.onerror = function(event) {
-      alert("音声認識エラー: " + event.error);
+      if (event.error === 'not-allowed' || event.error === 'service-not-allowed') {
+        openMicrophonePermissionModal('音声認識側でもマイクの許可が必要です。ブラウザのサイト設定でマイクを「許可」にしてから、もう一度お試しください。');
+      } else {
+        alert("音声認識エラー: " + event.error);
+      }
       btn.textContent = "発音する 🎤";
       btn.disabled = false;
       input.disabled = false;
+      updateMicrophonePermissionStatus();
     };
 
     recognition.onend = function() {
@@ -1126,7 +1250,14 @@
       }
     };
 
-    recognition.start();
+    try {
+      recognition.start();
+    } catch (error) {
+      btn.textContent = "発音する 🎤";
+      btn.disabled = false;
+      input.disabled = false;
+      openMicrophonePermissionModal('音声認識を開始できませんでした。もう一度「マイク権限を確認」を押してからお試しください。');
+    }
   }
 
   function showScreen(screenId) {
