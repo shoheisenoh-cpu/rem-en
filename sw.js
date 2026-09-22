@@ -1,4 +1,4 @@
-const CACHE_NAME = 'eigo-tango-pwa-v2';
+const CACHE_NAME = 'eigo-tango-pwa-v3';
 const APP_SHELL = [
   './',
   './index.html',

@@ -127,95 +127,6 @@
     70% { transform: scale(.99); }
     100% { transform: scale(1); }
   }
-
-
-  /* ====== 学習記録・カレンダー ====== */
-  .streak-card {
-    background: linear-gradient(135deg, var(--sub), var(--panel));
-    border: 1px solid var(--line);
-    border-radius: 12px;
-    padding: 14px;
-    margin: 0 0 18px;
-  }
-  .streak-main {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 12px;
-  }
-  .streak-label { font-size: 12px; color: var(--muted); font-weight: 700; }
-  .streak-value { font-size: 26px; font-weight: 900; line-height: 1.1; margin-top: 2px; }
-  .streak-sub { font-size: 11px; color: var(--muted); margin-top: 5px; }
-  .record-button { flex: 0 0 auto; }
-
-  .calendar-toolbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 8px;
-    margin-bottom: 14px;
-  }
-  .calendar-title {
-    font-size: 18px;
-    font-weight: 900;
-    text-align: center;
-    flex: 1;
-  }
-  .calendar-nav {
-    padding: 7px 11px;
-    min-width: 44px;
-    border-radius: 12px;
-  }
-  .calendar-weekdays,
-  .calendar-grid {
-    display: grid;
-    grid-template-columns: repeat(7, minmax(0, 1fr));
-    gap: 4px;
-  }
-  .calendar-weekdays {
-    margin-bottom: 4px;
-  }
-  .calendar-weekday {
-    text-align: center;
-    font-size: 10px;
-    font-weight: 800;
-    color: var(--muted);
-    padding: 4px 0;
-  }
-  .calendar-day {
-    min-height: 66px;
-    border: 1px solid var(--line);
-    background: var(--sub);
-    color: var(--text);
-    border-radius: 9px;
-    padding: 7px 5px;
-    text-align: left;
-    cursor: pointer;
-    transition: border-color .2s, box-shadow .2s, transform .1s, background .2s;
-  }
-  .calendar-day:hover { border-color: var(--accent); }
-  .calendar-day:active { transform: scale(.98); }
-  .calendar-day.is-other-month { opacity: .35; }
-  .calendar-day.is-today { border-color: var(--accent); box-shadow: 0 0 0 2px rgba(2,132,199,.14); }
-  .calendar-day.is-selected { background: var(--panel); border-color: var(--accent); box-shadow: 0 0 0 2px rgba(2,132,199,.22); }
-  .calendar-day-number { font-size: 12px; font-weight: 900; }
-  .calendar-day-count { font-size: 10px; color: var(--accent); font-weight: 800; margin-top: 7px; line-height: 1.2; }
-  .calendar-day-wrong { font-size: 9px; color: var(--danger-text); font-weight: 800; margin-top: 3px; line-height: 1.2; }
-  .calendar-detail-header { display: flex; justify-content: space-between; gap: 8px; align-items: baseline; margin-bottom: 10px; }
-  .calendar-detail-title { font-size: 16px; font-weight: 900; }
-  .calendar-detail-stats { font-size: 11px; color: var(--muted); }
-  .wrong-list { display: flex; flex-direction: column; gap: 8px; }
-  .wrong-item {
-    border: 1px solid var(--line);
-    border-radius: 9px;
-    padding: 10px;
-    background: var(--sub);
-  }
-  .wrong-item-word { font-size: 14px; font-weight: 900; }
-  .wrong-item-meta { font-size: 10px; color: var(--muted); margin-top: 4px; }
-  .wrong-item-answer { font-size: 11px; margin-top: 5px; color: var(--text); }
-  .empty-record { text-align: center; color: var(--muted); font-size: 12px; padding: 16px 8px; }
-
 </style>
 </head>
 <body>
@@ -239,17 +150,6 @@
   <!-- ==================== スタート画面 ==================== -->
   <div id="start-screen" class="screen active container">
     <h2 style="margin-bottom: 15px; text-align: center;">学習セットの選択</h2>
-
-    <div class="streak-card">
-      <div class="streak-main">
-        <div>
-          <div class="streak-label">連続学習記録</div>
-          <div class="streak-value" id="streak-count">0日連続</div>
-          <div class="streak-sub" id="streak-subtext">今日の学習で記録を始めよう</div>
-        </div>
-        <button class="btn-gray record-button" onclick="openStudyRecords()">学習カレンダー</button>
-      </div>
-    </div>
     
     <div style="margin-bottom: 20px;">
       <label>内蔵・保存済みの単語リスト</label>
@@ -313,36 +213,6 @@
         ※各出題方向の問題と正解は独立しています。複数の正解は「,」または改行で登録できます。
       </p>
     </div>
-  </div>
-
-  <!-- ==================== 学習記録画面 ==================== -->
-  <div id="record-screen" class="screen container">
-    <div class="calendar-toolbar">
-      <button class="btn-gray calendar-nav" onclick="changeCalendarMonth(-1)">‹</button>
-      <div class="calendar-title" id="calendar-month-title">----</div>
-      <button class="btn-gray calendar-nav" onclick="changeCalendarMonth(1)">›</button>
-    </div>
-
-    <div class="calendar-weekdays">
-      <div class="calendar-weekday">日</div>
-      <div class="calendar-weekday">月</div>
-      <div class="calendar-weekday">火</div>
-      <div class="calendar-weekday">水</div>
-      <div class="calendar-weekday">木</div>
-      <div class="calendar-weekday">金</div>
-      <div class="calendar-weekday">土</div>
-    </div>
-    <div class="calendar-grid" id="calendar-grid"></div>
-
-    <div class="card" style="margin-top: 16px;">
-      <div class="calendar-detail-header">
-        <div class="calendar-detail-title" id="calendar-detail-title">今日の学習記録</div>
-        <div class="calendar-detail-stats" id="calendar-detail-stats">学習 0語</div>
-      </div>
-      <div id="calendar-wrong-list" class="wrong-list"></div>
-    </div>
-
-    <button class="btn-gray" onclick="closeStudyRecords()" style="width:100%;">スタート画面へ戻る</button>
   </div>
 
   <!-- ==================== クイズ画面 ==================== -->
@@ -434,7 +304,6 @@
   const CURRENT_LIST_STORAGE_KEY = "vocabAppCurrentListName_v2";
   const QUIZ_MODE_STORAGE_KEY = "vocabAppQuizMode_v1";
   const LEGACY_STORAGE_KEY = "vocabAppWordLists";
-  const STUDY_HISTORY_STORAGE_KEY = "vocabAppStudyHistory_v1";
 
   // オフライン時の初回起動用フォールバック。
   // オンライン起動時は必ず DEFAULT_DATA_URL の結果が優先される。
@@ -445,9 +314,6 @@
   let startedLists = {};
   let appWordLists = {};
   let currentListName = "";
-  let studyHistory = {};
-  let calendarViewDate = new Date();
-  let selectedRecordDate = "";
 
   let sessionPool = [];
   let currentQuestionIndex = 0;
@@ -478,7 +344,6 @@
     rebuildAppWordLists();
     restoreCurrentList();
     updateSelectBox();
-    updateStreakDisplay();
 
     const modeSelect = document.getElementById('quiz-mode-select');
     if (modeSelect) modeSelect.value = quizMode;
@@ -626,14 +491,6 @@
     });
     saveStartedLists();
 
-    try {
-      const historySaved = localStorage.getItem(STUDY_HISTORY_STORAGE_KEY);
-      studyHistory = historySaved ? JSON.parse(historySaved) : {};
-      if (!studyHistory || typeof studyHistory !== "object" || Array.isArray(studyHistory)) studyHistory = {};
-    } catch (_) {
-      studyHistory = {};
-    }
-
     const savedMode = localStorage.getItem(QUIZ_MODE_STORAGE_KEY);
     quizMode = savedMode === "word_to_meaning" ? "word_to_meaning" : "meaning_to_word";
   }
@@ -655,221 +512,6 @@
       localStorage.setItem(CURRENT_LIST_STORAGE_KEY, currentListName);
     }
   }
-
-  function saveStudyHistory() {
-    localStorage.setItem(STUDY_HISTORY_STORAGE_KEY, JSON.stringify(studyHistory));
-  }
-
-  function getLocalDateKey(date = new Date()) {
-    const y = date.getFullYear();
-    const m = String(date.getMonth() + 1).padStart(2, '0');
-    const d = String(date.getDate()).padStart(2, '0');
-    return `${y}-${m}-${d}`;
-  }
-
-  function dateFromKey(dateKey) {
-    const [y, m, d] = String(dateKey).split('-').map(Number);
-    return new Date(y, (m || 1) - 1, d || 1);
-  }
-
-  function formatJapaneseDate(dateKey) {
-    const date = dateFromKey(dateKey);
-    return `${date.getFullYear()}年${date.getMonth() + 1}月${date.getDate()}日`;
-  }
-
-  function ensureStudyDay(dateKey) {
-    if (!studyHistory[dateKey]) {
-      studyHistory[dateKey] = { total: 0, wrongWords: [] };
-    }
-    if (!Number.isFinite(Number(studyHistory[dateKey].total))) studyHistory[dateKey].total = 0;
-    if (!Array.isArray(studyHistory[dateKey].wrongWords)) studyHistory[dateKey].wrongWords = [];
-    return studyHistory[dateKey];
-  }
-
-  function recordStudyResult() {
-    const dateKey = getLocalDateKey();
-    const day = ensureStudyDay(dateKey);
-    day.total += 1;
-
-    if (currentMistakes > 0 || isSkipped) {
-      const mode = sessionQuizMode;
-      const direction = getQuizDirectionData(currentWordData, mode);
-      const question = getQuestionText(currentWordData, mode);
-      const answers = getAcceptedAnswers(currentWordData, mode);
-      const wrongKey = `${currentListName}::${mode}::${normalizeTypedAnswer(question)}`;
-      const existing = day.wrongWords.find(item => item.key === wrongKey);
-
-      if (existing) {
-        existing.mistakes = Math.max(Number(existing.mistakes) || 0, currentMistakes);
-        existing.attempts = (Number(existing.attempts) || 0) + 1;
-        existing.lastSeenAt = Date.now();
-        existing.skipped = existing.skipped || isSkipped;
-      } else {
-        day.wrongWords.push({
-          key: wrongKey,
-          listName: currentListName,
-          mode,
-          question,
-          answers,
-          mistakes: currentMistakes,
-          attempts: 1,
-          skipped: Boolean(isSkipped),
-          lastSeenAt: Date.now()
-        });
-      }
-    }
-
-    saveStudyHistory();
-    updateStreakDisplay();
-  }
-
-  function hasStudyOn(dateKey) {
-    return Boolean(studyHistory[dateKey] && Number(studyHistory[dateKey].total) > 0);
-  }
-
-  function getCurrentStreak() {
-    let cursor = new Date();
-    let todayKey = getLocalDateKey(cursor);
-
-    // 今日まだ学習していない場合は、昨日まで続いている記録を表示する。
-    if (!hasStudyOn(todayKey)) {
-      cursor.setDate(cursor.getDate() - 1);
-      if (!hasStudyOn(getLocalDateKey(cursor))) return 0;
-    }
-
-    let streak = 0;
-    while (hasStudyOn(getLocalDateKey(cursor))) {
-      streak += 1;
-      cursor.setDate(cursor.getDate() - 1);
-    }
-    return streak;
-  }
-
-  function updateStreakDisplay() {
-    const streak = getCurrentStreak();
-    const countEl = document.getElementById('streak-count');
-    const subEl = document.getElementById('streak-subtext');
-    if (countEl) countEl.textContent = `${streak}日連続`;
-    if (subEl) {
-      const todayKey = getLocalDateKey();
-      const todayTotal = studyHistory[todayKey]?.total || 0;
-      subEl.textContent = todayTotal > 0
-        ? `今日は ${todayTotal}語 学習しました`
-        : (streak > 0 ? '今日も学習すると連続記録が続きます' : '今日の学習で記録を始めよう');
-    }
-  }
-
-  function openStudyRecords() {
-    calendarViewDate = new Date();
-    selectedRecordDate = getLocalDateKey();
-    renderStudyCalendar();
-    showScreen('record-screen');
-  }
-
-  function closeStudyRecords() {
-    updateStreakDisplay();
-    showScreen('start-screen');
-  }
-
-  function changeCalendarMonth(delta) {
-    calendarViewDate = new Date(calendarViewDate.getFullYear(), calendarViewDate.getMonth() + delta, 1);
-    renderStudyCalendar();
-  }
-
-  function selectRecordDate(dateKey) {
-    selectedRecordDate = dateKey;
-    renderStudyCalendar();
-  }
-
-  function renderStudyCalendar() {
-    const year = calendarViewDate.getFullYear();
-    const month = calendarViewDate.getMonth();
-    const monthTitle = document.getElementById('calendar-month-title');
-    const grid = document.getElementById('calendar-grid');
-    if (!monthTitle || !grid) return;
-
-    monthTitle.textContent = `${year}年${month + 1}月`;
-    grid.innerHTML = '';
-
-    const firstDay = new Date(year, month, 1).getDay();
-    const daysInMonth = new Date(year, month + 1, 0).getDate();
-    const prevDays = new Date(year, month, 0).getDate();
-    const totalCells = Math.ceil((firstDay + daysInMonth) / 7) * 7;
-    const todayKey = getLocalDateKey();
-
-    for (let i = 0; i < totalCells; i++) {
-      const dayOffset = i - firstDay + 1;
-      let cellDate;
-      let otherMonth = false;
-      if (dayOffset < 1) {
-        cellDate = new Date(year, month - 1, prevDays + dayOffset);
-        otherMonth = true;
-      } else if (dayOffset > daysInMonth) {
-        cellDate = new Date(year, month + 1, dayOffset - daysInMonth);
-        otherMonth = true;
-      } else {
-        cellDate = new Date(year, month, dayOffset);
-      }
-
-      const dateKey = getLocalDateKey(cellDate);
-      const data = studyHistory[dateKey];
-      const button = document.createElement('button');
-      button.type = 'button';
-      button.className = 'calendar-day';
-      if (otherMonth) button.classList.add('is-other-month');
-      if (dateKey === todayKey) button.classList.add('is-today');
-      if (dateKey === selectedRecordDate) button.classList.add('is-selected');
-      button.onclick = () => selectRecordDate(dateKey);
-
-      const count = Number(data?.total) || 0;
-      const wrongCount = Array.isArray(data?.wrongWords) ? data.wrongWords.length : 0;
-      button.innerHTML = `
-        <div class="calendar-day-number">${cellDate.getDate()}</div>
-        ${count > 0 ? `<div class="calendar-day-count">${count}語</div>` : '<div class="calendar-day-count" style="opacity:.35">—</div>'}
-        ${wrongCount > 0 ? `<div class="calendar-day-wrong">ミス ${wrongCount}</div>` : ''}
-      `;
-      grid.appendChild(button);
-    }
-
-    renderRecordDetail(selectedRecordDate || todayKey);
-  }
-
-  function renderRecordDetail(dateKey) {
-    const data = studyHistory[dateKey] || { total: 0, wrongWords: [] };
-    const wrongWords = Array.isArray(data.wrongWords) ? data.wrongWords : [];
-    const titleEl = document.getElementById('calendar-detail-title');
-    const statsEl = document.getElementById('calendar-detail-stats');
-    const listEl = document.getElementById('calendar-wrong-list');
-    if (!titleEl || !statsEl || !listEl) return;
-
-    titleEl.textContent = formatJapaneseDate(dateKey);
-    statsEl.textContent = `学習 ${Number(data.total) || 0}語 ／ 間違い ${wrongWords.length}語`;
-    listEl.innerHTML = '';
-
-    if (wrongWords.length === 0) {
-      const empty = document.createElement('div');
-      empty.className = 'empty-record';
-      empty.textContent = (Number(data.total) || 0) > 0 ? 'この日は間違えた単語はありません。' : 'この日は学習記録がありません。';
-      listEl.appendChild(empty);
-      return;
-    }
-
-    wrongWords.slice().sort((a, b) => (b.lastSeenAt || 0) - (a.lastSeenAt || 0)).forEach(item => {
-      const row = document.createElement('div');
-      row.className = 'wrong-item';
-      const directionLabel = item.mode === 'word_to_meaning' ? '英語 → 日本語' : '日本語 → 英語';
-      const reason = item.skipped ? 'スキップ' : `ミス ${Number(item.mistakes) || 0}回`;
-      row.innerHTML = `
-        <div class="wrong-item-word"></div>
-        <div class="wrong-item-meta">${directionLabel} ／ ${reason} ／ ${item.listName || ''}</div>
-        <div class="wrong-item-answer"></div>
-      `;
-      row.querySelector('.wrong-item-word').textContent = item.question || '';
-      row.querySelector('.wrong-item-answer').textContent = `正解：${Array.isArray(item.answers) ? item.answers.join(' / ') : ''}`;
-      listEl.appendChild(row);
-    });
-  }
-
 
   function migrateLegacyStorage() {
     // 新形式が既に存在するなら移行済み。
@@ -1208,6 +850,28 @@
   // ============================================================
   // 学習
   // ============================================================
+  // 重要度を出題確率へ変換する。
+  // 重要度1〜5を二乗し、重要度が高い単語ほど明確に出やすくする。
+  // 例: 1→1、2→4、3→9、4→16、5→25
+  function getQuestionWeight(wordData) {
+    const importance = clampImportance(wordData?.importance);
+    return importance * importance;
+  }
+
+  // 重み付き・重複なしで問題を選ぶ。
+  // 1回のセッション内では同じ単語を重ねず、重要度が高い語ほど上位に入りやすくする。
+  function buildWeightedQuestionPool(list, limit) {
+    const weighted = list.map((wordData, index) => {
+      const weight = getQuestionWeight(wordData);
+      // Exponential race による weighted sampling。
+      const priority = -Math.log(Math.max(Number.EPSILON, Math.random())) / weight;
+      return { index, priority };
+    });
+
+    weighted.sort((a, b) => a.priority - b.priority);
+    return weighted.slice(0, limit).map(item => item.index);
+  }
+
   function startSession() {
     if (!currentListName || !appWordLists[currentListName]) {
       alert("単語データがありません。");
@@ -1227,11 +891,10 @@
       return;
     }
 
-    let indices = list.map((_, i) => i);
-    indices = indices.sort(() => Math.random() - 0.5);
-
-    const limit = Math.min(MAX_QUESTIONS_PER_SESSION, indices.length);
-    sessionPool = indices.slice(0, limit);
+    // 重要度を反映した重み付き抽選。
+    // セッション内では重複なしで、重要度5が重要度1より25倍の重みになる。
+    const limit = Math.min(MAX_QUESTIONS_PER_SESSION, list.length);
+    sessionPool = buildWeightedQuestionPool(list, limit);
 
     currentQuestionIndex = 0;
     sessionPerfectCount = 0;
@@ -1331,10 +994,14 @@
       if (sessionQuizMode === "word_to_meaning") {
         document.getElementById('hint-display').textContent = "";
       } else {
-        const hintSource = getQuestionText(currentWordData, sessionQuizMode);
-        const hintChar = String(hintSource || "").charAt(0);
-        document.getElementById('hint-display').textContent =
-          `💡 ヒント: 頭文字は「${hintChar}」`;
+        // 日本語 → 英語モードでは、日本語の問題文ではなく
+        // 正解となる英単語の先頭文字をヒントにする。
+        const acceptedAnswers = getAcceptedAnswers(currentWordData, sessionQuizMode);
+        const hintSource = String(acceptedAnswers[0] || "").trim();
+        const hintChar = hintSource.charAt(0);
+        document.getElementById('hint-display').textContent = hintChar
+          ? `💡 ヒント: 英単語の頭文字は「${hintChar}」`
+          : "";
       }
     }
   }
@@ -1347,7 +1014,6 @@
   }
 
   function showAnswerScreen(isSuccess) {
-    recordStudyResult();
     const timeSpent = Math.floor((Date.now() - questionStartTime) / 1000);
 
     if (isSuccess && currentMistakes === 0) sessionPerfectCount++;
@@ -1466,7 +1132,6 @@
   function showScreen(screenId) {
     document.querySelectorAll('.screen').forEach(el => el.classList.remove('active'));
     document.getElementById(screenId).classList.add('active');
-    if (screenId === 'start-screen') updateStreakDisplay();
   }
 
   function toggleTheme() {
